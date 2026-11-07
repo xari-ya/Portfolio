@@ -1,62 +1,55 @@
-# SARITH — ASSEMBLY REQUIRED · Portfolio prototype v2
+# Sarith Dodangodage — Assembly Required
 
-## What this is
-An **offline**, scroll-driven interactive engineering portfolio for Sarith Dodangodage, built with HTML, CSS and a custom WebGL 2 renderer. No CDN, third-party runtime, package install or backend is required.
+An interactive engineering portfolio built with HTML, CSS, JavaScript and a custom WebGL 2 renderer. One shared 3D stage connects the Assembly Hall, engineer’s workbench, project delivery line, eight project studies, Engineering & Career Lab and communications office. Accessible HTML carries the content and navigation, with an illustrated fallback when WebGL is unavailable.
 
-## Open it
-Run `npm start` and visit `http://127.0.0.1:4173`. The local HTTP server is needed to load the supplied character assets. The site has no production JavaScript dependencies. Hardware acceleration/WebGL 2 provides the interactive hall; its illustrated fallback keeps the portfolio, project browsing, résumé and contact available when 3D is unavailable.
+## Run and verify
 
-## How to experience the site
-1. Enter through the existing Kira introduction. The Main Assembly Hall runs its coordinated manufacturing demonstration.
-2. Click **Meet Sarith**, select the miniature engineer, or scroll forward to approach his observation workbench. About Me includes his introduction, both undergraduate programmes, interests, direction and existing résumé. On desktop, readable HTML is registered to the physical wall display; phones retain the character above and content below. Reading scroll stays inside that interface; **Explore My Work / Continue to Projects** advances to the existing production-line destination.
-3. Use **Back to Workshop** to return, or continue toward the existing project archive and select any of nine CV projects. Their original project-specific presentations remain available.
-4. Continue into Inspect or open the project file for contributions, descriptions, technology and existing repository links. Contact remains at the end of the current portfolio.
-5. The hall journey follows overview, engineer, production line, assembly and the rear doorway. Select important machinery to inspect it; Escape or Back to Workshop exits inspection. Assembly and conveyor inspections retain limited orbit. The top-right camera and process toolbar is now limited to `/?workshopDebug`.
-6. Kira retains his greetings and autonomous routine. Reduced-motion mode holds the engineer still and starts manufacturing paused. Debug Pause freezes manufacturing; Restart returns safely through output/reset. Every loading sequence now opens the workshop overview, including visits with an initial `#about` fragment; section links work normally after arrival.
+Use Node.js 24 (minimum 22):
 
-Implementation, assets, rigging and verification: [The Engineer / About Me](ENGINEER_ABOUT_IMPLEMENTATION.md). Screenshots: [verification gallery](verification/engineer/index.html).
+```sh
+npm ci
+npm start
+```
 
-## Content and creative caveats
-- Existing project copy was taken from the four-page CV: Obsidian, compost monitoring/TerraVita, JellyCast, SENTINEL, Click Claim, analog FSK IR, HabitSeed, small-business POS and Prajaa. The linked `Sarith_Dodangodage_CV.pdf` is the supplied original r?sum?, restored at its existing resource path.
-- Models are **stylized conceptual visualizations**, not the user's exact photographs, finished product renders, technical drawings or production CAD.
-- JellyCast is ongoing research, not a proven operational forecast. SENTINEL is remote patient monitoring, not the separate nursing patient-safety research.
-- TerraVita's MQ-135 is an air-quality *response* and should not be represented as a selective CO₂/O₂ measurement instrument.
-- No invented awards, testimonials, usage statistics or performance metrics are embedded.
+Open `http://127.0.0.1:4173/`. Serving and building use Node built-ins; npm installation is needed only for Playwright development tests.
 
-## Notes for further production development
-The current experience is a prototype; for a production website, replace conceptual 3D with verified CAD/photography and project documents, build concise project case-study pages, test across real graphics hardware, implement SEO and optimize graphics performance under heavy load.
+```sh
+npm run check
+npm test
+npm run build
+npm run audit:release
+npm run preview
+```
 
-## Structure
-- `index.html`: interactive experience and project file interface
-- `style.css`: editorial art direction and responsive style
-- `engine.js`: scroll choreography, project database, interaction events, offline WebGL 2 geometry + renderer
-- `workshop-system.js`: authoritative fixed-step manufacturing controller and arm kinematics, shared with the tests
-- `workshop-hall.js`: retained mechanical models, coordinated scene animation, station picking, guided cameras, materials and lighting
-- `kira-loader.js`: existing five-stage entrance, retained
-- `verification/`: browser automation, controller tests, screenshots and measured results
-- `workshop-appearance.js`, `workshop-shadows.js`: shared lighting, static bay dressing and selective workcell shadows
-- `homepage-appearance.css`: homepage and entrance theme, local licensed typography
-- `Sarith_Dodangodage_CV.pdf`: supplied original r?sum?
+The production preview is `http://127.0.0.1:4174/`. With it running, `npm run test:release` exercises the built output across desktop, tablet and phone sizes, then checks dynamic interactions. Tests require installed Chromium/Chrome/Edge or `npx playwright install chromium`. `WORKSHOP_BROWSER_EXECUTABLE` selects a browser; `WORKSHOP_BROWSER_ANGLE=d3d11` selects the validated Windows hardware backend. `WORKSHOP_OUTPUT` selects an evidence directory; generated test output is ignored. `npm run test:performance` records rendered-frame measurements. See [deployment instructions](release/DEPLOYMENT.md) for paired original/production runs and environment limitations.
 
+## Source layout
 
+| Location | Purpose |
+|---|---|
+| `index.html`, CSS files | Content, responsive layouts and approved visual design |
+| `engine.js`, `workshop-hall.js` | Existing renderer, project geometry and journey/camera choreography |
+| `workshop-system.js`, `project-delivery.js` | Manufacturing, component ownership and delivery state machines |
+| Registry, study and exhibit scripts | Project discovery, chapters and technical studies |
+| `engineering-career-lab/`, `communications-room/` | Room geometry, skills, archives, Kira behavior and contact |
+| `engineer-assets/`, `assets/`, `character-assets/` | Runtime exports, artwork, maps, fonts and provenance |
+| `tools/` | Deterministic build, case-sensitive preview and release checks |
+| `verification/` | Maintained controller tests, current browser checks and release harnesses |
+| `release/` | Lightweight cleanup, performance, audit, asset and deployment reports |
+| `dist/` | Generated deployment only; ignored by Git |
 
-## V6 TerraVita unified WebGL model
-The user's TerraVita Rev 4 model is extracted directly and embedded inside `engine.js` as losslessly rebatched, compressed vertex/normal data. It renders on the existing WebGL canvas, with no iframe or external viewer. WORK: scroll gathers the device from separated internal subsystems; INSPECT: the same model opens to expose its internals. Open `index.html` directly in a browser. See `TERRAVITA_MODEL_V6.md` for provenance and source measurement caveats.
+No React, Three.js, CDN, analytics or runtime framework is required. The approved motion, room designs, dual-eye Kira model and mobile navigation remain intact. Debug controls appear only with `?workshopDebug`.
 
-## Main Assembly Hall refinement / V22
+## Projects and asset maintenance
 
-See [V22_WORKSHOP_REFINEMENT.md](V22_WORKSHOP_REFINEMENT.md) for the implementation and verification record. The room, articulated arm, detailed rotary workstation, conveyor, three computing cabinets, approved Kira geometry, introductory copy, portfolio navigation and loader remain in place. No additional rooms are implemented.
+Register project metadata in `project-registry.js`. For a new model or narrative, follow the existing study adapters and custom renderer. Add every dynamic dependency to `tools/runtime-assets.json`, including viewport alternatives, failure and fallback assets. Keep exact filename case and run production browser tests after path, material or navigation changes.
 
-Playwright is installed as a project-local development dependency. Run `npm run check` and `npm test` for syntax and controller verification. With `npm start` running, `npm run test:browser` checks a complete live cycle, physical component ownership, station interactions, existing navigation, mobile touch scrolling, reduced motion and graphics failure. It writes `verification/browser-report.json` and screenshots. The browser helper reuses an installed Chromium; `WORKSHOP_BROWSER_EXECUTABLE` can select another installed Chromium binary. `WORKSHOP_BROWSER_ANGLE=swiftshader` selects software rendering when hardware OpenGL is unavailable.
+The runtime allowlist and [asset manifest](release/ASSET_MANIFEST.md) define the deployment contract. Keep editing sources outside `dist`; use the [recovery index](release/LOCAL_RECOVERY.md) to recover original artwork when needed. Historical mutation scripts and tests tied to old capture fixtures are archived with the original project.
 
-Development inspection is available at `/?workshopDebug`: `window.__workshopDev.setTime(seconds)` replays and pauses the same controller, `run()` resumes it, and `state()` exposes physical transforms, monitoring state and rendering counters. These inspection functions are absent from ordinary page loads.
+Phone map optimization requires smaller files and byte-identical GPU-upload pixels. Other converted UI images use lossless WebP with unchanged RGBA pixels. Material filenames carry content hashes; identical entries share canonical resources. Preserve LOD dimensions, material relationships, original hashes and attributions. Do not reduce engineering model fidelity or substitute generic models for a benchmark.
 
-## Homepage and engineer display / November 2026
+## Publication and ownership
 
-The red-and-graphite visual pass retains the original main assets and manufacturing behaviour. It brings the engineer bay forward, adds fitted lighting, shelving, tools, plants and a chair, and restyles the wall display with a machined bezel and accessible icon tabs. The homepage introduction occupies the lower-left floor area with a larger name and seamlessly feathered blue-black backdrop. Kira patrols the usable width of the foreground and exchanges arrival/departure gestures with the engineer. The control monitor shows the actual five joint matrices; the retained Legion displays a separate, static electronics/PCB workspace. The existing five-stage entrance uses the same palette and fixtures.
+Deploy only `dist`, generated by `npm run build`. Cloudflare Pages settings: branch `release/production`, build `npm run build`, output `dist`, `NODE_VERSION=24`. Origin-dependent metadata and sitemap are generated only when `SITE_ORIGIN` is supplied. [Publication and rollback procedure](release/DEPLOYMENT.md).
 
-See [implementation and verification](HOMEPAGE_VISUAL_REFINEMENT.md) and the [screenshot gallery](verification/homepage/index.html). With the server running, `npm run test:homepage` verifies the public interface, startup destination, protected assets and rendering budget. The Git restore tag is `restore/before-homepage-redesign-2026-11-02` (`176a150`).
-
-## Office & Communications / Room 03
-
-The existing Skills Room reception doors now connect to the 12 × 6 m communications office. Use Contact, the lab Reception button, or continue scrolling after Experience Archives. The room reuses the engineer, Kira and supplied laptop, with accessible contact actions, a lounge, layered exterior scenery and moving daylight. See [room documentation](communications-room/README.md) and [component build sheets](communications-room/plans/). Run `npm run test:communications` with the local server running. The résumé PDF remains unavailable in this checkout.
+No general open-source license is granted. Third-party components retain their own terms: phone CC BY 4.0/CC0, font OFL, icon/decoder MIT, and identified shoreline data LGPL. The owner confirmed redistribution permission for the office car geometry during release preparation. Organization marks retain their owners’ rights. See [public credits](credits.html) and provenance records. Public repository visibility does not authorize reuse.

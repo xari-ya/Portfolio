@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "porsche.car",
+    "alpine-a110.car"
+  ],
+  "permissionBasis": "Portfolio owner explicitly confirmed permission to publicly redistribute the supplied rendered geometry during release preparation on 2026-11-07.",
+  "scope": "Public portfolio geometry distribution; no downstream reuse license granted.",
+  "upstreamAuthorAndLicense": "Not supplied; do not invent attribution or terms."
+}

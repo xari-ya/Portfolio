@@ -1,5 +1,0 @@
-const cp=require('node:child_process'),fs=require('node:fs');
-const suites=process.argv.slice(2).length?process.argv.slice(2):['verification/phone-ui/phone.cjs','verification/phone-ui/edges.cjs','verification/communications/phone-normal.cjs','verification/study/entry-inputs.cjs','verification/production/camera-handoff.cjs'];
-const results=[];
-for(const suite of suites){const r=cp.spawnSync(process.execPath,['--require','./verification/mobile-mission/current-server.cjs',suite],{encoding:'utf8',timeout:240000,env:{...process.env,WORKSHOP_BASE_URL:'http://127.0.0.1:4175',WORKSHOP_BROWSER_EXECUTABLE:'C:/Program Files/Google/Chrome/Application/chrome.exe',WORKSHOP_BROWSER_ANGLE:'d3d11'}});results.push({suite,status:r.status,stdout:r.stdout,stderr:r.stderr,error:r.error?.message});console.log(suite,r.status,r.stdout?.slice(-800),r.stderr?.slice(-800));fs.writeFileSync('verification/mobile-mission/existing-tests.json',JSON.stringify(results,null,2));}
-if(results.some(r=>r.status!==0))process.exitCode=1;

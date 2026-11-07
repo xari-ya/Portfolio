@@ -22,7 +22,7 @@ window.createHabitSeedShowcase=function(gl,k){'use strict';
   a.fillStyle=accent;a.beginPath();a.arc(48,310,7,0,Math.PI*2);a.fill();
   a.fillStyle='#d5efe3';a.font='18px monospace';a.fillText('ACTIVE DATA PIPELINE · VERIFIED ARCHITECTURE',68,316);
   return texture(c);}
- const handset=k.phones.load('compact');const images={};for(const name of ['04-home','06-habit-detail','07-stats','08-store']){const image=new Image();image.onload=()=>{if(!disposed)images[name]=texture(image);};image.src='assets/showcase/habitseed/'+name+'.png';}
+ const handset=k.phones.load('compact');const images={};for(const name of ['04-home','06-habit-detail','07-stats','08-store']){const image=new Image();image.onload=()=>{if(!disposed)images[name]=texture(image);};image.src='assets/showcase/habitseed/'+name+'.webp';}
  // Floating app cards remain physical plaques; screen artwork is mapped to their front face.
  box(0,[-1.75,-.15,-.4],[1.25,2.55,.09],[.24,.33,.29],[0,.28,-.10]);box(0,[2.1,.15,-.55],[1.25,2.55,.09],[.24,.33,.29],[0,-.3,.08]);
  // Lathed pot with a tapered wall, thick lip, soil bed and saucer.

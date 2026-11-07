@@ -26,7 +26,7 @@
   c.restore();
  }
  const A=window.CommunicationsGraphics={revision:0,connectionsImage:null,connectionsLoading:false,theme:readTheme(),
-  loadConnections(){if(this.connectionsLoading)return;this.connectionsLoading=true;const image=new Image();image.onload=()=>{this.connectionsImage=image;this.revision++;};image.src='./communications-room/assets/network-connections.png';},
+  loadConnections(){if(this.connectionsLoading)return;this.connectionsLoading=true;const image=new Image();image.onload=()=>{this.connectionsImage=image;this.revision++;};image.src='./communications-room/assets/network-connections.webp';},
   plate,stripes,icon,
   buttons:Array.from({length:4},(_,i)=>({x:.12+i*(.175+.02),y:.60,w:.175,h:.18})),
   display(c,v,{hover=-1,pressed=-1,resume=true,life={},motion=0,cached=false}={}){

@@ -11,7 +11,8 @@
   "modifications": [
     "Source transforms flattened; oriented display toward +Z; centered and normalized to height 1",
     "Original vertex positions, normals, UVs and triangle topology preserved under those transforms",
-    "Batched by original material; project screenshot replaces stock display; transmissive cover layer omitted for readable UI"
+    "Batched by original material; project screenshot replaces stock display; transmissive cover layer omitted for readable UI",
+    "Production maps prefiltered to the existing renderer upload dimensions, encoded losslessly as WebP only when smaller and GPU readback is byte-identical; nonmatching or larger conversions retain original maps. Original maps remain in the protected local source archive."
   ],
   "binary": "iphone.bin",
   "binarySHA256": "407d7fa8bdc50869b5a72275ff0252b2ff31e7478e3a331d3621cf444bda504b",
@@ -1073,46 +1074,88 @@
   ],
   "textures": [
     {
-      "file": "iphone-0.png",
-      "width": 256,
-      "height": 256,
+      "file": "material-77de9e73a265f20e.webp",
+      "width": 1,
+      "height": 1,
       "maxGPUSize": 1,
-      "sha256": "3c9f856bd52cc614a678bf646a58a27af539dd03dfac95ffc13b8041d96a6333"
+      "sha256": "77de9e73a265f20e0325465924cdeb660148cb898a67d683fefdd530a915f86d",
+      "originalTexture": {
+        "file": "iphone-0.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "3c9f856bd52cc614a678bf646a58a27af539dd03dfac95ffc13b8041d96a6333"
+      },
+      "pixelSHA256": "9e83509b5f2891c382dbd70ebb1f17d1fd6b41951f87713368060ebda78cc505"
     },
     {
-      "file": "iphone-1.png",
+      "file": "material-4bdc3a147e0d43a4.webp",
       "width": 1024,
       "height": 1024,
       "maxGPUSize": 1024,
-      "sha256": "a0d745fa0ff62d8fdf44840f387c50be34c60821e27fefdca2461c082e7c1745"
+      "sha256": "4bdc3a147e0d43a484b9432063fb3942b91af22b63474b63929e4203b948f9ef",
+      "originalTexture": {
+        "file": "iphone-1.png",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "a0d745fa0ff62d8fdf44840f387c50be34c60821e27fefdca2461c082e7c1745"
+      },
+      "pixelSHA256": "37502aad02861794931b3361c0b4b152e78d3d7fa5d61ad9b1a99988ff8699f9"
     },
     {
-      "file": "iphone-2.png",
+      "file": "material-df88d59f705031e5.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "abab146efc19d64ba86b375cf25aff73d46ed7a5c20b12a3077d255cd3277525"
+      "sha256": "df88d59f705031e52279a9cc4d02f5f6b65de7d4b5ba452d9c395d60f13b813f",
+      "originalTexture": {
+        "file": "iphone-2.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "abab146efc19d64ba86b375cf25aff73d46ed7a5c20b12a3077d255cd3277525"
+      },
+      "pixelSHA256": "bf65e5116f1bfc89695a6512fc89b6e5014ba0e34d203be93b2ea48073ec6acb"
     },
     {
-      "file": "iphone-3.png",
+      "file": "material-0795bd4a25aa84df.webp",
       "width": 256,
       "height": 256,
       "maxGPUSize": 1024,
-      "sha256": "e0aec3170ce89c6ec8db1ca2f69afa577807b12c8b7ea7d0c2ce5ca10dae1c38"
+      "sha256": "0795bd4a25aa84df07b343de513e245eadb4382f975c2608291e6f543233eb36",
+      "originalTexture": {
+        "file": "iphone-3.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "e0aec3170ce89c6ec8db1ca2f69afa577807b12c8b7ea7d0c2ce5ca10dae1c38"
+      },
+      "pixelSHA256": "8b152410aa7c6021f0d82a8e1673e08c73b779770d53aedf6b881627e71c46ee"
     },
     {
-      "file": "iphone-4.png",
+      "file": "material-a748274dacde1a6c.webp",
       "width": 256,
       "height": 256,
       "maxGPUSize": 1024,
-      "sha256": "0bd0e4089fa54aed4a8d6b7040fe0ccf76d8a1a369faeac0582a02a3e894b988"
+      "sha256": "a748274dacde1a6c67280144ea9b4a894e115bf641b46cef349f125c2d07a6d2",
+      "originalTexture": {
+        "file": "iphone-4.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "0bd0e4089fa54aed4a8d6b7040fe0ccf76d8a1a369faeac0582a02a3e894b988"
+      },
+      "pixelSHA256": "9224d8efc5e39cfae27d625563f54b368164d871b7c53f58e56b2aa2ae9aed1c"
     },
     {
-      "file": "iphone-5.png",
+      "file": "material-b8792ead593398b8.webp",
       "width": 256,
       "height": 256,
       "maxGPUSize": 1024,
-      "sha256": "ad79b73dcfa1314459d78ba7c126200e088f77b3f8174acd339623b788c7436f"
+      "sha256": "b8792ead593398b8546280ade69090c2f67f67c20d1fb4193151c924484aca5a",
+      "originalTexture": {
+        "file": "iphone-5.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "ad79b73dcfa1314459d78ba7c126200e088f77b3f8174acd339623b788c7436f"
+      },
+      "pixelSHA256": "9dcffa8a981a8b25278f6249091c03cfa63dd176128154cf295038cffaf213ad"
     },
     {
       "file": "iphone-6.jpg",
@@ -1122,25 +1165,46 @@
       "sha256": "84a8fdd1df9799c99f8495bbc5d7421251640a4d29378adc17f769cb00c66138"
     },
     {
-      "file": "iphone-7.png",
+      "file": "material-1b9a43582050d368.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "0f19a5af79f340af49fd1c215316bd6cdf5dce29397b1639e7e6b83a60f8bdcd"
+      "sha256": "1b9a43582050d368c183d6cb89ce981c607e1fb89ba5ff66ed03d5fee7ce7ab9",
+      "originalTexture": {
+        "file": "iphone-7.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "0f19a5af79f340af49fd1c215316bd6cdf5dce29397b1639e7e6b83a60f8bdcd"
+      },
+      "pixelSHA256": "c0335d7031d89b5cbfe3c68f056ad31ef94881e0e91fe1e0fbe8be4a13853d53"
     },
     {
-      "file": "iphone-8.png",
+      "file": "material-bfb72112da29e422.webp",
       "width": 256,
       "height": 256,
       "maxGPUSize": 1024,
-      "sha256": "d3a38f9c17d23110ec47ed1727321bbc62a4887e8893b56d6b1d7b30a322813b"
+      "sha256": "bfb72112da29e422838df3413519217329001b08f30e87d745e22ba964da3822",
+      "originalTexture": {
+        "file": "iphone-8.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "d3a38f9c17d23110ec47ed1727321bbc62a4887e8893b56d6b1d7b30a322813b"
+      },
+      "pixelSHA256": "3998afa3d393bcf9c28ec2d85e634f9e60679094baaa629b10cda153c914ddcb"
     },
     {
-      "file": "iphone-9.png",
+      "file": "material-c8c3f5eb67ec5347.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "ac209bd455d4954cf6b858202071875e55a5e54347473440248c4794ce066628"
+      "sha256": "c8c3f5eb67ec5347c6cf5d19065d27398e0fcfd071525fd3c79cd58d38a98cd0",
+      "originalTexture": {
+        "file": "iphone-9.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "ac209bd455d4954cf6b858202071875e55a5e54347473440248c4794ce066628"
+      },
+      "pixelSHA256": "012b96c768932fe094933ed6d28e041c4cf552612970ab43ea0511f3e9ff5867"
     },
     {
       "file": "iphone-10.jpg",
@@ -1150,88 +1214,172 @@
       "sha256": "a57c2d02a7f9652749ac60eee6c9a63f4f7d418dcbb5548d826af3e257ddbead"
     },
     {
-      "file": "iphone-11.png",
+      "file": "material-819205792d531910.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "92133f7da031dd08ca315d76890e658c6e417acdb6086ca6818655fa678dfed4"
+      "sha256": "819205792d531910907ad14ca767c2061ccbcf53e28780545b57b61e96fbf79a",
+      "originalTexture": {
+        "file": "iphone-11.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "92133f7da031dd08ca315d76890e658c6e417acdb6086ca6818655fa678dfed4"
+      },
+      "pixelSHA256": "481150b4125c1b0af732bac253c2d55b72f75cb21ae0e3c1288b47427444fe7b"
     },
     {
-      "file": "iphone-12.png",
+      "file": "material-6fa35202e94f0462.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "d420952ed6da7d705b23433e6baf6c6eb3f21c33015526d0448b73855fb4a74e"
+      "sha256": "6fa35202e94f04620fecb96e6c618ac182666e167e1cbc8385fbe374811f4175",
+      "originalTexture": {
+        "file": "iphone-12.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "d420952ed6da7d705b23433e6baf6c6eb3f21c33015526d0448b73855fb4a74e"
+      },
+      "pixelSHA256": "be9b9afa32e7f7f3f12aaa859ff359a5711da9b8ee4ed19f72cf772da785b4f0"
     },
     {
-      "file": "iphone-13.png",
+      "file": "material-2423c2ba917ed692.webp",
       "width": 1024,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "bbc74e5403499ff2850e6778895becba22e4cc031a54610f20e66e1f890e89c8"
+      "sha256": "2423c2ba917ed692ef1b0507c81119c08bbb8a152d57deb1faa4d74b078ae236",
+      "originalTexture": {
+        "file": "iphone-13.png",
+        "width": 1024,
+        "height": 512,
+        "sha256": "bbc74e5403499ff2850e6778895becba22e4cc031a54610f20e66e1f890e89c8"
+      },
+      "pixelSHA256": "c147e2fe2e76ff65065017fa7223e8984a68ae8ed8294f85e975d13ef1fc648c"
     },
     {
-      "file": "iphone-14.png",
+      "file": "material-79a88961e6aa5e4c.webp",
       "width": 1024,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "28053326f70324ad603842e0b76173a47a4bab9920c278694b0cb80d6746069c"
+      "sha256": "79a88961e6aa5e4cd2bcfdad66a4993995d1116623b66ba7f6f61113904a4066",
+      "originalTexture": {
+        "file": "iphone-14.png",
+        "width": 1024,
+        "height": 512,
+        "sha256": "28053326f70324ad603842e0b76173a47a4bab9920c278694b0cb80d6746069c"
+      },
+      "pixelSHA256": "25833c283a24a4854b8addcee52a85d7f4efc438d6bf7111a768a52c5a2cc7d2"
     },
     {
-      "file": "iphone-15.png",
+      "file": "material-9bf621aca8d1086a.webp",
       "width": 1024,
       "height": 1024,
       "maxGPUSize": 1024,
-      "sha256": "a8c64e9515dec1b85c253a4caf58e98427f86a15b295b0a880313450f5187101"
+      "sha256": "9bf621aca8d1086a6d7e62c28af2f038da5e8972de57649c6be612f6bd6c7368",
+      "originalTexture": {
+        "file": "iphone-15.png",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "a8c64e9515dec1b85c253a4caf58e98427f86a15b295b0a880313450f5187101"
+      },
+      "pixelSHA256": "dbb78b21aa20b0afea7497b48f5967a5d18894a86e13541d81c9f5fb27932985"
     },
     {
-      "file": "iphone-16.png",
+      "file": "material-8e3020c93ae8a6fa.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "d49cdf37af1df2c46d530ceac627cae4d0251cd3b4e39741fae5f979370f5a2a"
+      "sha256": "8e3020c93ae8a6fa2b3703b17257a6d36b69d798d20e45eafc77c510998ccbb4",
+      "originalTexture": {
+        "file": "iphone-16.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "d49cdf37af1df2c46d530ceac627cae4d0251cd3b4e39741fae5f979370f5a2a"
+      },
+      "pixelSHA256": "d9edea89a2a633610e0e91832cd5e5a500b96c7ae182515a941583756cb1f9ce"
     },
     {
-      "file": "iphone-17.png",
-      "width": 256,
-      "height": 256,
+      "file": "material-5335f9532eb506f5.webp",
+      "width": 1,
+      "height": 1,
       "maxGPUSize": 1,
-      "sha256": "73e835d829f3f520f6eb59abaa258f142e80ec31f287973d5fa164032cc30aa3"
+      "sha256": "5335f9532eb506f5b30a02df38fee4863e8f7b0a77e1fde5cde15b5c33005bcf",
+      "originalTexture": {
+        "file": "iphone-17.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "73e835d829f3f520f6eb59abaa258f142e80ec31f287973d5fa164032cc30aa3"
+      },
+      "pixelSHA256": "881403f066eed4af82db56bba33cace8ce02321762897aeb2bc95276970d429b"
     },
     {
-      "file": "iphone-19.png",
+      "file": "material-8e5f6ee6ccbbff42.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "ed0d229ece4222ee0a7bbc2715db6783d99a5e7cc6a1da9cd68da2d2aa4eb5dd"
+      "sha256": "8e5f6ee6ccbbff422ac1782df8854b23a3378706febf6b0fea6d4fa60446e8de",
+      "originalTexture": {
+        "file": "iphone-19.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "ed0d229ece4222ee0a7bbc2715db6783d99a5e7cc6a1da9cd68da2d2aa4eb5dd"
+      },
+      "pixelSHA256": "2a7e75af04faaa6ab6d72de00af2f370ea64f1bae08ec83d354ec00b2e953544"
     },
     {
-      "file": "iphone-20.png",
+      "file": "material-f9e8e6805a801cdc.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "81f17b42745a3a1604c66db62ab0a0b8a43566e0203d805f87c1cccded260f19"
+      "sha256": "f9e8e6805a801cdc9fb33926e39a1f9468b2a2351df4a8f459ba0ca4085b5da1",
+      "originalTexture": {
+        "file": "iphone-20.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "81f17b42745a3a1604c66db62ab0a0b8a43566e0203d805f87c1cccded260f19"
+      },
+      "pixelSHA256": "4d977704f65f788d06312a3600721c84a898526a484e76e52c6744a5cb9a3bd3"
     },
     {
-      "file": "iphone-21.png",
+      "file": "material-ffaf7fac4f0c6fdd.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "2d5bf7fb8c056932705d0e7f0cdc7d7e7ca31ff5095f51e1eaf294f17a45d496"
+      "sha256": "ffaf7fac4f0c6fddaec7d12ce7ee12ba10df74fbdabc3e3474481a502d5a6665",
+      "originalTexture": {
+        "file": "iphone-21.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "2d5bf7fb8c056932705d0e7f0cdc7d7e7ca31ff5095f51e1eaf294f17a45d496"
+      },
+      "pixelSHA256": "6ab08fd2a6a620d455ba7b6becff9fa4af07ec004a812993e983d29cede1b002"
     },
     {
-      "file": "iphone-22.png",
+      "file": "material-76a41452065f4920.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "c963fdd9479ab37ac8960f27b8fc14fbecaff352becedda62f19f4e9d10bdd74"
+      "sha256": "76a41452065f49204fbad8b0b56eda952da10799afae170665c83ccc837e3445",
+      "originalTexture": {
+        "file": "iphone-22.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "c963fdd9479ab37ac8960f27b8fc14fbecaff352becedda62f19f4e9d10bdd74"
+      },
+      "pixelSHA256": "45731af09a33739c84605d3447080b50de1caccd447e5048a14fe8bd62699fcb"
     },
     {
-      "file": "iphone-23.png",
+      "file": "material-363d7eb50260f961.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "9d5aab4a8fb4b2ae1101452aca189388c72575640c85e50bce8b9f90de6f853c"
+      "sha256": "363d7eb50260f9619ffbee1519971f5643a5af917c2841ee9908aaa96fd1ac5f",
+      "originalTexture": {
+        "file": "iphone-23.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "9d5aab4a8fb4b2ae1101452aca189388c72575640c85e50bce8b9f90de6f853c"
+      },
+      "pixelSHA256": "3e28f9313c186ace674fd3af4a28c969aae1b16ba6538588f63c35afe32155b8"
     },
     {
       "file": "iphone-24.png",
@@ -1241,46 +1389,88 @@
       "sha256": "a83a4435a157ef4e6c26659524d11b078584eee4f7a1a85da9a46519336d44e4"
     },
     {
-      "file": "iphone-25.png",
+      "file": "material-abf4919928fb751b.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "da2a0d8da1f136d66fad0debd1d88957f2cf352a1c8e597d9ce199afb077513f"
+      "sha256": "abf4919928fb751b7f32c0803d5580539844210258feb9dcc9d49b41c53b66b9",
+      "originalTexture": {
+        "file": "iphone-25.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "da2a0d8da1f136d66fad0debd1d88957f2cf352a1c8e597d9ce199afb077513f"
+      },
+      "pixelSHA256": "099fec9f332a4d6d9bc968ba7b9a281a76e7bdceda71241f006ab5226806eebe"
     },
     {
-      "file": "iphone-26.png",
+      "file": "material-fe861fe1b1d0c59d.webp",
       "width": 1024,
       "height": 1024,
       "maxGPUSize": 1024,
-      "sha256": "11412ae8b55d9eaa750581772747e0018bb09250625782150798c66482409c14"
+      "sha256": "fe861fe1b1d0c59d576fe69d29498cddbec749ebe949161976a495848031d83d",
+      "originalTexture": {
+        "file": "iphone-26.png",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "11412ae8b55d9eaa750581772747e0018bb09250625782150798c66482409c14"
+      },
+      "pixelSHA256": "b1841595a6bfcd7dcbab7e1812bd605aa0535035edb158754c58bcd362438773"
     },
     {
-      "file": "iphone-27.png",
+      "file": "material-ff43914a521a4fbf.webp",
       "width": 512,
       "height": 512,
       "maxGPUSize": 1024,
-      "sha256": "35e8e411e039e60c2883b0c601c5d7479a7b3937aa7ba56f15079f3697988169"
+      "sha256": "ff43914a521a4fbf7c5baf517af0e68c9dd54eb30ef5e4083789c38a577857b7",
+      "originalTexture": {
+        "file": "iphone-27.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "35e8e411e039e60c2883b0c601c5d7479a7b3937aa7ba56f15079f3697988169"
+      },
+      "pixelSHA256": "d4e0b15d0413e859785238accf2bf8ecb49f93a995767f662e1a4c1ef372644f"
     },
     {
-      "file": "iphone-28.png",
+      "file": "material-c57ec9a1ed6fdeb6.webp",
       "width": 256,
       "height": 256,
       "maxGPUSize": 1024,
-      "sha256": "19e5f9c2af71065bf3516ad6fa7217f2811e26565cb389e88a1700faa4d526f6"
+      "sha256": "c57ec9a1ed6fdeb6d83f9fa8c9d83adf8d57e1eab1201301502c59fe4eddd05b",
+      "originalTexture": {
+        "file": "iphone-28.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "19e5f9c2af71065bf3516ad6fa7217f2811e26565cb389e88a1700faa4d526f6"
+      },
+      "pixelSHA256": "069356398ab8dcb7e8b838002c3a2332f98180dd7a247aab4a938be003d6f7a9"
     },
     {
-      "file": "iphone-29.png",
+      "file": "material-78d2eb78e5264a02.webp",
       "width": 256,
       "height": 256,
       "maxGPUSize": 1024,
-      "sha256": "4dd33ae5f5377dcc78a63b16c4af71116b41fb14e3c7befe090968124b256498"
+      "sha256": "78d2eb78e5264a0251f429fa48e01e82fd7c812867a8c9370e7cdbbb42eb9a6c",
+      "originalTexture": {
+        "file": "iphone-29.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "4dd33ae5f5377dcc78a63b16c4af71116b41fb14e3c7befe090968124b256498"
+      },
+      "pixelSHA256": "890e66e3e250642af12812379be507caefb35b192deea8415fa840904d50d76e"
     },
     {
-      "file": "iphone-31.png",
+      "file": "material-5f0b9588ff4b67c7.webp",
       "width": 256,
       "height": 256,
       "maxGPUSize": 1024,
-      "sha256": "40e8275a4d4e13b550e86f63dc4e364bd6686aed43e65ef630597894e9f5997f"
+      "sha256": "5f0b9588ff4b67c796ee88c3c2e67678e7a78625e82a25ff1f24c96305f28eea",
+      "originalTexture": {
+        "file": "iphone-31.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "40e8275a4d4e13b550e86f63dc4e364bd6686aed43e65ef630597894e9f5997f"
+      },
+      "pixelSHA256": "c1d0abda85dd4380182f6f05bd818a0d4b9d6dc9a1476165bad044879ca03ae1"
     }
   ]
 }

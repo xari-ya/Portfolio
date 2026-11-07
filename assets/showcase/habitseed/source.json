@@ -14,28 +14,41 @@
   ],
   "assets": [
     {
-      "file": "04-home.png",
+      "file": "04-home.webp",
       "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/04-home.png",
-      "sha256": "7f3372125f91602848c460d22462ea1a6e17afdf02faf5e9ef8ae2a78e9af381",
-      "modified": false
+      "sha256": "c07bc78c40e5d37d4abb707b156058c8de16f48ee3f5741284dd962522b09178",
+      "modified": true,
+      "originalFile": "04-home.png",
+      "originalSHA256": "7f3372125f91602848c460d22462ea1a6e17afdf02faf5e9ef8ae2a78e9af381",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "06-habit-detail.png",
+      "file": "06-habit-detail.webp",
       "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/06-habit-detail.png",
-      "sha256": "279c296a72de137d7e361cdf5c30a2ac98a3997d9dd909853d661c341167db8a",
-      "modified": false
+      "sha256": "21b37f1763b9c351c843ad8f9880a3efc45b16e25d2da5c6c8de08e78cf22eec",
+      "modified": true,
+      "originalFile": "06-habit-detail.png",
+      "originalSHA256": "279c296a72de137d7e361cdf5c30a2ac98a3997d9dd909853d661c341167db8a",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "07-stats.png",
+      "file": "07-stats.webp",
       "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/07-stats.png",
-      "sha256": "c7be1e9e521d14666f7df35c532e14588745c5f38e01c286084fa392d60b339a",
-      "modified": false
+      "sha256": "84a0768cba7f80681833b2b7ac651859a9da21357effdf3dd14daa8d792edd31",
+      "modified": true,
+      "originalFile": "07-stats.png",
+      "originalSHA256": "c7be1e9e521d14666f7df35c532e14588745c5f38e01c286084fa392d60b339a",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "08-store.png",
+      "file": "08-store.webp",
       "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/08-store.png",
-      "sha256": "23c734532f1ac302a671d7920f2166e50c9b177fba6c3d28305b8d8dd8315b7f",
-      "modified": false
+      "sha256": "c7b4a0ed2278fc0d62c5c7a869eb1ec6946ab9446fc8437b0e227944f108c301",
+      "modified": true,
+      "originalFile": "08-store.png",
+      "originalSHA256": "23c734532f1ac302a671d7920f2166e50c9b177fba6c3d28305b8d8dd8315b7f",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     }
-  ]
+  ],
+  "productionOptimization": "Lossless WebP; decoded RGBA pixels verified identical; original source files retained in protected recovery."
 }

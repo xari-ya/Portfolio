@@ -4,45 +4,64 @@
   "logo": "Original m%cd text, Su_Sathmina embedded font, outlined paths exported by PowerPoint; original yellow #FFC000. No substitute font.",
   "assets": [
     {
-      "file": "welcome.png",
+      "file": "welcome.webp",
       "original": "image9.png",
-      "sha256": "c9e149194c998654e3529b9013f250c0343350d456a06d00a0e01d5793a8f784",
-      "modified": false
+      "sha256": "1baf04fc1ec0378437cc41f187e41d893d46bfb602bcb16c3535764d40fec9de",
+      "modified": true,
+      "originalFile": "welcome.png",
+      "originalSHA256": "c9e149194c998654e3529b9013f250c0343350d456a06d00a0e01d5793a8f784",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "home.png",
+      "file": "home.webp",
       "original": "image24.png",
-      "sha256": "1f5911d9d6a90aba58f1bffdc230294ee3c0933c57c41ef63c4ef6371b0755e4",
-      "modified": false
+      "sha256": "c4bb271117e1987dadea9e7f7649ff6c3fc13a0031972609967e6c7c68e5d972",
+      "modified": true,
+      "originalFile": "home.png",
+      "originalSHA256": "1f5911d9d6a90aba58f1bffdc230294ee3c0933c57c41ef63c4ef6371b0755e4",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "report.png",
+      "file": "report.webp",
       "original": "image15.png",
-      "sha256": "8d1264ddc72c7ca1df6c75b67b685caecd6e5b6051eb6dc7f4a07c664621503d",
-      "modified": false
+      "sha256": "0317f7c0380e20acd27165a4d705b9e354cd234c14f141f309e3a808fdf19dd3",
+      "modified": true,
+      "originalFile": "report.png",
+      "originalSHA256": "8d1264ddc72c7ca1df6c75b67b685caecd6e5b6051eb6dc7f4a07c664621503d",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "complaints.png",
+      "file": "complaints.webp",
       "original": "image17.png",
-      "sha256": "c96bc0a2dc0eb9b66a8c5605a7f45331abc8ed0634a4da3ff1787996c2e155f3",
-      "modified": false
+      "sha256": "c785e0811c966700101c5c41e59ff06d872e2efea4653a8e0d5aa2f388173152",
+      "modified": true,
+      "originalFile": "complaints.png",
+      "originalSHA256": "c96bc0a2dc0eb9b66a8c5605a7f45331abc8ed0634a4da3ff1787996c2e155f3",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "performance.png",
+      "file": "performance.webp",
       "original": "image18.png",
-      "sha256": "301118a1e67bd7d043289a49bb661e68da1ebb99ec81ed04f8921fbae17b8d2f",
-      "modified": false
+      "sha256": "e66b7df7d0b0da97c1fabf80d7b917c3be5dfdc2d8fea6c67a1cf7ee8f64f80f",
+      "modified": true,
+      "originalFile": "performance.png",
+      "originalSHA256": "301118a1e67bd7d043289a49bb661e68da1ebb99ec81ed04f8921fbae17b8d2f",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
-      "file": "community.png",
+      "file": "community.webp",
       "original": "image20.png",
-      "sha256": "eceeda86a5843aa5dd703e32f10bdcc3ff0a4a38bc4ecd9ea4ccdaa6c8401b22",
-      "modified": false
+      "sha256": "2579d5a77f755b56bf14b4e577ffdb7b1e72eb06488fdc6f8460cd1fda676565",
+      "modified": true,
+      "originalFile": "community.png",
+      "originalSHA256": "eceeda86a5843aa5dd703e32f10bdcc3ff0a4a38bc4ecd9ea4ccdaa6c8401b22",
+      "modification": "Lossless WebP conversion; decoded pixels identical."
     },
     {
       "file": "prajaa-logo.svg",
       "sha256": "826cdf6167cf2a899056cb13e1bc473e5f55cf05f3d270791fe9ecf384d7c364",
       "source": "Slide 3 native logo outlines"
     }
-  ]
+  ],
+  "productionOptimization": "Lossless WebP; decoded RGBA pixels verified identical; original source files retained in protected recovery."
 }

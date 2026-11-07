@@ -31,7 +31,7 @@ window.createImportedPhones=function(gl){'use strict';
  const u=Object.fromEntries(['model','vp','eye','color','metal','rough','opacity','normalScale','baseMap','ormMap','normalMap','screenMap','shadowDepth','hasBase','hasORM','hasNormal','isScreen','shadowEnabled','shadowVP','screenRect'].map(n=>[n,gl.getUniformLocation(program,n)]));
  function load(key){if(models.has(key))return models.get(key);const entry={key,loaded:false,batches:[],textures:[],error:null,triangles:0};models.set(key,entry);
  entry.ready=(async()=>{try{const base='assets/showcase/phones/',response=await fetch(base+key+'.json',{signal:controller.signal});if(!response.ok)throw Error('Phone metadata '+response.status);const info=await response.json(),binaryResponse=await fetch(base+info.binary,{signal:controller.signal});if(!binaryResponse.ok)throw Error('Phone geometry '+binaryResponse.status);const binary=await binaryResponse.arrayBuffer();
- // Material maps are at most 1024px on the GPU; source files stay unchanged.
+ // Production maps preserve the verified original GPU pixels at this upload size.
  // Keep the cap fixed across resizes so models share one set of textures.
  entry.textureBytes=0;
  const images=await Promise.all(info.textures.map(async t=>{const response=await fetch(base+t.file,{signal:controller.signal});if(!response.ok)throw Error('Phone material '+response.status);const scale=Math.min(1,(t.maxGPUSize||1024)/Math.max(t.width,t.height)),width=Math.max(1,Math.round(t.width*scale)),height=Math.max(1,Math.round(t.height*scale));entry.textureBytes+=Math.ceil(width*height*4*4/3);return createImageBitmap(await response.blob(),{resizeWidth:width,resizeHeight:height,colorSpaceConversion:'none'});}));

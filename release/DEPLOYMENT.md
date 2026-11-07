@@ -4,7 +4,7 @@ This is a static HTML/CSS/JavaScript/WebGL 2 application. No backend, Functions,
 
 ## Verify locally
 
-Use Node.js 24 (minimum 22). From the repository root:
+Use Node.js 24 (minimum 22). Start in the **`site-publication` checkout**, the clean publication repository. The original `site` keeps legacy Git history and must not be pushed as this release. From the publication repository root:
 
 ```sh
 npm ci
@@ -19,7 +19,7 @@ Open `http://127.0.0.1:4174/`. In another terminal run `npm run test:release`. T
 
 Playwright is a locked development dependency. The browser helper finds an installed Chromium/Chrome/Edge, or accepts `WORKSHOP_BROWSER_EXECUTABLE`. On this Windows host, `WORKSHOP_BROWSER_ANGLE=d3d11` enables the tested hardware backend. On a system without an installed browser, install Playwright Chromium with `npx playwright install chromium`. Browser captures default to ignored `verification/test-results/`; `WORKSHOP_OUTPUT` can select an external evidence directory. Physical phone and Safari checks remain separate manual verification.
 
-`npm run test:performance` records three runs across desktop and touch viewports. Set `WORKSHOP_BASELINE_URL` to an HTTP-served protected original to obtain alternating before/after runs, and `WORKSHOP_BASE_URL` to the production preview. It reports rendered frames, not raw animation-frame callback frequency.
+`npm run test:performance` records three runs across desktop and touch viewports. Set `WORKSHOP_BASELINE_URL` to an HTTP-served protected original to obtain alternating before/after runs, and `WORKSHOP_BASE_URL` to the production preview. It reports rendered frames, not raw animation-frame callback frequency. `WORKSHOP_PERF_FIXED_QUALITY=1` holds the existing balanced renderer quality and DPR cap for matched comparisons; `WORKSHOP_PERF_PROJECTS=1` also records lazy handset/project resource transfer. `WORKSHOP_PERF_RUNS` and `WORKSHOP_PERF_VIEWPORTS` can select a shorter diagnostic run. Neither changes the public application configuration.
 
 ## Create and connect GitHub
 

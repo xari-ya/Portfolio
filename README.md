@@ -2,6 +2,8 @@
 
 An interactive engineering portfolio built with HTML, CSS, JavaScript and a custom WebGL 2 renderer. One shared 3D stage connects the Assembly Hall, engineer’s workbench, project delivery line, seven project studies, Engineering & Career Lab and communications office. Accessible HTML carries the content and navigation, with an illustrated fallback when WebGL is unavailable.
 
+This `site-publication` checkout is the clean release repository. The original `site` directory retains its legacy Git history and links to the separate mobile worktree; no code was merged from another worktree.
+
 ## Run and verify
 
 Use Node.js 24 (minimum 22):
@@ -21,7 +23,7 @@ npm run audit:release
 npm run preview
 ```
 
-The production preview is `http://127.0.0.1:4174/`. With it running, `npm run test:release` exercises the built output across desktop, tablet and phone sizes, then checks dynamic interactions. Tests require installed Chromium/Chrome/Edge or `npx playwright install chromium`. `WORKSHOP_BROWSER_EXECUTABLE` selects a browser; `WORKSHOP_BROWSER_ANGLE=d3d11` selects the validated Windows hardware backend. `WORKSHOP_OUTPUT` selects an evidence directory; generated test output is ignored. `npm run test:performance` records rendered-frame measurements. See [deployment instructions](release/DEPLOYMENT.md) for paired original/production runs and environment limitations.
+The production preview is `http://127.0.0.1:4174/`. With it running, `npm run test:release` exercises the built output across desktop, tablet and phone sizes, then checks dynamic interactions and trusted touch drag/pinch. Tests require installed Chromium/Chrome/Edge or `npx playwright install chromium`. `WORKSHOP_BROWSER_EXECUTABLE` selects a browser; `WORKSHOP_BROWSER_ANGLE=d3d11` selects the validated Windows hardware backend. `WORKSHOP_OUTPUT` selects an evidence directory; generated test output is ignored. `npm run test:performance` records rendered-frame measurements. See [deployment instructions](release/DEPLOYMENT.md) for paired original/production runs and environment limitations.
 
 ## Source layout
 

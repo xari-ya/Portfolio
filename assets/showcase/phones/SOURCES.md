@@ -1,5 +1,7 @@
 # Authored handset provenance
 
+Production release note: the preparation stage described below preserves original maps. The final runtime manifests additionally use smaller lossless WebP maps at the renderer's existing upload dimensions only when GPU pixel readback is identical. Original map hashes remain in `originalTexture` records and originals remain in the protected local recovery archive. One duplicate compact map entry is consolidated with unchanged material mapping. See the root release asset manifest.
+
 Runtime credits are in [CREDITS.html](CREDITS.html). Original models and acquisition metadata are retained under `verification/showcase/phone-source/` for reproducibility. The portfolio uses the prepared mesh buffers, not an external viewer or rendering framework.
 
 | Runtime variant | Original asset | Author | Licence | Original SHA-256 |

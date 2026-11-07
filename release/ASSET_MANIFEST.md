@@ -6,7 +6,7 @@ The authoritative copy allowlist is [`tools/runtime-assets.json`](../tools/runti
 
 | Runtime asset | Purpose and integrity |
 |---|---|
-| `engine.js` | Existing embedded TerraVita Rev 4 data and procedural Obsidian, JellyCast, SENTINEL and related project scenes; original geometry/animation data retained. Only responsive query caching and a license comment changed. |
+| `engine.js` | Existing embedded TerraVita Rev 4 data and procedural Obsidian, JellyCast, SENTINEL and related project scenes; original geometry/animation data retained. Only a source license comment and normalized line endings changed; geometry and runtime behavior match the approved source. |
 | `workshop-hall.js`, room/exhibit scripts | Approved hall, Kira two-eye geometry, rooms, equipment, lighting, camera and animation logic. No renderer migration, blanket simplification or model substitution. |
 | `engineer-assets/character/sarith-engineer-{desktop,mobile}.glb` | Original optimized skinned engineer exports, unchanged byte hashes. Both retain eight clips and the authored rig; desktop/mobile variants are intentional. |
 | `engineer-assets/laptop/legion-model.js` | Supplied Legion model adapter and hinge/material geometry, preserved. |
@@ -30,15 +30,15 @@ No general source/asset license is granted. Phone source credits (CC BY 4.0 / CC
 
 | Category | Files | Bytes |
 |---|---:|---:|
-| Room art, institutional marks, credits and publication metadata | 48 | 2,557,461 |
+| Room art, institutional marks, credits and publication metadata | 48 | 2,557,454 |
 | CV | 1 | 5,036,103 |
 | Local typography | 3 | 224,100 |
-| Application code, embedded geometry, shaders and styles | 88 | 4,487,612 |
-| Project previews and fallbacks | 22 | 1,676,858 |
+| Application code, embedded geometry, shaders and styles | 88 | 4,487,311 |
+| Project previews and fallbacks | 7 | 241,681 |
 | Project artwork | 11 | 2,049,450 |
-| Handset geometry and PBR materials | 49 | 12,572,458 |
+| Handset geometry and PBR materials | 49 | 12,572,621 |
 | Engineer models | 2 | 6,969,520 |
-| **Total** | **224** | **35,573,562** |
+| **Total** | **209** | **34,138,240** |
 
 No runtime npm dependencies or external trackers/CDNs are loaded. Fonts and shader sources are local. The meshopt decoder is loaded only for compatible compressed engineer models. Production output excludes reports, tests, caches, editing masters and recovery data.
 
@@ -57,33 +57,18 @@ Sizes describe the domain-unset artifact; setting an origin adds a sitemap and a
 | `assets/licenses/GSHHG-COPYING.LESSER.txt` | 7,651 |
 | `assets/licenses/GSHHG-COPYING.txt` | 35,150 |
 | `assets/licenses/jellycast-shoreline.js` | 27,848 |
-| `assets/projects/analog-fsk-first.jpg` | 80,549 |
 | `assets/projects/analog-fsk-model.jpg` | 22,827 |
-| `assets/projects/analog-fsk.png` | 48,523 |
-| `assets/projects/click-claim-first.jpg` | 80,812 |
 | `assets/projects/click-claim-model.jpg` | 33,296 |
-| `assets/projects/click-claim.png` | 52,167 |
-| `assets/projects/habitseed-first.jpg` | 61,704 |
 | `assets/projects/habitseed-model.jpg` | 51,807 |
-| `assets/projects/habitseed.png` | 17,259 |
 | `assets/projects/jellycast-model.jpg` | 35,782 |
-| `assets/projects/jellycast.png` | 370,896 |
-| `assets/projects/kira.png` | 260,406 |
-| `assets/projects/obsidian-first.jpg` | 81,370 |
 | `assets/projects/obsidian-model.jpg` | 35,969 |
-| `assets/projects/obsidian.png` | 62,260 |
-| `assets/projects/prajaa-first.jpg` | 92,130 |
 | `assets/projects/prajaa-model.jpg` | 39,023 |
-| `assets/projects/prajaa.png` | 51,629 |
-| `assets/projects/sentinel-model.jpg` | 28,288 |
-| `assets/projects/sentinel.png` | 55,162 |
 | `assets/projects/terravita-model.jpg` | 22,977 |
-| `assets/projects/terravita.png` | 92,022 |
 | `assets/showcase/habitseed/04-home.webp` | 395,310 |
 | `assets/showcase/habitseed/06-habit-detail.webp` | 375,742 |
 | `assets/showcase/habitseed/07-stats.webp` | 146,328 |
 | `assets/showcase/habitseed/08-store.webp` | 450,006 |
-| `assets/showcase/phones/CREDITS.html` | 1,693 |
+| `assets/showcase/phones/CREDITS.html` | 1,856 |
 | `assets/showcase/phones/compact.bin` | 300,440 |
 | `assets/showcase/phones/compact.json` | 15,879 |
 | `assets/showcase/phones/iphone-10.jpg` | 60,481 |
@@ -158,15 +143,15 @@ Sizes describe the domain-unset artifact; setting an origin adds a sitemap and a
 | `communications-room/daylight.js` | 5,436 |
 | `communications-room/exterior.js` | 2,179 |
 | `communications-room/graphics.js` | 8,521 |
-| `communications-room/interface.js` | 12,321 |
+| `communications-room/interface.js` | 12,293 |
 | `communications-room/materials.js` | 2,902 |
 | `communications-room/pendulum.js` | 2,598 |
-| `communications-room/phone.js` | 8,713 |
+| `communications-room/phone.js` | 8,508 |
 | `communications-room/room.css` | 11,745 |
 | `communications-room/room.js` | 26,360 |
 | `communications-room/screens.js` | 2,175 |
 | `credits.html` | 2,685 |
-| `engine.js` | 3,480,035 |
+| `engine.js` | 3,479,967 |
 | `engineer-about.css` | 15,579 |
 | `engineer-about.js` | 7,085 |
 | `engineer-assets/character/sarith-engineer-desktop.glb` | 4,714,976 |
@@ -177,7 +162,7 @@ Sizes describe the domain-unset artifact; setting an origin adds a sitemap and a
 | `engineer-station.js` | 10,065 |
 | `engineering-career-lab/archive-display.css` | 15,952 |
 | `engineering-career-lab/archive-display.js` | 13,289 |
-| `engineering-career-lab/assets/archive/CREDITS.html` | 2,514 |
+| `engineering-career-lab/assets/archive/CREDITS.html` | 2,507 |
 | `engineering-career-lab/assets/archive/LICENSE-tabler.txt` | 1,073 |
 | `engineering-career-lab/assets/archive/aiesec.png` | 12,432 |
 | `engineering-career-lab/assets/archive/ananda-college.png` | 75,510 |

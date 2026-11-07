@@ -1,6 +1,5 @@
 (()=>{'use strict';
-const mobileLayoutQuery=matchMedia('(max-width:759px)');
-const $=id=>document.getElementById(id),clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*t,smooth=x=>{x=clamp(x);return x*x*(3-2*x)},ease5=x=>{x=clamp(x);return x*x*x*(x*(x*6-15)+10)},mobile=()=>mobileLayoutQuery.matches;
+const $=id=>document.getElementById(id),clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*t,smooth=x=>{x=clamp(x);return x*x*(3-2*x)},ease5=x=>{x=clamp(x);return x*x*x*(x*(x*6-15)+10)},mobile=()=>innerWidth<760;
 const phoneUIQuery=matchMedia('(max-width:760px)');
 document.querySelectorAll('#work,#inspect').forEach(el=>{el.classList.add('legacy-hall-slide');el.inert=true;el.setAttribute('aria-hidden','true');});
 const frames=[...document.querySelectorAll('.frame')],chapterTitles=['MAIN ASSEMBLY HALL','HUMAN / BEHIND THE WORK','PRODUCTION LINE / IN MOTION','PRECISION ASSEMBLY / ACTIVE','ARCHIVE / INTERACTIVE','PROJECT / INTERNALS','NEXT BUILD / OPEN'];

@@ -9,7 +9,7 @@
     "preview": "node tools/serve.mjs --dist --port 4174",
     "check": "node tools/check.mjs",
     "test": "node tools/test.mjs",
-    "test:release": "node verification/release/check.cjs && node verification/release/interactions.cjs",
+    "test:release": "node verification/release/check.cjs && node verification/release/interactions.cjs && node verification/release/touch.cjs",
     "test:performance": "node verification/release/performance.cjs",
     "audit:release": "node tools/audit-release.mjs"
   },

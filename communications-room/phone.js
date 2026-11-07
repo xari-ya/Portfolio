@@ -1,21 +1,20 @@
 /* Phone-only presentation of the existing office, shared actors and display. */
 (()=>{'use strict';
- const query=matchMedia('(max-width:760px)'),reducedMotion=matchMedia('(prefers-reduced-motion: reduce)'),L=CommunicationsLayout;
- let viewportWidth=innerWidth,viewportHeight=innerHeight;
+ const query=matchMedia('(max-width:760px)'),L=CommunicationsLayout;
  const mix=(a,b,t)=>a+(b-a)*t,vec=(a,b,t)=>a.map((v,i)=>mix(v,b[i],t));
  const phone=window.CommunicationsPhone={
   get active(){return query.matches;},amount:query.matches?1:0,
   safeTop:0,safeBottom:0,viewportDirty:true,
   get top(){return 65+this.safeTop;},
-  get span(){return Math.max(3.9,2.50/(viewportWidth/Math.max(1,viewportHeight-this.top-this.safeBottom)));},
-  get boardFraction(){return viewportHeight<=700?.80:.75;},
+  get span(){return Math.max(3.9,2.50/(innerWidth/Math.max(1,innerHeight-this.top-this.safeBottom)));},
+  get boardFraction(){return innerHeight<=700?.80:.75;},
   get screen(){const height=this.span*this.boardFraction;return {center:[0,.90+height/2,-2.40],size:[2.25,height]};},
   get eyeHeight(){return Math.max(.15,Math.min(.35,(this.span-3.9)*.2+.15));},
   get targetHeight(){return .90+this.span*this.boardFraction-this.span*.48;},
   dock:[.56,0,-1.20],engineer:[-.70,.02,-1.15],laptop:[-.02,.36,-.78],
   buttons:Array.from({length:4},(_,i)=>({x:.07,y:.515+i*.115,w:.86,h:.105})),
   navigation:[{x:.07,y:.022,w:.415,h:.105},{x:.515,y:.022,w:.415,h:.105}],
-  update(dt,progress=1){viewportWidth=innerWidth;viewportHeight=innerHeight;const key=viewportWidth+':'+viewportHeight;if((this.viewportDirty||this.viewportKey!==key)&&typeof getComputedStyle==='function'){this.viewportDirty=false;this.viewportKey=key;const style=getComputedStyle(document.documentElement);this.safeTop=parseFloat(style.getPropertyValue('--comms-safe-top'))||0;this.safeBottom=parseFloat(style.getPropertyValue('--comms-safe-bottom'))||0;}let goal=query.matches?Math.max(0,Math.min(1,(progress-.967)/.023)):0;goal=goal*goal*(3-2*goal);this.amount=reducedMotion.matches?goal:mix(this.amount,goal,1-Math.exp(-Math.min(dt,.05)*12));if(Math.abs(this.amount-goal)<.001)this.amount=goal;},
+  update(dt,progress=1){const key=innerWidth+':'+innerHeight;if((this.viewportDirty||this.viewportKey!==key)&&typeof getComputedStyle==='function'){this.viewportDirty=false;this.viewportKey=key;const style=getComputedStyle(document.documentElement);this.safeTop=parseFloat(style.getPropertyValue('--comms-safe-top'))||0;this.safeBottom=parseFloat(style.getPropertyValue('--comms-safe-bottom'))||0;}let goal=query.matches?Math.max(0,Math.min(1,(progress-.967)/.023)):0;goal=goal*goal*(3-2*goal);this.amount=matchMedia('(prefers-reduced-motion: reduce)').matches?goal:mix(this.amount,goal,1-Math.exp(-Math.min(dt,.05)*12));if(Math.abs(this.amount-goal)<.001)this.amount=goal;},
   get roomScale(){return [1,mix(1,Math.max(1.2,(.90+this.span*this.boardFraction)/3.6+.05),this.amount),1];},
   get screenPlane(){return {center:vec(L.screen.center,this.screen.center,this.amount),size:vec(L.screen.size,this.screen.size,this.amount)};},
   get dockPosition(){return vec(L.dock,this.dock,this.amount);},
@@ -94,6 +93,6 @@
  window.addEventListener('wheel',scrollInput,{passive:false,capture:true});
  window.addEventListener('touchmove',scrollInput,{passive:false,capture:true});
  window.addEventListener('keydown',e=>{if(!locked()||e.ctrlKey||e.metaKey||e.altKey||e.target.closest?.('input,textarea,select,[contenteditable=true]'))return;if(e.key===' '&&e.target.closest?.('button,a'))return;if(['PageUp','PageDown','Home','End','ArrowUp','ArrowDown',' '].includes(e.key))e.preventDefault();},{capture:true});
- window.addEventListener('resize',()=>{viewportWidth=innerWidth;viewportHeight=innerHeight;phone.viewportDirty=true;const navigation=window.WorkshopNavigation;if(navigation&&CommunicationsRoom.inRange(navigation.getState().progress)&&phone.active)requestAnimationFrame(()=>{if(CommunicationsRoom.inRange(navigation.getState().progress)&&!window.ProjectStudy?.active)navigation.navigate('communications',{instant:true});});});
+ window.addEventListener('resize',()=>{phone.viewportDirty=true;const navigation=window.WorkshopNavigation;if(navigation&&CommunicationsRoom.inRange(navigation.getState().progress)&&phone.active)requestAnimationFrame(()=>{if(CommunicationsRoom.inRange(navigation.getState().progress)&&!window.ProjectStudy?.active)navigation.navigate('communications',{instant:true});});});
  query.addEventListener('change',()=>{CommunicationsCamera?.reset();});
 })();

@@ -1,6 +1,6 @@
 /* Accessible controls track the depth-tested display; reused models stay in front. */
 (()=>{'use strict';
- const lifecycleAbort=new AbortController(),reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+ const lifecycleAbort=new AbortController();
  const panel=document.createElement('section');panel.id='communicationsPanel';panel.className='communications-panel';panel.hidden=true;panel.inert=true;panel.setAttribute('aria-label','Office and communications');
  panel.innerHTML='<div class="comms-copy"><span>07 / COMMUNICATIONS</span><h2>LET’S BUILD <em>SOMETHING.</em></h2><p>Interested in collaborating, discussing an engineering project, or exploring an internship opportunity? I’d love to connect.</p></div><div class="comms-actions"></div>';
  const paths=[
@@ -74,7 +74,7 @@
  window.CommunicationsInterface={
   update(p,camera){
    if(camera)lastCamera=camera;
-   const life=CommunicationsRoom.behaviour;life.tick(p,performance.now(),{hidden:document.hidden,blocked:!!window.ProjectStudy?.active||!!window.__kiraSequence?.active||!!(window.WorkshopNavigation?.getState().intent&&!['communications','contact'].includes(window.WorkshopNavigation.getState().intent?.destination)),reduced:reducedMotion.matches});
+   const life=CommunicationsRoom.behaviour;life.tick(p,performance.now(),{hidden:document.hidden,blocked:!!window.ProjectStudy?.active||!!window.__kiraSequence?.active||!!(window.WorkshopNavigation?.getState().intent&&!['communications','contact'].includes(window.WorkshopNavigation.getState().intent?.destination)),reduced:matchMedia('(prefers-reduced-motion: reduce)').matches});
    CommunicationsRoom.hover=life.selected;CommunicationsRoom.pressed=life.pressed;
    const on=p>=.98&&!window.ProjectStudy?.active&&!window.__kiraSequence?.active;
    panel.hidden=!on;panel.inert=!on;nav.hidden=!on;CommunicationsRoom.active=on;

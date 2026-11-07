@@ -1,6 +1,6 @@
 # Sarith Dodangodage — Assembly Required
 
-An interactive engineering portfolio built with HTML, CSS, JavaScript and a custom WebGL 2 renderer. One shared 3D stage connects the Assembly Hall, engineer’s workbench, project delivery line, eight project studies, Engineering & Career Lab and communications office. Accessible HTML carries the content and navigation, with an illustrated fallback when WebGL is unavailable.
+An interactive engineering portfolio built with HTML, CSS, JavaScript and a custom WebGL 2 renderer. One shared 3D stage connects the Assembly Hall, engineer’s workbench, project delivery line, seven project studies, Engineering & Career Lab and communications office. Accessible HTML carries the content and navigation, with an illustrated fallback when WebGL is unavailable.
 
 ## Run and verify
 

@@ -2,7 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 assert.ok(process.env.WORKSHOP_BASELINE_URL,'Serve the protected original and set WORKSHOP_BASELINE_URL');
 const output=path.resolve(process.env.WORKSHOP_OUTPUT||'verification/test-results/visual');fs.mkdirSync(output,{recursive:true});
 const report={method:'Reduced motion, seeded random source, fixed renderer timestamps, fixed manufacturing time; static geometry/material comparison. Normal-motion captures and physical delivery tests are separate.',captures:[],errors:[]};
-const states=['overview','about','production','lab','skills','experience','communications','obsidian','terravita','jellycast','sentinel','click-claim','analog-fsk','habitseed','prajaa','jellycast-map'];
+const states=['overview','about','production','lab','skills','experience','communications','obsidian','terravita','jellycast','click-claim','analog-fsk','habitseed','prajaa','jellycast-map'];
 async function settle(p,time){for(let i=0;i<6;i++){await p.evaluate(t=>{window.__releaseTimestamp=t;},time+i*200);await p.waitForTimeout(90);}}
 (async()=>{const b=await launch();try{for(const [width,height] of [[1440,900],[390,844]])for(const [name,url] of [['baseline',process.env.WORKSHOP_BASELINE_URL],['production',process.env.WORKSHOP_BASE_URL||'http://127.0.0.1:4174']]){
  const p=await b.newPage({viewport:{width,height},isMobile:width<760,hasTouch:width<760,reducedMotion:'reduce'});p.on('pageerror',e=>report.errors.push(e.message));

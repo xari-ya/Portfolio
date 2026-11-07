@@ -52,7 +52,7 @@ No force push, history rewrite or `git add .` is needed. Review and stage explic
 The build uses only Node built-ins. The output allowlist is `tools/runtime-assets.json`; tests, original source artwork, reports, dependencies and recovery files never enter `dist`. Do not point Pages at the repository root.
 
 3. Initially leave `SITE_ORIGIN` unset. The build omits canonical/absolute sharing URLs and sitemap until an actual deployment origin is known. After the first deployment, optionally set `SITE_ORIGIN` to its exact HTTPS origin **without a trailing slash**, then rebuild. Once a custom domain is active, replace it with that canonical origin. No domain has been invented in the source.
-4. Test the assigned `pages.dev` URL: loader, all rooms, all eight project studies, phone navigation, contact, CV, credits, a missing route, and asset requests. Check browser console and network errors. Confirm HTTPS, content types, `_headers` policies, compression and cache revalidation. These live Cloudflare checks have not been run locally.
+4. Test the assigned `pages.dev` URL: loader, all rooms, all seven project studies, phone navigation, contact, CV, credits, a missing route, and asset requests. Check browser console and network errors. Confirm HTTPS, content types, `_headers` policies, compression and cache revalidation. These live Cloudflare checks have not been run locally.
 
 Pages Free currently permits 20,000 files and a maximum 25 MiB per static asset. The build enforces these limits. [Cloudflare limits](https://developers.cloudflare.com/pages/platform/limits/), [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/).
 

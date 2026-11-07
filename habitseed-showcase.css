@@ -20,7 +20,7 @@
 #projectStudy .habit-privacy{padding:12px 0 0;margin:14px 0 0;border-top:1px solid #d1e8ee30}
 #projectStudy .habit-privacy strong{display:block;font:9px/1.5 monospace;letter-spacing:.08em;color:var(--study-accent)}
 #projectStudy .habit-privacy p{margin:7px 0 8px;font:13px/1.55 Arial,Helvetica,sans-serif;color:#d5e0e3}
-#projectStudy .habit-privacy span{display:block;font:8px/1.6 monospace;color:#9db6b0}
+#projectStudy .habit-privacy span{display:block;margin-top:7px;font:8px/1.6 monospace;color:#9db6b0}
 
 @media(max-width:1039px){
  #projectStudy .habit-controls button{min-height:44px;font-size:10px}

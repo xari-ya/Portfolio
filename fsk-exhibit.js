@@ -138,6 +138,7 @@
   pages.forEach(page=>{
    const mobile=document.createElement('div');
    mobile.className='fsk-instrument fsk-mobile-instrument';
+   if(page===pages[2]) return;
    page.append(mobile);
   });
   lastChapter=-1;
@@ -173,7 +174,8 @@
    node.querySelector('b').textContent=d[index];
    node.querySelector('span').textContent=d[index+1];
   }
-  hud.querySelector('.fsk-instrument').innerHTML=chapter===0?waveTemplate():chapter===1?'<b>THE ANALOG RECOVERY CHAIN</b><div class="fsk-chain"><span>IR SENSOR<small>Threshold</small></span><span>BPF × 2<small>Separate</small></span><span>DIODE + RC<small>Envelope</small></span><span>COMPARATOR<small>Decision</small></span></div>':'<b>SOURCE & ENGINEERING NOTES</b><p>Analog modulation, optical transmission and frequency-selective recovery.</p><small>Board placement follows supplied model source. Receiver IC assignment is interpreted; its source alternates TL072 and LM358.</small>';
+  hud.querySelector('.fsk-instrument').innerHTML=chapter===0?waveTemplate():chapter===1?'<b>THE ANALOG RECOVERY CHAIN</b><div class="fsk-chain"><span>IR SENSOR<small>Threshold</small></span><span>BPF × 2<small>Separate</small></span><span>DIODE + RC<small>Envelope</small></span><span>COMPARATOR<small>Decision</small></span></div>':'';
+  hud.querySelector('.fsk-instrument').hidden=chapter===2;
   updateWaveformLabels();
  }
 

@@ -1,57 +1,109 @@
-# Sarith Dodangodage — Assembly Required
+<img src="docs/media/github-banner-final-v4.png" alt="Sarith Dodangodage — Engineering Portfolio" width="100%">
 
-An interactive engineering portfolio built with HTML, CSS, JavaScript and a custom WebGL 2 renderer. One shared 3D stage connects the Assembly Hall, engineer’s workbench, project delivery line, seven project studies, Engineering & Career Lab and communications office. Accessible HTML carries the content and navigation, with an illustrated fallback when WebGL is unavailable.
+An interactive 3D engineering portfolio built as a virtual workshop, showcasing projects in robotics, embedded systems, automation, AI, and software engineering.
 
-This `site-publication` checkout is the clean release repository. The original `site` directory retains its legacy Git history and links to the separate mobile worktree; no code was merged from another worktree.
+**[Explore the live portfolio →](https://portfolio-bu2.pages.dev/)** · [Browse the source](https://github.com/xari-ya/Portfolio)
 
-## Run and verify
+## Inside the workshop
 
-Use Node.js 24 (minimum 22):
+The portfolio turns project exploration into a journey through an engineering workshop. A working assembly line, an engineer’s workbench, and a shared 3D environment connect the projects, background, skills, and contact areas. Selecting a project sends it through the production line before opening its individual study.
+
+Desktop and mobile have their own responsive compositions and controls. Project chapters pair technical descriptions with interactive models, while HTML provides the reading surfaces, navigation, and an illustrated fallback when WebGL is unavailable.
+
+## Experience showcase
+
+<img src="docs/media/workshop-desktop.png" alt="The Main Assembly Hall on desktop, with the assembly robot, conveyor, miniature engineer, and Kira" width="100%">
+
+<p align="center">
+  <img src="docs/media/workshop-mobile.png" alt="The responsive workshop home screen on mobile" width="300">
+</p>
+
+<details>
+<summary>Project Discovery, a project study, and the Engineering &amp; Career Lab</summary>
+
+<img src="docs/media/discovery-desktop.png" alt="Project Discovery and the production line" width="100%">
+<img src="docs/media/project-desktop.png" alt="Project Obsidian’s interactive micromouse study" width="100%">
+<img src="docs/media/lab-desktop.png" alt="The Engineering and Career Lab" width="100%">
+
+</details>
+
+These are captures of the running production build at **1440 × 900** and **390 × 844**. [Screenshot index and mobile views](docs/media/README.md).
+
+## Explore the workshop
+
+| Area | What to explore |
+| --- | --- |
+| **Main Assembly Hall** | The workshop entrance, working assembly cell, conveyor, and Kira. |
+| **The Engineer** | The engineer’s workbench, introduction, education, interests, and direction. |
+| **Project Discovery** | Browse seven projects and select one for delivery and inspection. |
+| **Project Study** | Three chapters per project, with technical information, models, and project-specific controls. |
+| **Engineering & Career Lab** | The Toolbox’s embedded systems, robotics, design, and software categories; archives for leadership, experience, and achievements. |
+| **Communications / Contact** | Existing contact links and a downloadable résumé. |
+
+## Featured engineering projects
+
+| Project | Focus |
+| --- | --- |
+| **Project Obsidian** | Autonomous micromouse work combining ESP32 control, sensor feedback, navigation, and a Webots / ROS 2 simulation counterpart. |
+| **TerraVita** | Compost-monitoring instrumentation using an ESP32-C3, environmental sensors, embedded electronics, and data monitoring. |
+| **JellyCast** | Research into jellyfish abundance forecasting and coastal decision support for Sri Lanka’s western coastline. |
+| **Analog FSK / IR** | A microcontroller-free infrared communication system using discrete analog electronics and dedicated circuit boards. |
+| **Click Claim** | A three-person insurance incident and field-inspection project, including database engineering, reporting, and backend integration. |
+| **HabitSeed** | A native Android habit-tracking app with plant growth, streaks, rewards, and social features. |
+| **Prajaa** | A team concept for local-government transparency, representative information, and citizen participation. |
+
+## Technology and architecture
+
+| Layer | Implementation |
+| --- | --- |
+| **Interface** | HTML, CSS, and JavaScript; responsive desktop and mobile layouts. |
+| **Rendering** | Custom WebGL 2 rendering, procedural geometry, shaders, and imported model assets. |
+| **Interaction** | Shared journey navigation, assembly and delivery controllers, project chapters, orbit controls, and touch interaction. |
+| **Build** | Node.js scripts assemble an explicit static asset allowlist into `dist/`. |
+| **Verification** | Node.js controller tests and Playwright browser, interaction, and touch checks. |
+| **Hosting** | Cloudflare Pages, connected to the GitHub production branch. |
+
+The renderer and scene controllers are implemented directly in JavaScript. The site has no runtime npm dependencies.
+
+Useful source entry points: [engine](engine.js), [project registry](project-registry.js), [project studies](project-study.js), [workshop systems](workshop-system.js), and [build](tools/build.mjs).
+
+## Run locally
+
+Use **Node.js 22 or newer**; the production setup uses Node.js 24.
 
 ```sh
+git clone https://github.com/xari-ya/Portfolio.git
+cd Portfolio
 npm ci
 npm start
 ```
 
-Open `http://127.0.0.1:4173/`. Serving and building use Node built-ins; npm installation is needed only for Playwright development tests.
+Open **http://127.0.0.1:4173/**. To build and serve the production output:
+
+```sh
+npm run build
+npm run preview
+```
+
+Open **http://127.0.0.1:4174/**. With that preview running, the existing checks are:
 
 ```sh
 npm run check
 npm test
-npm run build
 npm run audit:release
-npm run preview
+npm run test:release
 ```
 
-The production preview is `http://127.0.0.1:4174/`. With it running, `npm run test:release` exercises the built output across desktop, tablet and phone sizes, then checks dynamic interactions and trusted touch drag/pinch. Tests require installed Chromium/Chrome/Edge or `npx playwright install chromium`. `WORKSHOP_BROWSER_EXECUTABLE` selects a browser; `WORKSHOP_BROWSER_ANGLE=d3d11` selects the validated Windows hardware backend. `WORKSHOP_OUTPUT` selects an evidence directory; generated test output is ignored. `npm run test:performance` records rendered-frame measurements. See [deployment instructions](release/DEPLOYMENT.md) for paired original/production runs and environment limitations.
+Browser checks use an installed Chromium, Chrome, or Edge. If none is available, run `npx playwright install chromium`. On Windows, the validated hardware backend can be selected in PowerShell with `$env:WORKSHOP_BROWSER_ANGLE='d3d11'`. [Verification and deployment details](release/DEPLOYMENT.md).
 
-## Source layout
+## Deployment
 
-| Location | Purpose |
-|---|---|
-| `index.html`, CSS files | Content, responsive layouts and approved visual design |
-| `engine.js`, `workshop-hall.js` | Existing renderer, project geometry and journey/camera choreography |
-| `workshop-system.js`, `project-delivery.js` | Manufacturing, component ownership and delivery state machines |
-| Registry, study and exhibit scripts | Project discovery, chapters and technical studies |
-| `engineering-career-lab/`, `communications-room/` | Room geometry, skills, archives, Kira behavior and contact |
-| `engineer-assets/`, `assets/`, `character-assets/` | Runtime exports, artwork, maps, fonts and provenance |
-| `tools/` | Deterministic build, case-sensitive preview and release checks |
-| `verification/` | Maintained controller tests, current browser checks and release harnesses |
-| `release/` | Lightweight cleanup, performance, audit, asset and deployment reports |
-| `dist/` | Generated deployment only; ignored by Git |
+The live portfolio is deployed through Cloudflare Pages from **`release/production`**. The build command is **`npm run build`**, and the output directory is **`dist`**. Only the runtime asset allowlist is deployed; repository documentation and verification captures stay outside the website build.
 
-No React, Three.js, CDN, analytics or runtime framework is required. The approved motion, room designs, dual-eye Kira model and mobile navigation remain intact. Debug controls appear only with `?workshopDebug`.
+Sharing metadata uses **https://portfolio-bu2.pages.dev/** and the approved 1200 × 630 artwork. `SITE_ORIGIN` can override that origin after a replacement domain is connected and verified. **`sarith.me` is planned; it is not used as the live URL here.** [Publication and rollback procedure](release/DEPLOYMENT.md).
 
-## Projects and asset maintenance
+## Explore and connect
 
-Register project metadata in `project-registry.js`. For a new model or narrative, follow the existing study adapters and custom renderer. Add every dynamic dependency to `tools/runtime-assets.json`, including viewport alternatives, failure and fallback assets. Keep exact filename case and run production browser tests after path, material or navigation changes.
+[Enter the workshop](https://portfolio-bu2.pages.dev/) and use its Contact interface to get in touch.
 
-The runtime allowlist and [asset manifest](release/ASSET_MANIFEST.md) define the deployment contract. Keep editing sources outside `dist`; use the [recovery index](release/LOCAL_RECOVERY.md) to recover original artwork when needed. Historical mutation scripts and tests tied to old capture fixtures are archived with the original project.
-
-Phone map optimization requires smaller files and byte-identical GPU-upload pixels. Other converted UI images use lossless WebP with unchanged RGBA pixels. Material filenames carry content hashes; identical entries share canonical resources. Preserve LOD dimensions, material relationships, original hashes and attributions. Do not reduce engineering model fidelity or substitute generic models for a benchmark.
-
-## Publication and ownership
-
-Deploy only `dist`, generated by `npm run build`. Cloudflare Pages settings: branch `release/production`, build `npm run build`, output `dist`, `NODE_VERSION=24`. Origin-dependent metadata and sitemap are generated only when `SITE_ORIGIN` is supplied. [Publication and rollback procedure](release/DEPLOYMENT.md).
-
-No general open-source license is granted. Third-party components retain their own terms: phone CC BY 4.0/CC0, font OFL, icon/decoder MIT, and identified shoreline data LGPL. The owner confirmed redistribution permission for the office car geometry during release preparation. Organization marks retain their owners’ rights. See [public credits](credits.html) and provenance records. Public repository visibility does not authorize reuse.
+Source and artwork retain their existing ownership and third-party terms. [Asset credits](https://portfolio-bu2.pages.dev/credits.html).

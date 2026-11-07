@@ -12,12 +12,11 @@
    // Keep engine-owned telemetry nodes mounted, while replacing the obsolete reading structure.
    const telemetry=page.querySelector('.obs-progress-line');if(telemetry)telemetry.hidden=true;
    const hint=page.querySelector('.obs-hint');
-   const note=page.querySelector('.obs-truth'),disclaimer=page.querySelector('.study-record-disclaimer');
    const label=document.createElement('div');label.className='exhibit-section';label.textContent=`0${i+1} / ${['OVERVIEW','NAVIGATION','SUBSYSTEMS'][i]}`;
    const h=document.createElement('h2');h.innerHTML=titles[i];const p=document.createElement('p');p.textContent=copy[i];page.replaceChildren(label,h,p,...controls.filter(Boolean));
    if(i===1){const run=document.createElement('div');run.className='obs-auto-controls';run.innerHTML='<button type="button" id="obsAutoToggle" data-obs-auto="toggle" aria-pressed="false">PAUSE AUTO RUN</button><button type="button" data-obs-auto="restart">RESTART ROUTE</button>';page.append(run);}
    if(i===0){controls[0].innerHTML='<span>ESP32 CONTROL</span><span>3× TOF SENSING</span><span>DUAL N20 DRIVE</span><span>MAZE ROBOTICS</span>';if(telemetry)page.append(telemetry);}
-   if(hint){hint.hidden=true;page.append(hint);}if(note)page.append(note);if(disclaimer)page.append(disclaimer);
+   if(hint){hint.hidden=true;page.append(hint);}
   });
   const host=document.getElementById('studyModelHud');let labels=host.querySelector('.exhibit-leaders');
   if(!labels){labels=document.createElement('div');labels.className='exhibit-leaders';labels.setAttribute('aria-label','Robot assemblies');for(const [name,cl]of [['Main PCB','pcb'],['Sensor array','sensors'],['Drive motors','motors'],['Chassis stack','chassis'],['Rear ball caster','caster']]){const label=document.createElement('span');label.className='exhibit-leader '+cl;label.textContent=name;labels.append(label);}host.append(labels);}

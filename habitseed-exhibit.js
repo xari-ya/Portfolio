@@ -40,10 +40,6 @@
    home.append(b);
   }
   pages[0].append(home);
-  const note=document.createElement('p');
-  note.className='habit-note';
-  note.textContent='Actual application screens from the project repository. Drag to orbit the physical device.';
-  pages[0].append(note);
 
   // Chapter 1: Growth Engine with Auto-growth & Dragger
   const growth=document.createElement('div');
@@ -57,14 +53,13 @@
        <button type="button" id="habitWater" title="Water habit manually">+ WATER HABIT<br>+10 DROPS · +10 XP</button>
      </div>
    </div>
-   <p id="habitRewards"></p>
-   <small>REAL-TIME BOTANICAL ENGINE · SEED STAGE 0 TO FULL BLOOM STAGE 6</small>`;
+   <p id="habitRewards"></p>`;
   pages[1].append(growth);
 
   // Chapter 2: Privacy & Data Architecture
   const privacy=document.createElement('div');
   privacy.className='habit-privacy';
-  privacy.innerHTML='<strong>PRIVATE STORAGE / ROOM DATABASE</strong><p>Habit titles, notes, exact Garden XP, water-drop balances and completion logs are not included in public Firebase profiles.</p><span>KOTLIN / MVVM · HILT · ROOM + FLOWS · WORKMANAGER · FIREBASE AUTH · FIRESTORE</span>';
+  privacy.innerHTML='<strong>PRIVATE STORAGE / ROOM DATABASE</strong><span>KOTLIN / MVVM · HILT · ROOM + FLOWS · WORKMANAGER · FIREBASE AUTH · FIRESTORE</span>';
   const flowControls=document.createElement('div');
   flowControls.className='habit-controls';
   flowControls.innerHTML='<button type="button" data-habit-flow="private">01 PRIVATE / LOCAL</button><button type="button" data-habit-flow="public">02 PUBLIC / SOCIAL</button>';

@@ -38,7 +38,7 @@ for (const file of sources) { safePath(root, file); exactFile(file); }
 const old = fs.existsSync(statePath) ? JSON.parse(fs.readFileSync(statePath, 'utf8')).files : [];
 const existing = files(output);
 for (const file of existing) if (!old.includes(file)) throw Error(`Unrecognized dist file; preserve or move it before building: ${file}`);
-const origin = process.env.SITE_ORIGIN;
+const origin = process.env.SITE_ORIGIN || 'https://portfolio-bu2.pages.dev';
 if (origin && (new URL(origin).protocol !== 'https:' || new URL(origin).origin !== origin || !/^[a-z0-9.-]+$/i.test(new URL(origin).hostname))) throw Error('SITE_ORIGIN must be an HTTPS domain origin without a trailing slash');
 const preview = process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH !== 'release/production';
 const built = [];
@@ -47,7 +47,7 @@ for (const file of sources) {
   let bytes = fs.readFileSync(exactFile(file));
   if (file === 'index.html') {
     let html = bytes.toString('utf8');
-    if (origin) html = html.replace('</head>', `<link rel="canonical" href="${origin}/"><meta property="og:url" content="${origin}/"><meta property="og:image" content="${origin}/assets/projects/obsidian-model.jpg">\n</head>`);
+    html = html.replaceAll('https://portfolio-bu2.pages.dev/', origin + '/');
     if (preview) html = html.replace('</head>', '<meta name="robots" content="noindex,nofollow">\n</head>');
     bytes = Buffer.from(html);
   }

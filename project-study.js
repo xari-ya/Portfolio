@@ -23,13 +23,13 @@
   for(const node of originals)parking.append(node);
   const node=project.id==='obsidian'?originals[0]:project.id==='terravita'?originals[1]:project.id==='jellycast'?originals[2]:null;
   if(project.id==='jellycast'&&!node.dataset.studyMounted){
-   const narrative=node.querySelector('.jelly-narrative'),stations=node.querySelector('.jelly-stations'),truth=node.querySelector('.jelly-disclaimer');
+   const narrative=node.querySelector('.jelly-narrative'),stations=node.querySelector('.jelly-stations');
    const first=article('SOFTWARE FOR A CHANGING COAST.',record.description),second=article('ONE COAST. THREE STATIONS.','');second.querySelector('h2').remove();second.querySelector('p').remove();second.append(narrative,stations);
-   const third=article('RESEARCH IN PROGRESS.',record.contribution);technologies(third);third.append(truth);node.replaceChildren(first,second,third);node.dataset.studyMounted='true';
+   const third=article('RESEARCH IN PROGRESS.',record.contribution);technologies(third);node.replaceChildren(first,second,third);node.dataset.studyMounted='true';
   }
   if(node){reading.replaceChildren(node);pages=[...node.querySelectorAll('.obs-scene,.terra-scene,.study-chapter')];pages.forEach(n=>n.classList.add('study-chapter'));}
-  else{const first=article('THE SYSTEM.',record.description),second=article('WHAT I BUILT.',record.contribution||project.description),third=article('TOOLS & TECHNOLOGIES.','The technologies used in this project.');technologies(third);const note=document.createElement('small');note.className='study-truth';note.textContent=record.disclaimer||'Conceptual visualization of the project; not manufacturing CAD.';third.append(note);pages=[first,second,third];reading.replaceChildren(...pages);}
-  if(node){const truth=node.querySelector('.obs-truth,.terra-safety');if(truth){truth.classList.add('study-truth');pages.at(-1).append(truth);}if(record.disclaimer&&!node.querySelector('.study-record-disclaimer')){const note=document.createElement('small');note.className='study-truth study-record-disclaimer';note.textContent=record.disclaimer;pages.at(-1).append(note);}}
+  else{const first=article('THE SYSTEM.',record.description),second=article('WHAT I BUILT.',record.contribution||project.description),third=article('TOOLS & TECHNOLOGIES.','The technologies used in this project.');technologies(third);pages=[first,second,third];reading.replaceChildren(...pages);}
+  if(node){const truth=node.querySelector('.terra-safety');if(truth){truth.classList.add('study-truth');pages.at(-1).append(truth);}}
   // The existing miniature map belongs beside the large model, not over copy.
   const map=$('obsMapHud');if(map)$('studyModelHud').append(map);
   pages=window.ReferenceShowcase?.mount(project.id,pages,record)||pages;

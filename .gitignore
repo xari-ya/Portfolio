@@ -1,0 +1,39 @@
+node_modules/
+verification/browser-profile/
+verification/test-results/
+
+# Heavy working/analysis artefacts (assets below are tracked)
+*.blend
+*.blend1
+*.npy
+*.pyc
+__pycache__/
+
+# Generated verification screenshots and capture media
+verification/**/*.png
+verification/*.png
+verification/**/*.gif
+verification/**/*.jpg
+verification/**/*.jpeg
+verification/**/*.webp
+
+# Run logs
+verification/**/server-*.log
+
+# Mobile audit evidence screenshots
+audit/**/*.png
+audit/**/*.jpg
+audit/**/*.jpeg
+audit/**/*.gif
+audit/**/*.webp
+
+.DS_Store
+
+# Isolated browser automation profiles
+verification/**/firefox-runtime/
+verification/homepage/*.log
+
+# Large supplied car sources; deploy only the optimized office assets.
+/assets/Car+cgtrader+obj.obj
+/assets/Alpine+A110.zip
+/.tools/

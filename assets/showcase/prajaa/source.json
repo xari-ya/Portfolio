@@ -1,0 +1,48 @@
+{
+  "source": "Praja - pitch deck.pptx",
+  "deckSHA256": "ed4cc009d2c6f04d648cbc79080ff2daae089346cdaf421c0ea56fc4f58fc0ab",
+  "logo": "Original m%cd text, Su_Sathmina embedded font, outlined paths exported by PowerPoint; original yellow #FFC000. No substitute font.",
+  "assets": [
+    {
+      "file": "welcome.png",
+      "original": "image9.png",
+      "sha256": "c9e149194c998654e3529b9013f250c0343350d456a06d00a0e01d5793a8f784",
+      "modified": false
+    },
+    {
+      "file": "home.png",
+      "original": "image24.png",
+      "sha256": "1f5911d9d6a90aba58f1bffdc230294ee3c0933c57c41ef63c4ef6371b0755e4",
+      "modified": false
+    },
+    {
+      "file": "report.png",
+      "original": "image15.png",
+      "sha256": "8d1264ddc72c7ca1df6c75b67b685caecd6e5b6051eb6dc7f4a07c664621503d",
+      "modified": false
+    },
+    {
+      "file": "complaints.png",
+      "original": "image17.png",
+      "sha256": "c96bc0a2dc0eb9b66a8c5605a7f45331abc8ed0634a4da3ff1787996c2e155f3",
+      "modified": false
+    },
+    {
+      "file": "performance.png",
+      "original": "image18.png",
+      "sha256": "301118a1e67bd7d043289a49bb661e68da1ebb99ec81ed04f8921fbae17b8d2f",
+      "modified": false
+    },
+    {
+      "file": "community.png",
+      "original": "image20.png",
+      "sha256": "eceeda86a5843aa5dd703e32f10bdcc3ff0a4a38bc4ecd9ea4ccdaa6c8401b22",
+      "modified": false
+    },
+    {
+      "file": "prajaa-logo.svg",
+      "sha256": "826cdf6167cf2a899056cb13e1bc473e5f55cf05f3d270791fe9ecf384d7c364",
+      "source": "Slide 3 native logo outlines"
+    }
+  ]
+}

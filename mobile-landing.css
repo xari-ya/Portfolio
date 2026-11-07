@@ -1,0 +1,179 @@
+/* Mobile landing presentation.
+ *
+ * Scoped to phones so the desktop art direction keeps evolving independently.
+ * The 3D hall and the Kira loader are untouched; this layer only adjusts the
+ * header and hero position, while the shared touch surface spins the fixed
+ * landing camera to look around the hall.
+ */
+
+@media (max-width: 760px) {
+  :root {
+    --mobile-gutter: 6%;
+    --mobile-safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* ----------------------------------------------------------------------- */
+  /* Header: logo + menu over a fading scrim                                 */
+  /* ----------------------------------------------------------------------- */
+
+  .topbar {
+    height: auto;
+    padding: calc(11px + env(safe-area-inset-top, 0px)) var(--mobile-gutter) 14px;
+    align-items: center;
+    background: transparent;
+    border-bottom: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    pointer-events: none;
+  }
+
+  .topbar::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: -1;
+    height: calc(158px + env(safe-area-inset-top, 0px));
+    background: linear-gradient(
+      180deg,
+      rgba(5, 8, 11, 0.94) 0%,
+      rgba(5, 8, 11, 0.78) 38%,
+      rgba(5, 8, 11, 0.42) 66%,
+      rgba(5, 8, 11, 0.12) 86%,
+      rgba(5, 8, 11, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  .topbar .brand {
+    pointer-events: auto;
+    font-size: 26px;
+  }
+
+  .topbar .brand-sub,
+  .topbar .topnav {
+    display: none !important;
+  }
+
+  .topbar .menu-btn {
+    margin-left: auto;
+    margin-top: -4px;
+    pointer-events: auto;
+  }
+
+  .mobile-nav {
+    inset: calc(70px + env(safe-area-inset-top, 0px)) 0 auto;
+  }
+
+  /* ----------------------------------------------------------------------- */
+  /* Hero: lower third, one action, no résumé                               */
+  /* ----------------------------------------------------------------------- */
+
+  .frame.home {
+    justify-content: flex-end;
+    padding: 0 var(--mobile-gutter) calc(27px + var(--mobile-safe-bottom));
+    background: linear-gradient(
+      to top,
+      rgba(5, 8, 11, 0.95) 0%,
+      rgba(5, 8, 11, 0.82) 12%,
+      rgba(5, 8, 11, 0.52) 27%,
+      rgba(5, 8, 11, 0.18) 44%,
+      rgba(5, 8, 11, 0) 60%
+    );
+  }
+
+  .frame.home .home-intro {
+    width: 100%;
+  }
+
+  .frame.home .home-intro::before {
+    display: none;
+  }
+
+  .frame.home .eyebrow {
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-size: 8.5px;
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+  }
+
+  .frame.home h1 {
+    max-width: 100%;
+    font-size: clamp(34px, 9.7vw, 48px);
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+  }
+
+  .frame.home .home-statement {
+    max-width: 100%;
+    margin-top: 12px;
+    font-size: 9.5px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    white-space: normal;
+  }
+
+  .frame.home .home-statement strong {
+    font-size: clamp(18px, 4.7vw, 22px);
+  }
+
+  .frame.home .intro-actions {
+    width: 100%;
+    margin-top: 14px;
+    gap: 0;
+  }
+
+  .frame.home .intro-actions .button-outline {
+    display: none;
+  }
+
+  .frame.home .intro-actions .button-solid {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 15px;
+    gap: 18px;
+    justify-content: space-between;
+    font-size: 9px;
+  }
+
+  /* ----------------------------------------------------------------------- */
+  /* Landing-only overlays                                                  */
+  /* ----------------------------------------------------------------------- */
+
+  body.mobile-home .scroll-cue,
+  body.mobile-home .stage-controls,
+  body.mobile-home .hall-focus-tools,
+  body.mobile-home .hall-station-info,
+  body.mobile-home .ghost-index {
+    display: none !important;
+  }
+
+  body.mobile-home #stage {
+    touch-action: pan-y pinch-zoom;
+  }
+
+  body.mobile-home {
+    overscroll-behavior-y: none;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 700px) {
+  .frame.home h1 {
+    font-size: clamp(31px, 9.2vw, 42px);
+  }
+
+  .frame.home .home-statement {
+    margin-top: 9px;
+  }
+
+  .frame.home .intro-actions {
+    margin-top: 11px;
+  }
+}
+
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .topbar,
+  .frame.home {
+    transition: none;
+  }
+}

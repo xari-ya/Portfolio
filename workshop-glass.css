@@ -1,0 +1,132 @@
+/* Web adaptation of Apple's regular/clear material hierarchy, not native
+   Liquid Glass shader parameters. Text-heavy surfaces use regular dark glass;
+   controls use lighter layers. One backdrop filter per floating surface.
+   https://developer.apple.com/design/human-interface-guidelines/materials */
+:root {
+ --workshop-footer-accent:#e78869;
+ --workshop-glass-tint:rgba(11,20,28,.28);
+ --workshop-glass-light:linear-gradient(145deg,rgba(223,241,255,.13),rgba(130,169,190,.035) 42%,rgba(2,8,14,.22));
+ --workshop-glass-edge:rgba(225,241,250,.16);
+ --workshop-glass-shadow:0 18px 52px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.23),inset 0 -1px 0 rgba(190,218,232,.055);
+ --workshop-glass-filter:blur(14px) saturate(130%);
+ --workshop-glass-control:linear-gradient(155deg,rgba(233,246,255,.12),rgba(176,203,219,.025)),rgba(39,55,66,.34);
+ --workshop-glass-accent:linear-gradient(155deg,rgba(255,223,183,.16),rgba(255,120,65,.04) 48%,rgba(151,31,12,.10)),rgba(250,65,32,.97);
+}
+:is(.project-discovery,.production-transport,.production-handoff,.hall-station-info,.dossier,.mobile-nav),
+.engineer-about:not(.on-wall-screen) {
+ background:var(--workshop-glass-light),var(--workshop-glass-tint);
+ -webkit-backdrop-filter:var(--workshop-glass-filter);
+ backdrop-filter:var(--workshop-glass-filter);
+ border:1px solid var(--workshop-glass-edge);
+ border-radius:24px;
+ box-shadow:var(--workshop-glass-shadow);
+ color:#f2f5f3;
+}
+.project-discovery {padding:24px 24px 18px;scrollbar-color:#8e9da455 transparent}
+.production-heading p,.production-preview p {color:#ccd7dd}
+.production-browser-label,.production-arrows span,.production-projects button small {color:#b4c6d0}
+.production-browser-label,.production-footer {border-color:#d9e7ef22}
+.production-heading h2 {line-height:.98}
+.production-heading h2 em {color:#ff875d}
+.production-kicker {color:#ffad8e}
+.production-projects {gap:7px;padding-top:10px;padding-bottom:10px}
+.production-projects button {border-radius:13px;background:var(--workshop-glass-control);border-color:#d3e5ef25;color:#f0f4f4;padding:9px 10px;box-shadow:inset 0 1px 0 #ffffff12}
+.production-projects button>span {color:#e5a890}
+.production-projects button[aria-current=true] {background:linear-gradient(150deg,#ffaa7636,#bb543a1a),#49302588;border-color:#ffab787d}
+.production-projects button[aria-pressed=true] strong::after {color:#ffcda9}
+.production-image {border-radius:14px;border-color:#d8e9f22a;background:#07121955}
+.production-image>span {border-radius:6px;background:#10212cd4;color:#d0e0e8;font-size:8px}
+.production-preview-copy>span {color:#eea990}
+.production-preview h3 {color:#f5f6f0}
+.production-technologies span {border-radius:6px;border-color:#d5e6ef26;background:#a7c6dc09;color:#cbd9df}
+.production-preview small {color:#d8bca3}
+.production-job span,.production-idle-tag {color:#c2d2d7}
+.production-transport {border-radius:22px}
+.production-transport p {color:#d5e0e3}
+.production-handoff {padding:14px 16px;border-radius:18px;font-size:10px;gap:9px}
+.production-handoff #productionHandoffLabel {color:#dfe8eb;font-size:10px;letter-spacing:.07em}
+:is(.production-arrows button,.production-handoff button,.hall-display-modes button,.dossier-nav button,.dossier-close,.dossier-link),#productionExit {
+ background:var(--workshop-glass-control);border:1px solid #e4f0f837;border-radius:12px;
+ color:#edf3f3;box-shadow:inset 0 1px 0 #ffffff15;min-height:36px;
+ transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease;
+}
+.production-arrows button {min-width:40px;border-radius:50%}
+#productionExit {border-radius:10px;padding:8px 10px}
+.production-primary,.production-skip,.production-handoff #productionStudy,.production-handoff #productionAssemblySkip {
+ background:var(--workshop-glass-accent);color:#fff7ef;border:1px solid #ffb38c80;
+ border-radius:13px;box-shadow:inset 0 1px 0 #ffe5cc45,0 5px 16px #6b1f1629;
+}
+.production-skip {box-shadow:inset 0 1px 0 #ffe5cc45,0 0 22px #ff714136}
+.production-primary:hover,.production-skip:hover {background:linear-gradient(145deg,#ffd6ac26,#ff843d0d),#ff502b}
+.production-navigation button,.production-change {border-radius:10px;color:#c6d5dc;padding-left:5px;padding-right:5px}
+.production-navigation button:hover,.production-change:hover {background:#d7e9f212;color:#fff}
+.project-discovery button:focus-visible,.production-transport button:focus-visible,.production-handoff button:focus-visible {outline:2px solid #ffe1bc;outline-offset:3px}
+.hall-station-info {padding:22px 24px;border-left-width:1px}
+.hall-station-info p {color:#d1dde2}
+.hall-station-info>button {border-radius:10px;background:#d8ebf20d;padding:9px 11px;border:1px solid #e1eff429;color:#e9eeee}
+.hall-display-modes button[aria-pressed=true] {border-color:#ffb78b80;background:var(--workshop-glass-accent)}
+.hall-process,.hall-joint-details {border-color:#d4e4ed29}
+.hall-joint-details article {border-radius:10px;background:#0c182536}
+.hall-hover-hint {background:#172c3d99;-webkit-backdrop-filter:blur(12px) saturate(130%);backdrop-filter:blur(12px) saturate(130%);border:1px solid #d9eff32e;border-radius:10px;box-shadow:0 6px 20px #0003;color:#eff4f1}
+.mobile-nav {z-index:60;margin:12px 14px 0;padding:18px 22px 24px;border-radius:22px}
+.mobile-nav a {border-color:#d1e3eb26;border-radius:9px}
+.mobile-nav a:hover {background:#d5e4ec0c}
+.dossier {border-radius:26px 0 0 26px;border-right:0}
+.dossier p {color:#d6dfe2}
+.dossier h2,.dossier h3 {color:#f3f5f0}
+.dossier-head {color:#b6cbd6}
+.dossier-head span:first-child,.dossier-category {color:#ffac8b}
+.dossier .dossier-foot {color:#b9cbd4}
+.dossier-nav button {padding:12px 15px}
+.dossier-rule {background:#dae8ee26}
+.dossier-tech span {border-radius:7px;background:#def1fb0c;border-color:#d9e9f42b}
+/* The About display stays registered to its physical screen. Its transient
+   mobile reading sheet and controls share the glass vocabulary. */
+.engineer-about:not(.on-wall-screen) {border-radius:24px 24px 0 0;border-bottom:0;box-shadow:0 -10px 38px #0003,inset 0 1px 0 #ffffff24}
+.engineer-about .engineer-tabs button {clip-path:none;border-radius:12px;background:var(--workshop-glass-control);border:1px solid #e1ecf42d;color:#dce8ed;padding:9px 10px;box-shadow:inset 0 1px 0 #ffffff13}
+.engineer-about .engineer-tabs button[aria-selected=true] {background:var(--workshop-glass-accent);border-color:#ffb99680;box-shadow:inset 0 1px 0 #ffe8d733;color:#fff7eb}
+.engineer-about .engineer-tabs button:not([aria-selected=true]):hover {border-color:#f7d3b880;background:linear-gradient(155deg,#e7f2ff1c,#cf886315),#28303a80}
+.engineer-about .engineer-actions :is(button,a) {border-radius:12px}
+.engineer-about .engineer-actions :is(.engineer-primary,.engineer-resume) {background:var(--workshop-glass-accent);border-color:#ffb48c80;box-shadow:inset 0 1px 0 #ffe5cf3b;color:#fff6ea}
+.engineer-about .engineer-actions .engineer-back {background:var(--workshop-glass-control);border-color:#dce8ec44;box-shadow:inset 0 1px 0 #ffffff20;color:#edf2f1}
+.on-wall-screen .engineer-academic,.on-wall-screen .engineer-interest {border-radius:10px;background:#b4d3e00a;border-left-color:#e3987588}
+@media(max-width:1039px),(max-aspect-ratio:7/5) {
+ :root {--workshop-glass-filter:blur(10px) saturate(125%);--workshop-glass-tint:rgba(11,21,30,.40)}
+ .project-discovery {border-radius:24px 24px 0 0;border-bottom:0;padding:20px 22px;box-shadow:0 -10px 35px #0003,inset 0 1px 0 #ffffff26}
+ .production-footer {background:linear-gradient(#142430ee,#0d1c28f5);border-radius:14px;padding:12px 9px 8px;margin-left:-7px;margin-right:-7px;box-shadow:0 -7px 22px #07121b50}
+ .production-handoff {border-radius:18px}
+ .engineer-about .engineer-tabs {gap:6px;border-bottom:0;padding-bottom:3px}
+ .engineer-about .engineer-tabs button {min-height:39px;padding:9px 7px;font-size:9px;flex:1}
+ .production-navigation button {padding-left:2px;padding-right:2px;font-size:8px}
+}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more) {
+ :is(.project-discovery,.production-transport,.production-handoff,.hall-station-info,.dossier,.mobile-nav,.engineer-about:not(.on-wall-screen),.hall-hover-hint) {background:#12212c;-webkit-backdrop-filter:none;backdrop-filter:none;border-color:#b7c8d288;box-shadow:0 10px 26px #0004}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+ :is(.project-discovery,.production-transport,.production-handoff,.hall-station-info,.dossier,.mobile-nav,.engineer-about:not(.on-wall-screen)) {background:#12212cf5}
+}
+@media(forced-colors:active) {
+ :is(.project-discovery,.production-transport,.production-handoff,.hall-station-info,.dossier,.mobile-nav,.engineer-about:not(.on-wall-screen)) {background:Canvas;color:CanvasText;border:1px solid CanvasText;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media(prefers-reduced-motion:reduce) {
+ :is(.project-discovery,.production-transport,.production-handoff,.hall-station-info,.engineer-about) button {transition:none}
+}
+
+/* Keep the approved header and complete industrial loader unchanged. Home
+   buttons stand directly on the shared feathered shade, without a wrapper. */
+.home .intro-actions .button-solid {
+ background:var(--workshop-glass-accent);color:#fff9ef;border:1px solid #ffb28f99;border-radius:13px;
+ box-shadow:inset 0 1px 0 #fff0d34d,0 5px 18px #f3472226;
+}
+.home .intro-actions .button-solid:hover {background:linear-gradient(145deg,#ffd6ac26,#ff843d0d),#ff502b;border-color:#ffcfac;color:#fff}
+.home .intro-actions .button-outline {background:var(--workshop-glass-control);border:1px solid #e2f1f33b;border-radius:13px;color:#ecf2f3;box-shadow:inset 0 1px 0 #ffffff1a}
+.home .intro-actions .button-outline:hover {background:linear-gradient(145deg,#e2f1f31c,#c7d9e309),#35414c80;border-color:#f5ceaa9c;color:#fff}
+@media(max-width:760px) {
+ .home .intro-actions {display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);width:100%;max-width:360px;gap:9px}
+ .home .intro-actions a {min-width:0;justify-content:center;text-align:center;padding:12px 9px;gap:7px;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce) {.home .intro-actions a{transition:none}}
+
+/* A compact entrance sits with the introduction, with a full-size tap target. */
+body .frame.home .intro-actions{display:flex;width:fit-content;max-width:100%}
+body .frame.home .intro-actions .button-solid{width:240px;max-width:100%;min-height:48px;padding:14px 20px;justify-content:space-between;gap:24px}

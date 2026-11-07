@@ -1,0 +1,9 @@
+# 26 / Visitor camera
+
+Keep the established arrival path and fixed office viewing position. After arrival, dragging the scene changes the viewing direction. Constrain the entire horizontal field of view inside the left and right front-wall edges, including a safety margin. Also clamp the centre sightline inside the rear wall corners (local x = -5.65 to +5.65) and target height to 0.65–3.12 m. Compute the limits again after a viewport change. The camera never translates through a wall. Its corner rays must also intersect a completed wall, floor or ceiling. When a diagonal view would miss the finished surfaces, clamp the combined look angles toward the arrival view. The supporting floor/ceiling extend to 20 m wide and local z = +8 using two additional material batches. Store clamped offsets so reversing away from a limit responds immediately.
+
+camera.js owns the math, pointer capture and cancellation. The existing hall render loop applies the result and projects the contact links from that same camera. There is no additional render loop, timer, scene, texture or framebuffer. Arrival and earlier rooms retain their existing cameras.
+
+Show a grab cursor. Keep only the two centred, equally sized navigation buttons with the site glass-and-coral hover feedback. Do not show a drag hint or Reset View button. Arrow keys while either navigation button has focus offer keyboard control; Home restores the composition. Touch gestures retain page scrolling. User-directed looking remains available with reduced motion; environmental animation stays frozen.
+
+Verify real pointer drags in both directions, both wall stops, vertical limits, immediate reversal, reset, keyboard control, contact hit targets, restored actor sizes on return to Skills, and unchanged GPU resource counts. Captures and report: verification/communications/interaction.cjs.

@@ -1,0 +1,10 @@
+{
+  "tool": "built-in imagegen",
+  "mode": "generate",
+  "prompt": "Create a seamless-looking wide exterior environmental backdrop image for the view through a modern workshop's right-hand window. Camera eye height 1.6 metres, level horizon, natural 35mm perspective, 2:1 landscape composition. A beautiful quiet engineering-campus garden in warm late-afternoon sunlight: several slender dark-barked trees with richly detailed golden-yellow and fresh green foliage, a sunlit lawn, clipped shrubs, a subtle paved path, and a nearby low two-storey contemporary university/research building with broad blue-grey glass windows and light concrete framing in the middle distance, not a distant skyscraper skyline. The sun shines from the upper right and glints through yellow leaves, giving a believable bright golden rim, warm long shadows on the grass and a clean blue sky with a few soft white clouds. Trees frame both sides but leave enough clear central view to see the campus building; upper-right foliage should glow intensely against the sky. Premium believable stylized-realistic 3D architectural environment rendering, crisp foliage detail and natural materials, designed to sit behind the dark graphite metal window mullions of a red-accented engineering studio. Entire image is outdoors. No interior, no window frames, no railings immediately in front of the camera, no people, no vehicles, no signs, no text, no labels, no logos, no watermarks. This is a single efficient matte backdrop texture, not a full room rendering.",
+  "outputs": [
+    "campus-v2.webp",
+    "campus-mobile-v2.webp"
+  ],
+  "source": "exec-ca8e43ed-9470-4e64-9eb0-4a701f47bb2d.png"
+}

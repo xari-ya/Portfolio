@@ -1,0 +1,19 @@
+[
+  {
+    "institution": "University of Colombo",
+    "asset": "university-of-colombo.png",
+    "note": "Existing transparent PNG institution emblem."
+  },
+  {
+    "institution": "University of Moratuwa",
+    "asset": "university-of-moratuwa.png",
+    "source": "https://uom.lk/assets/images/logo_0.png",
+    "page": "https://uom.lk/emblem-university.php",
+    "note": "Official transparent PNG header emblem, cropped to exclude adjacent wordmark; proportions and colors preserved."
+  },
+  {
+    "institution": "Ananda College",
+    "asset": "../engineering-career-lab/assets/archive/ananda-college.png",
+    "note": "Reuse existing transparent school emblem."
+  }
+]

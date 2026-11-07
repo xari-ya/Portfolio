@@ -1,0 +1,31 @@
+/* Reference exhibits share the finalized study layout. Only the local,
+ * interactive content below belongs to an individual project. */
+.exhibit-view-controls{display:none!important}
+#projectStudy .exhibit-leaders,
+#projectStudy .obs-map-hud{display:none!important}
+
+/* Obsidian / interactive controls */
+#projectStudy .obs-auto-controls{display:flex;gap:7px;margin:15px 0 0;flex-wrap:wrap}
+#projectStudy .obs-auto-controls button{font:9px/1.4 monospace;padding:8px 12px;min-height:38px}
+#projectStudy .obs-maze-modes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:0 0 14px}
+#projectStudy .obs-mode{width:100%;padding:9px 10px;font-size:9px}
+#projectStudy .obs-maze-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:13px 0;margin:0;border-top:1px solid #d1e8ee30;border-bottom:1px solid #d1e8ee30}
+#projectStudy .obs-maze-stats div{display:flex;flex-direction:column;gap:4px;min-width:0}
+#projectStudy .obs-maze-stats span{font:8px/1.4 monospace;letter-spacing:.08em;color:#a9c2cc}
+#projectStudy .obs-maze-stats strong{font:600 clamp(18px,1.5vw,24px)/1.05 Workshop Condensed,'Arial Narrow',Arial,sans-serif;color:#f3f5ec;white-space:nowrap}
+#projectStudy .obs-specs{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+#projectStudy .obs-specs span{font:9px/1.4 monospace;padding:7px 9px;border:1px solid #d5e5f22b;border-radius:9px;background:#f0eff209;color:#d5e2e5}
+#projectStudy .obs-subsystems{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+#projectStudy .obs-sub{min-height:44px;padding:8px 6px;font-size:9px}
+#projectStudy .obs-subdetail{margin-top:12px;padding:10px 0 0;border-top:1px solid #d1e8ee30}
+#projectStudy .obs-subdetail>span{font:9px/1.6 monospace;color:var(--study-accent)}
+#projectStudy .obs-subdetail p{font:13px/1.55 Arial,Helvetica,sans-serif;color:#d5e0e3;margin:7px 0 0}
+#projectStudy .obs-truth,
+#projectStudy .study-record-disclaimer{display:block;margin-top:14px;font:9px/1.5 monospace;color:#a6b2ba}
+#projectStudy .obs-progress-line[hidden]{display:none}
+
+@media(max-width:1039px){
+ #projectStudy .obs-auto-controls button{min-height:44px;font-size:10px}
+ #projectStudy .obs-maze-stats strong{font-size:18px}
+ #projectStudy .obs-subdetail p{font-size:14px}
+}

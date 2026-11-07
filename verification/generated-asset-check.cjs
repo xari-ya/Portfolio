@@ -1,0 +1,17 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process'),{createRequire}=require('node:module'),crypto=require('node:crypto');
+const r=createRequire(path.join(execFileSync('npm',['root','--global'],{encoding:'utf8'}).trim(),'@gltf-transform/cli/package.json')),{NodeIO}=r('@gltf-transform/core'),{ALL_EXTENSIONS}=r('@gltf-transform/extensions'),validator=r('gltf-validator'),sharp=r('sharp');
+async function main(){const {MeshoptDecoder}=await import(r.resolve('meshoptimizer'));await MeshoptDecoder.ready;const io=new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({'meshopt.decoder':MeshoptDecoder}),report=[];
+const official=crypto.createHash('sha256').update(fs.readFileSync('character-assets/university-of-colombo.png')).digest('hex');
+for(const quality of ['desktop','mobile'])for(const compressed of [false,true]){
+ const file=`character-assets/generated/the-builder-${quality}${compressed?'-meshopt':''}.glb`,bytes=fs.readFileSync(file),validation=await validator.validateBytes(new Uint8Array(bytes),{maxIssues:30,uri:path.basename(file)}),d=await io.read(file),root=d.getRoot();
+ assert.equal(validation.issues.numErrors,0,JSON.stringify(validation.issues.messages));
+ const prims=root.listMeshes().flatMap(m=>m.listPrimitives()),triangles=prims.reduce((s,p)=>s+p.getIndices().getCount()/3,0),vertices=prims.reduce((s,p)=>s+p.getAttribute('POSITION').getCount(),0);
+ assert.equal(root.listSkins().length,1);assert.equal(root.listSkins()[0].listJoints().length,3);assert.equal(root.listAnimations().length,3);assert(triangles<(quality==='desktop'?104000:37000));
+ for(const pr of prims){for(const a of pr.listAttributes())for(const v of a.getArray())assert(Number.isFinite(v),'Finite attribute');const indices=pr.getIndices().getArray(),count=pr.getAttribute('POSITION').getCount();for(const i of indices)assert(i>=0&&i<count);const a=pr.getAttribute('WEIGHTS_0'),weights=a.getArray(),den=a.getNormalized()?255:1;for(let i=0;i<weights.length;i+=4){const sum=(weights[i]+weights[i+1]+weights[i+2]+weights[i+3])/den;assert(Math.abs(sum-1)<.005);for(let j=0;j<4;j++)assert(weights[i+j]>=0);}}
+ const crest=root.listTextures().find(t=>t.getName()==='Official University of Colombo crest');assert(crest);assert.equal(crest.getExtras().sha256,official);assert.deepEqual(await sharp(crest.getImage()).ensureAlpha().raw().toBuffer(),await sharp(fs.readFileSync('character-assets/university-of-colombo.png')).ensureAlpha().raw().toBuffer());const image=await sharp(crest.getImage()).metadata();assert.equal(image.width,600);assert.equal(image.height,688);assert.equal(root.listMaterials().find(m=>m.getName().includes('crest')).getAlphaMode(),'MASK');assert(root.listTextures().some(t=>t.getExtras().text==='FOT'));
+ const atlas=root.listTextures().find(t=>t.getName()==='Character colour atlas'),atlasMeta=await sharp(atlas.getImage()).metadata();assert.equal(atlasMeta.width,quality==='desktop'?2048:1024);
+ report.push({file,bytes:bytes.length,triangles,vertices,animations:root.listAnimations().map(a=>a.getName()),textures:root.listTextures().length,crestSHA256:official,validation:validation.issues});console.log(path.basename(file),bytes.length,'bytes',triangles,'triangles',validation.issues.numErrors,'errors',validation.issues.numWarnings,'warnings');
+}
+fs.writeFileSync('verification/generated-character-validation.json',JSON.stringify(report,null,2)+'\n');}
+main().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,184 @@
+/* Skills Station and Experience Archives. The panels are projected onto the
+   real displays in wall layout; the same content becomes a reading panel on
+   narrow screens and when WebGL is unavailable. */
+.engineering-lab{position:fixed;inset:0;z-index:32;pointer-events:none;color:#e9eae3;--lab-red:#ff3d21;--lab-line:rgba(168,190,194,.22);font-family:Arial,sans-serif}
+.engineering-lab[hidden],.engineering-lab [hidden]{display:none!important}
+.engineering-lab button{font:12px ui-monospace,'Liberation Mono',monospace;color:inherit;cursor:pointer;border:1px solid var(--lab-line);border-radius:6px;background:rgba(13,21,24,.78);padding:10px 14px;min-height:42px;transition:background .2s,border-color .2s,color .2s,box-shadow .2s;pointer-events:auto}
+.engineering-lab button:hover{border-color:rgba(255,92,54,.72);background:rgba(36,37,34,.9)}
+.engineering-lab button:focus-visible{outline:2px solid #ffc09c;outline-offset:3px}
+.engineering-lab button[aria-pressed=true],.engineering-lab .lab-primary{color:#fff;background:linear-gradient(135deg,#ff532b,#e93213);border-color:#ff714c}
+.lab-eyebrow{font:11px ui-monospace,'Liberation Mono',monospace;letter-spacing:1.5px;color:#ff7a57}
+
+/* Room heading */
+.lab-room-heading{position:absolute;left:3.9vw;top:62px;max-width:520px;pointer-events:none;z-index:1}
+.lab-room-heading:before{content:'';position:absolute;left:-13px;top:1px;width:2px;height:35px;background:linear-gradient(#ff4b2d,#a62014);box-shadow:0 0 18px #ff3c1d88}
+.lab-room-heading h1{font:700 clamp(17px,1.38vw,23px)/1 'Workshop Condensed','Arial Narrow',sans-serif;letter-spacing:.3px;margin:0;color:#f0f0e8;text-shadow:0 2px 18px #000}
+.lab-room-sub{font:11px ui-monospace,'Liberation Mono',monospace;letter-spacing:.6px;color:#c8cbc4;margin:5px 0 0;padding-left:1px}
+.lab-room-heading p{margin:0}
+.lab-room-heading button,.lab-archive-notice button{display:none}
+.lab-archive-notice{display:none!important}
+
+/* Shared display chassis */
+.lab-panel{position:absolute;left:0;top:0;transform-origin:0 0;box-sizing:border-box;pointer-events:auto;display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(125deg,#050b0e,#03080a);border:1px solid #303a3d;box-shadow:inset 0 0 0 1px #000,0 0 30px #0006;scrollbar-width:none}
+.lab-panel::-webkit-scrollbar{display:none}
+.lab-screen-chrome{box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:clamp(12px,1.7vw,22px) clamp(13px,1.9vw,24px);min-height:0}
+.lab-screen-head{display:flex;align-items:center;gap:9px;font:12px/1 ui-monospace,'Liberation Mono',monospace;letter-spacing:1.65px;color:#eceee7;text-transform:uppercase;flex:none;margin-bottom:clamp(12px,1.5vw,20px)}
+.lab-red-square{width:10px;height:10px;box-sizing:border-box;border:1.5px solid var(--lab-red);background:rgba(255,61,33,.12);box-shadow:0 0 12px #ff3d2144;flex:none}
+.lab-screen-dots{margin-left:auto;color:#a4b1b2;letter-spacing:3px;font-size:12px}
+.lab-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+/* Skills Station display */
+.lab-domain-layout{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(0,1fr);gap:clamp(12px,1.6vw,22px);flex:1;min-height:0}
+.lab-domain-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1vw,14px);min-height:0}
+.engineering-lab .lab-capability{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(8px,1vw,14px);padding:10px 7px;min-height:0;border-radius:5px;border-color:#29353a;background:linear-gradient(150deg,rgba(18,27,30,.88),rgba(8,14,17,.9));box-shadow:inset 0 1px 0 #ffffff08;text-align:center}
+.engineering-lab .lab-capability:hover{border-color:#844c3b;background:linear-gradient(150deg,rgba(30,35,34,.94),rgba(11,18,20,.94))}
+.engineering-lab .lab-capability.is-selected{background:radial-gradient(ellipse at 50% 35%,rgba(80,22,14,.36),rgba(10,17,20,.96) 72%);border-color:var(--lab-red);box-shadow:inset 0 0 0 1px #ff3d2155,0 0 18px #ff3d211a}
+.engineering-lab .lab-card-icon{width:clamp(24px,2.4vw,34px);height:clamp(24px,2.4vw,34px);flex:none;color:#e5e7e1;stroke-width:1.25;filter:drop-shadow(0 2px 3px #0009)}
+.engineering-lab .lab-capability.is-selected .lab-card-icon{color:var(--lab-red);filter:drop-shadow(0 0 7px #ff3d2155)}
+.engineering-lab .lab-card-title{display:block;font:clamp(9px,.9vw,12px)/1.24 'Arial Narrow',Arial,sans-serif;letter-spacing:.1px;color:#cfd4d0;max-width:13ch}
+.engineering-lab .lab-capability.is-selected .lab-card-title{color:#f2f2eb}
+.lab-domain-detail{min-width:0;display:flex;flex-direction:column;gap:6px;padding-left:clamp(12px,1.5vw,20px);border-left:1px solid #223135;overflow:hidden}
+.lab-detail-head{display:flex;align-items:center;gap:8px;min-width:0}
+.lab-detail-head h3{font:600 clamp(10px,1.05vw,14px)/1.2 'Arial Narrow',Arial,sans-serif;letter-spacing:.5px;margin:0;color:#eceee7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+.lab-detail-head .lab-screen-dots{flex:none;margin-left:0}
+.lab-domain-detail p{font:clamp(8px,.78vw,11px)/1.5 Arial,sans-serif;color:#b9c2be;margin:0}
+.lab-domain-detail h4{font:700 clamp(8px,.7vw,10px)/1.2 Arial,sans-serif;letter-spacing:1px;color:#ff6844;margin:clamp(3px,.7vw,10px) 0 0}
+.lab-tech-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:1px}
+.lab-tech-chips span{font:clamp(7px,.7vw,10px)/1 Arial,sans-serif;color:#dad9d1;padding:5px 7px;border:1px solid #6e392e;border-radius:4px;background:rgba(110,35,25,.35);white-space:nowrap}
+.lab-tools{display:none!important}
+#labSkillsStatus{display:none}
+
+/* Experience Archives display */
+.lab-experience-screen{justify-content:flex-start}
+.lab-journey-track{display:flex;align-items:stretch;gap:0;flex:none;height:clamp(70px,8.5vw,108px);margin-top:2px}
+.engineering-lab .lab-journey-stop{position:relative;flex:0 0 17%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(6px,.8vw,10px);height:100%;min-height:0;padding:6px 4px;border:1px solid #263337;border-radius:5px;background:linear-gradient(155deg,rgba(20,28,31,.88),rgba(7,13,15,.9));font:11px/1.15 Arial,sans-serif;color:#c7cdca;box-shadow:inset 0 1px 0 #ffffff08}
+.engineering-lab .lab-journey-stop:hover{border-color:#675047;background:rgba(31,34,33,.92)}
+.engineering-lab .lab-journey-stop.is-selected{background:radial-gradient(ellipse at 50% 42%,rgba(91,23,14,.42),rgba(8,14,17,.96) 72%);border-color:var(--lab-red);box-shadow:inset 0 0 0 1px #ff3d2155,0 0 16px #ff3d211a;color:#ecede7}
+.engineering-lab .lab-journey-icon{width:clamp(25px,2.5vw,34px);height:clamp(25px,2.5vw,34px);color:#d9ddd7;stroke-width:1.3}
+.engineering-lab .lab-journey-stop.is-selected .lab-journey-icon{color:var(--lab-red);filter:drop-shadow(0 0 7px #ff3d2144)}
+.lab-journey-link{display:block;flex:1 1 auto;align-self:center;height:1px;min-width:8px;background:linear-gradient(90deg,#bb3a25,#2f796b);position:relative}
+.lab-journey-link:after{content:'';position:absolute;right:0;top:-2px;width:5px;height:5px;border-radius:50%;background:#55c0a4;box-shadow:0 0 7px #55c0a4}
+.lab-journey-link:first-of-type{background:linear-gradient(90deg,#df4027,#b4442c)}
+.lab-journey-link:first-of-type:after{background:#ff5133;box-shadow:0 0 7px #ff5133}
+.lab-journey-record{display:flex;gap:clamp(14px,1.8vw,24px);align-items:stretch;flex:1;min-height:0;margin-top:clamp(16px,2vw,26px);padding-top:clamp(12px,1.5vw,20px);border-top:1px solid #ffffff12}
+.lab-record-image{flex:0 0 38%;max-width:300px;aspect-ratio:2/1;align-self:center;min-height:0;border:1px solid #2b3437;background:#0a1215;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.lab-university{width:100%;height:100%;display:block;object-fit:cover}
+.lab-record-copy{display:flex;flex-direction:column;justify-content:center;min-width:0;gap:5px}
+.lab-record-copy h3{font:600 clamp(17px,1.8vw,25px)/1.05 'Workshop Condensed','Arial Narrow',sans-serif;letter-spacing:.2px;margin:0;color:#e8eae3}
+.lab-record-copy p{font:clamp(11px,1.15vw,15px)/1.35 Arial,sans-serif;margin:0;color:#cbd1cd;max-width:38ch}
+.lab-record-copy>span{font:9px ui-monospace,'Liberation Mono',monospace;letter-spacing:.4px;color:#8c9a9a;margin-top:2px}
+
+/* Navigation */
+.lab-navigation{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:9px;white-space:nowrap;pointer-events:auto;max-width:95vw;z-index:2}
+.lab-navigation button{backdrop-filter:blur(14px);background:rgba(18,26,30,.65);font-size:10px;padding:10px 15px}
+.lab-navigation .lab-primary{background:linear-gradient(135deg,#ff5c32,#ed3918);border-color:#ff7956;color:white}
+.lab-active .sideguide,.lab-active .corner-tag,.lab-active #scrollCue,.lab-active .scene-id,.lab-active .axis,.lab-active .obs-experience,.lab-active .terra-experience,.lab-active .jelly-experience,.lab-active #dossier,.lab-active .frame-meta,.lab-active .hall-world-hotspot{visibility:hidden!important;pointer-events:none!important}
+.lab-active .footer-axis,.lab-active .focus-line,.lab-active .scene-id,.lab-active .grid-world,.lab-active .reticle,.lab-active .fallback-machine,.lab-active #obsExperience,.lab-active #terraExperience,.lab-active #jellyExperience,.lab-active #obsMapHud{visibility:hidden!important;pointer-events:none!important}
+
+/* Reading layout: keep the same instruments readable without the wall projection. */
+.engineering-lab[data-layout=reading] .lab-panel{position:absolute;left:0;right:0;top:44vh;bottom:80px;width:100%;height:auto;padding:0;border:0;border-top:1px solid #d8896733;background:linear-gradient(140deg,rgba(5,13,17,.99),rgba(7,15,18,.995));overflow:auto}
+.engineering-lab[data-layout=reading] .lab-screen-chrome{padding:18px clamp(16px,4vw,38px)}
+.engineering-lab[data-layout=reading] .lab-domain-grid{grid-template-columns:repeat(2,minmax(0,1fr));flex:none;gap:10px}
+.engineering-lab[data-layout=reading] .lab-domain-layout{grid-template-columns:1fr;gap:12px}
+.engineering-lab[data-layout=reading] .lab-domain-detail{border-left:0;border-top:1px solid #223135;padding:10px 0 0;gap:7px}
+.engineering-lab[data-layout=reading] .lab-detail-head h3{font-size:14px}
+.engineering-lab[data-layout=reading] .lab-domain-detail p{font-size:12px}
+.engineering-lab[data-layout=reading] .lab-tech-chips span{font-size:10px}
+.engineering-lab[data-layout=reading] .lab-capability{min-height:126px;padding:12px}
+.engineering-lab[data-layout=reading] .lab-card-icon{width:32px;height:32px}
+.engineering-lab[data-layout=reading] .lab-card-title{font-size:12px}
+.engineering-lab[data-layout=reading] .lab-journey-track{height:auto;min-height:82px;flex-wrap:nowrap}
+.engineering-lab[data-layout=reading] .lab-journey-stop{flex-basis:22%;font-size:10px;min-height:78px}
+.engineering-lab[data-layout=reading] .lab-journey-icon{width:26px;height:26px}
+.engineering-lab[data-layout=reading] .lab-journey-record{flex-direction:column;margin-top:16px}
+.engineering-lab[data-layout=reading] .lab-record-image{flex:none;width:100%;max-width:340px;height:150px}
+.engineering-lab[data-layout=reading] .lab-room-heading{left:6vw;top:86px;max-width:86vw}
+.engineering-lab[data-layout=reading] .lab-navigation{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));bottom:12px;gap:5px;width:96vw}
+.engineering-lab[data-layout=reading] .lab-navigation button{white-space:normal;min-height:50px;padding:5px;font-size:9px;line-height:1.5}
+.engineering-lab[data-layout=reading] .lab-navigation .lab-enter-skills{display:none}
+.has-no-webgl .engineering-lab .lab-panel{top:85px}
+
+@media(max-width:600px){
+ .lab-room-heading{top:72px;left:7vw}
+ .lab-room-heading h1{font-size:26px}
+ .lab-room-sub{font-size:9px}
+ .engineering-lab[data-layout=reading] .lab-panel{top:40vh;bottom:78px}
+ /* Without WebGL there is no room to reveal behind, so the reading panel keeps
+    its near-top fallback position even on narrow viewports. */
+ .has-no-webgl .engineering-lab[data-layout=reading] .lab-panel{top:85px;bottom:78px}
+ .engineering-lab[data-layout=reading] .lab-journey-track{height:auto;min-height:76px}
+ .engineering-lab[data-layout=reading] .lab-journey-stop{font-size:9px;padding:5px 2px}
+ .engineering-lab[data-layout=reading] .lab-journey-link{min-width:3px}
+}
+@media(max-width:370px){.engineering-lab[data-layout=reading] .lab-card-title{font-size:10px}.engineering-lab .lab-screen-head{font-size:10px;letter-spacing:1px}}
+@media(prefers-reduced-motion:reduce){.engineering-lab *{transition:none!important;animation:none!important}}
+
+/* Close-up presentation: the reference frames are pure room views. The site
+   chrome goes away in the two workstation close-ups, and the lab buttons fade
+   with pointer idle so they never sit across the bottom of the reference shot. */
+body.lab-closeup .topbar{opacity:0!important;transform:translateY(-105%);pointer-events:none!important}
+.topbar{transition:opacity .32s ease,transform .32s ease}
+.lab-active .lab-navigation{opacity:0;pointer-events:none;transition:opacity .32s ease}
+.lab-active.lab-pointer-active .lab-navigation,.lab-active .lab-navigation:focus-within{opacity:1;pointer-events:auto}
+
+/* Wall layout: the projected panel is authored at 1200 × 513 / 570 and then
+   scaled onto the physical display, so it needs its own display-scale type
+   rather than viewport-scaled clamps. These sizes match the readable weight of
+   the reference close-ups. */
+.engineering-lab[data-layout=wall] .lab-screen-chrome{padding:36px 38px}
+.engineering-lab[data-layout=wall] .lab-screen-head{gap:14px;font-size:36px;letter-spacing:2.4px;margin-bottom:52px}
+.engineering-lab[data-layout=wall] .lab-red-square{width:20px;height:20px;border-width:2px}
+.engineering-lab[data-layout=wall] .lab-screen-dots{font-size:24px}
+.engineering-lab[data-layout=wall] .lab-domain-layout{grid-template-columns:minmax(0,2.55fr) minmax(0,1fr);gap:22px;flex:none;height:268px}
+.engineering-lab[data-layout=wall] .lab-domain-grid{gap:12px}
+.engineering-lab[data-layout=wall] .lab-capability{gap:18px;padding:34px 9px 20px;border-radius:7px}
+.engineering-lab[data-layout=wall] .lab-card-icon{width:86px;height:86px;stroke-width:1.2}
+.engineering-lab[data-layout=wall] .lab-card-title{font:600 36px/1.05 Workshop Condensed,'Arial Narrow',sans-serif;max-width:15ch;letter-spacing:.2px}
+.engineering-lab[data-layout=wall] .lab-domain-detail{gap:9px;padding-left:20px;overflow:visible}
+.engineering-lab[data-layout=wall] .lab-detail-head h3{font:600 32px/1.05 Workshop Condensed,'Arial Narrow',sans-serif;letter-spacing:.2px}
+.engineering-lab[data-layout=wall] .lab-detail-head .lab-screen-dots{font-size:20px}
+.engineering-lab[data-layout=wall] .lab-domain-detail p{font-size:26px;line-height:1.36}
+.engineering-lab[data-layout=wall] .lab-domain-detail h4{font-size:23px;letter-spacing:1.4px;margin-top:12px}
+.engineering-lab[data-layout=wall] .lab-tech-chips{gap:8px}
+.engineering-lab[data-layout=wall] .lab-tech-chips span{font-size:21px;padding:8px 10px;border-radius:5px}
+.engineering-lab[data-layout=wall] .lab-journey-track{height:158px;margin-top:0}
+.engineering-lab[data-layout=wall] .lab-journey-stop{flex-basis:17.2%;gap:10px;font:600 32px/1.05 Workshop Condensed,'Arial Narrow',sans-serif;border-radius:7px}
+.engineering-lab[data-layout=wall] .lab-journey-icon{width:70px;height:70px;stroke-width:1.25}
+.engineering-lab[data-layout=wall] .lab-journey-link{height:2px;min-width:14px}
+.engineering-lab[data-layout=wall] .lab-journey-link:after{top:-3px;width:8px;height:8px}
+.engineering-lab[data-layout=wall] .lab-journey-record{gap:26px;margin-top:20px;padding-top:16px}
+.engineering-lab[data-layout=wall] .lab-record-image{flex:0 0 32%;max-width:350px;aspect-ratio:1.72}
+.engineering-lab[data-layout=wall] .lab-record-copy{gap:7px}
+.engineering-lab[data-layout=wall] .lab-record-copy h3{font-size:50px}
+.engineering-lab[data-layout=wall] .lab-record-copy p{font-size:28px;line-height:1.28;max-width:34ch}
+.engineering-lab[data-layout=wall] .lab-record-copy>span{font-size:20px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-screen-chrome{padding:43px 90px 30px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-screen-head{font-size:31px;letter-spacing:1.7px;margin-bottom:18px;gap:12px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-domain-layout{grid-template-columns:minmax(0,2.05fr) minmax(0,1fr);gap:18px;height:360px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-domain-grid{gap:11px;height:288px;align-self:start}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-capability{gap:12px;padding:26px 6px 14px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-card-icon{width:72px;height:72px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-card-title{font-size:29px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-domain-detail{gap:7px;padding-left:18px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-detail-head h3{font-size:28px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-domain-detail p{font-size:21px;line-height:1.32}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-domain-detail h4{font-size:19px;letter-spacing:1.2px;margin-top:auto;padding-top:8px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-tech-chips{flex-wrap:nowrap;gap:7px}
+.engineering-lab[data-mode=skills][data-layout=wall] .lab-tech-chips span{font-size:18px;padding:8px 9px;white-space:nowrap}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-screen-chrome{padding:67px 40px 24px}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-screen-head{font-size:31px;letter-spacing:1.8px;margin-bottom:43px}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-journey-track{height:128px;margin:0 54px}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-journey-stop{flex-basis:15%;font-size:30px;gap:8px}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-journey-icon{width:74px;height:74px}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-journey-record{margin-top:43px;padding-left:74px;padding-right:24px;gap:60px}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-record-image{flex:0 0 30%;max-width:330px;aspect-ratio:1.55}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-record-copy h3{font-size:46px}
+.engineering-lab[data-mode=experience][data-layout=wall] .lab-record-copy p{font-size:26px}
+
+
+/* Touch navigation remains available while the environment is observed. */
+@media (hover:none), (max-width:760px){
+ .lab-active .lab-navigation{opacity:1;pointer-events:auto}
+ .engineering-lab[data-layout=reading] .lab-navigation .lab-enter-skills{display:inline-flex;align-items:center;justify-content:center}
+ .engineering-lab[data-layout=reading] .lab-navigation button{min-height:44px}
+}

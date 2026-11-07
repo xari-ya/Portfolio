@@ -1,0 +1,40 @@
+{
+  "name": "living-workshop-portfolio",
+  "private": true,
+  "version": "22.0.0",
+  "description": "Offline WebGL portfolio and standalone character studios.",
+  "scripts": {
+    "start": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "check": "node --check engineering-career-lab/kira-behaviour.js && node --check engineering-career-lab/mobile-lab.js && node --check mobile-behavior.js && node --check engineering-career-lab/refinement.js && node --check communications-room/phone.js && node --check communications-room/cars.js && node --check communications-room/screens.js && node --check communications-room/pendulum.js && node --check communications-room/behaviour.js && node --check communications-room/camera.js && node --check communications-room/graphics.js && node --check communications-room/materials.js && node --check communications-room/exterior.js && node --check communications-room/room.js && node --check communications-room/interface.js && node --check communications-room/daylight.js && node --check engine.js && node --check workshop-hall.js && node --check workshop-appearance.js && node --check workshop-shadows.js && node --check workshop-monitor.js && node --check workshop-system.js && node --check kira-loader.js && node --check engineer-station.js && node --check engineer-avatar.js && node --check engineer-renderer.js && node --check engineer-about.js && node --check engineer-assets/laptop/legion-model.js && node --check project-registry.js && node --check project-delivery.js && node --check production-station.js && node --check project-discovery.js && node --check project-study.js && node --check study-renderer.js && node --check project-study-timeline.js && node --check engineering-career-lab/room/geometry-kit.js && node --check engineering-career-lab/room/reception-door.js && node --check engineering-career-lab/room/lab-room.js && node --check engineering-career-lab/room/lab-dressing.js && node --check engineering-career-lab/skills/furniture.js && node --check engineering-career-lab/skills/equipment.js && node --check engineering-career-lab/skills/skills-data.js && node --check engineering-career-lab/lab-controller.js && node --check engineering-career-lab/lab-kira-route.js && node --check engineering-career-lab/interface/skills-interface.js",
+    "test": "node --test verification/workshop-system.test.cjs verification/project-delivery.test.cjs verification/project-study-timeline.test.cjs verification/lab/kira-life.test.cjs",
+    "test:homepage": "node verification/homepage/check.cjs",
+    "test:browser": "node verification/browser-check.cjs",
+    "character:refine": "node tools/refine-current-character.cjs",
+    "character:build": "node tools/optimize-generated-character.cjs && node tools/refine-current-character.cjs",
+    "test:character": "node verification/generated-asset-check.cjs && node verification/generated-browser-check.cjs",
+    "check:character": "node --check character-stage.js && node --check generated-model-loader.js && node --check generated-character.js && node --check tools/refine-current-character.cjs",
+    "test:engineer": "node verification/engineer/check.cjs && node verification/engineer/final-navigation.cjs && node verification/engineer/living-character.cjs",
+    "test:production": "node verification/production/check.cjs && node verification/production/navigation.cjs && node verification/production/standby.cjs && node verification/production/camera-handoff.cjs && node verification/production/mobile-delivery-follow.cjs",
+    "test:glass": "node verification/glass/check.cjs",
+    "test:study": "node verification/study/check.cjs && node verification/study/layout.cjs",
+    "test:study:refinement": "node verification/study/refinement.cjs",
+    "test:study:transitions": "node verification/study/transitions.cjs",
+    "test:study:regressions": "node verification/study/regressions.cjs && node verification/study/entry-inputs.cjs",
+    "test:communications": "node --test verification/communications/route.test.cjs verification/communications/geometry.test.cjs && node verification/communications/check.cjs && node verification/communications/interaction.cjs && node verification/communications/board-check.cjs",
+    "test:lab:refinement": "node verification/lab/refinement-check.cjs",
+    "test:mobile:mission": "node verification/mobile-mission/audit.cjs",
+    "test:mobile:regression": "node verification/mobile-mission/capture.cjs current && node verification/mobile-mission/compare.cjs",
+    "test:mobile:performance": "node verification/mobile-mission/performance.cjs && node verification/mobile-mission/layout.cjs",
+    "test:lab": "node --test verification/lab/route.test.cjs && node verification/lab/check.cjs",
+    "test:communications:life": "node --test verification/communications/phase07/behaviour.test.cjs && node verification/communications/phase07/check.cjs",
+    "test:communications:visual": "node verification/communications/visual.cjs",
+    "test:communications:cars": "node --test verification/communications/pendulum.test.cjs && node verification/communications/cars.cjs",
+    "test:office:phone:lock": "node verification/communications/phone-lock.cjs",
+    "test:office:phone:preserve": "node verification/communications/phone-preservation.cjs",
+    "test:office:phone": "node --test verification/communications/phone-layout.test.cjs && node verification/communications/phone-office.cjs && node verification/communications/phone-normal.cjs",
+    "test:phone-ui": "node verification/phone-ui/preserve.cjs --baseline && node verification/phone-ui/preserve.cjs && node verification/phone-ui/phone.cjs && node verification/phone-ui/edges.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1"
+  }
+}

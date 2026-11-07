@@ -1,0 +1,66 @@
+/* Authored in display coordinates (1200 × 513), then projected by the original
+ * camera. Every rule is limited to Skills Station or its phone instrument. */
+@media(min-width:761px){
+ #engineeringLab[data-mode=skills] #labSkillsPanel{background:radial-gradient(ellipse at 45% 35%,#0d1a1f,#04090c 74%);border-color:#385056;box-shadow:inset 0 0 0 5px #030809,inset 0 0 0 6px #1b3035,0 0 24px #0009}
+ #engineeringLab[data-mode=skills] #labSkillsPanel:before,#engineeringLab[data-mode=skills] #labSkillsPanel:after{content:'';position:absolute;pointer-events:none;inset:12px;border:1px solid #385056;clip-path:polygon(0 0,13% 0,13% 2px,2px 2px,2px 13%,0 13%,0 0,100% 0,100% 13%,calc(100% - 2px) 13%,calc(100% - 2px) 2px,87% 2px,87% 0,100% 0,100% 100%,87% 100%,87% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 87%,100% 87%,100% 100%,0 100%,0 87%,2px 87%,2px calc(100% - 2px),13% calc(100% - 2px),13% 100%,0 100%)}
+ #engineeringLab[data-mode=skills] #labSkillsPanel:after{inset:5px;border-color:#c04f35;opacity:.4}
+ #engineeringLab[data-mode=skills][data-layout=wall] .lab-skills-screen{padding:30px 32px 26px}
+ #engineeringLab[data-mode=skills] .lab-screen-head{font:600 29px/1 'Workshop Condensed',sans-serif;letter-spacing:.8px;margin-bottom:26px;min-height:32px}
+ #engineeringLab[data-mode=skills] .lab-red-square{width:5px;height:27px;background:#ef492f;border:0;box-shadow:0 0 9px #ff402144}
+ #engineeringLab[data-mode=skills] .lab-screen-dots{font:12px monospace;letter-spacing:2px;color:#5f7b80}
+ #engineeringLab[data-mode=skills] .lab-screen-dots:before{content:'STATION 05 / ';font-size:11px;color:#be7059}
+ #engineeringLab[data-mode=skills] .lab-domain-layout{grid-template-columns:minmax(0,3.35fr) minmax(0,1fr);gap:28px;flex:1;height:auto;align-items:center;padding:0 4px 12px}
+ #engineeringLab[data-mode=skills] .lab-domain-grid{height:284px;align-self:center;gap:17px}
+ #engineeringLab[data-mode=skills] .lab-capability{position:relative;padding:28px 12px 23px;gap:22px;border:1px solid #3a5059;border-radius:8px;background:linear-gradient(145deg,#15232a70,#070e12 70%);box-shadow:inset 0 1px 0 #c4e2e312,0 8px 22px #0005;transition:background .24s,border-color .24s,box-shadow .24s,color .24s}
+ #engineeringLab[data-mode=skills] .lab-capability:before{content:'0' counter(domain);counter-increment:domain;position:absolute;top:12px;left:13px;font:10px monospace;letter-spacing:1px;color:#657b80}
+ #engineeringLab[data-mode=skills] .lab-domain-grid{counter-reset:domain}
+ #engineeringLab[data-mode=skills] .lab-capability:after{content:'';position:absolute;bottom:12px;width:24px;height:2px;background:#47616a;opacity:.5}
+ #engineeringLab[data-mode=skills] .lab-capability:hover,#engineeringLab[data-mode=skills] .lab-capability:focus-visible,#engineeringLab[data-mode=skills] .lab-capability.is-selected{border-color:#ff5b3f;background:radial-gradient(ellipse at 50% 30%,#6a201b75,#190e0e 80%);box-shadow:inset 0 0 0 1px #ff442e55,inset 0 0 38px #f33a1912,0 0 17px #ee40232b;color:#fff1e9}
+ #engineeringLab[data-mode=skills] .lab-capability:hover:after{background:#ff6844;opacity:1}
+ #engineeringLab[data-mode=skills] .lab-card-icon{width:72px;height:72px;stroke-width:1.1;color:#c8d6d9}
+ #engineeringLab[data-mode=skills] .lab-capability:hover svg{color:#ff9273;filter:drop-shadow(0 0 6px #ff593455)}
+ #engineeringLab[data-mode=skills] .lab-card-title{font:600 29px/1.15 'Workshop Condensed',sans-serif;letter-spacing:.15px;color:#e0e7e3;max-width:12ch}
+ #engineeringLab[data-mode=skills] .lab-domain-detail{padding:24px 0 24px 27px;gap:17px;border-color:#2c4046;min-height:220px}
+ #engineeringLab[data-mode=skills] .lab-detail-head h3{font:600 28px 'Workshop Condensed',sans-serif;letter-spacing:.4px}
+ #engineeringLab[data-mode=skills] .lab-detail-head .lab-screen-dots{display:none}
+ #engineeringLab[data-mode=skills] .lab-domain-detail p{font:18px/1.65 Arial,sans-serif;color:#a5b3b5}
+ #engineeringLab[data-mode=skills] .lab-domain-detail:after{content:'';width:48px;height:2px;background:#e9492d;box-shadow:0 0 8px #ff452d44;margin-top:12px}
+ #engineeringLab[data-mode=skills] .lab-domain-detail h4{display:none}
+ #engineeringLab[data-mode=skills][data-domain-view=detail] .lab-screen-head{margin-bottom:22px}
+ #engineeringLab[data-mode=skills] .lab-refined-domain{grid-template-columns:66px minmax(0,1fr) 206px;gap:20px;padding-bottom:5px}
+ #engineeringLab[data-mode=skills] .lab-refined-sidebar{gap:12px;padding-top:3px}
+ #engineeringLab[data-mode=skills] .lab-refined-sidebar button{display:grid;place-items:center;width:66px;min-height:58px;padding:10px;border-radius:6px;background:linear-gradient(145deg,#18232a,#090f13);border-color:#33464d;color:#8c9c9e;box-shadow:inset 0 1px 0 #ffffff0b}
+ #engineeringLab[data-mode=skills] .lab-refined-sidebar svg{width:33px;height:33px}
+ #engineeringLab[data-mode=skills] .lab-refined-sidebar button[aria-pressed=true]{background:radial-gradient(#6e241a88,#241011);border-color:#ff563b;color:#ffa387;box-shadow:inset 0 0 0 1px #ff3d2155,0 0 13px #f23d2333}
+ #engineeringLab[data-mode=skills] .lab-refined-sidebar button:last-child{margin-top:auto;min-height:40px;font-size:22px}
+ #engineeringLab[data-mode=skills] .lab-refined-domain article{position:relative;display:block;padding:22px 18px;overflow:hidden;border:1px solid #293f44;border-radius:5px;background:radial-gradient(ellipse at 75% 50%,#10242b99,#080f13 85%)}
+ #engineeringLab[data-mode=skills] .lab-refined-domain article:before{content:'';position:absolute;inset:0;pointer-events:none;border-top:2px solid #ad4a32;clip-path:polygon(0 0,25px 0,25px 2px,2px 2px,2px 25px,0 25px,0 0,100% 0,100% 25px,calc(100% - 2px) 25px,calc(100% - 2px) 2px,calc(100% - 25px) 2px,calc(100% - 25px) 0)}
+ #engineeringLab[data-mode=skills] .lab-domain-copy{position:relative;z-index:1;width:34%;height:100%;display:flex;flex-direction:column;align-items:flex-start;pointer-events:none}
+ #engineeringLab[data-mode=skills] .lab-technical-eyebrow{font:10px/1.4 monospace;color:#80a3a8;letter-spacing:.6px;margin-bottom:15px;max-width:26ch}
+ #engineeringLab[data-mode=skills] .lab-refined-domain h2{font:600 34px/1.08 'Workshop Condensed',sans-serif;letter-spacing:.15px;margin:0 0 17px;color:#f0f0e6;text-transform:none}
+ #engineeringLab[data-mode=skills] .lab-refined-domain article p{font:18px/1.6 Arial,sans-serif;margin:0;color:#adbcbe}
+ #engineeringLab[data-mode=skills] .lab-domain-note{font:9px/1.7 monospace;letter-spacing:1px;color:#a07661;margin-top:auto;padding-top:20px}
+ #engineeringLab[data-mode=skills] .lab-refined-domain article img{position:absolute;right:0;top:8%;width:66%;height:88%;object-fit:contain;grid-area:auto;mix-blend-mode:screen}
+ #engineeringLab[data-mode=skills] .lab-refined-domain aside{border-color:#2a3d43;padding:15px 0 0 19px;overflow:visible}
+ #engineeringLab[data-mode=skills] .lab-refined-domain h3{font:600 21px/1 'Workshop Condensed',sans-serif;letter-spacing:.8px;color:#e1e8e2;margin:0 0 18px}
+ #engineeringLab[data-mode=skills] .lab-refined-domain aside h3:not(:first-child){margin-top:28px;padding-top:22px;border-top:1px solid #23383e}
+ #engineeringLab[data-mode=skills] .lab-refined-domain .lab-tech-chips{display:flex;flex-wrap:wrap;gap:7px}
+ #engineeringLab[data-mode=skills] .lab-refined-domain .lab-tech-chips span{font:600 16px/1.1 'Workshop Condensed',sans-serif;color:#c7dbe3;border:1px solid #304550;background:linear-gradient(#20343f,#14232c);border-radius:6px;padding:8px 10px;white-space:nowrap;box-shadow:inset 0 1px 0 #ffffff0b}
+ #engineeringLab[data-mode=skills] .lab-evidence{font:19px/1.4 'Workshop Condensed',sans-serif;margin:16px 0;color:#c8d6d6;gap:10px}
+ #engineeringLab[data-mode=skills] .lab-evidence svg{width:27px;height:27px;color:#9fbfc7}
+
+ #engineeringLab[data-mode=skills][data-layout=reading] .lab-refined-domain{min-height:350px;grid-template-columns:55px minmax(0,1fr) 170px;gap:14px}
+ #engineeringLab[data-mode=skills][data-layout=reading] .lab-refined-sidebar button{width:50px;min-height:50px}
+ #engineeringLab[data-mode=skills][data-layout=reading] .lab-domain-copy{width:31%}
+ #engineeringLab[data-mode=skills][data-layout=reading] .lab-refined-domain article img{width:62%}
+ #engineeringLab[data-mode=skills][data-layout=reading] .lab-refined-domain h2{font-size:25px}
+ #engineeringLab[data-mode=skills][data-layout=reading] .lab-refined-domain article p{font-size:13px}
+}
+@media(max-width:760px), (max-width:1023px) and (max-height:500px){
+ #labPhone[data-mode=skills] .lab-phone-instrument{border-radius:16px 16px 0 0;background:linear-gradient(150deg,#111d23f5,#070e12fa);border-color:#3c5157;box-shadow:0 -4px 28px #0008,inset 0 2px 0 #eb4e322b;backdrop-filter:none}
+ #labPhone[data-mode=skills] .lab-phone-domains button{background:linear-gradient(#16232a,#0c1419);border-color:#344950;border-radius:6px}
+ #labPhone[data-mode=skills] .lab-phone-domains button[aria-pressed=true]{background:radial-gradient(#69251b80,#1f1010);border-color:#f65b3b;box-shadow:inset 0 0 0 1px #ff684633,0 0 10px #ff49211c;color:#ffd5c6}
+ #labPhone[data-mode=skills] .lab-phone-tools span{background:#182b35;border-color:#34505e;color:#c5dce4}
+ #labPhone .lab-phone-technical{display:block;width:100%;height:155px;object-fit:contain;margin-top:12px;border:1px solid #294148;border-radius:5px;background:#081115}
+}
+@media(prefers-reduced-motion:reduce){#engineeringLab[data-mode=skills] button{transition:none}}

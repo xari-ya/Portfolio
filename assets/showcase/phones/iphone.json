@@ -1,0 +1,1286 @@
+{
+  "source": {
+    "title": "Apple iPhone 15 Pro Max Black",
+    "author": "polyman Studio",
+    "url": "https://sketchfab.com/3d-models/apple-iphone-15-pro-max-black-df17520841214c1792fb8a44c6783ee7",
+    "license": "CC-BY-4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "originalFile": "apple_iphone_15_pro_max_black(2).glb",
+  "originalSHA256": "b4e1a4e6d5f61d1e906d6c77a63dd2d5c703c2769afc461b917be7b0f525d31d",
+  "modifications": [
+    "Source transforms flattened; oriented display toward +Z; centered and normalized to height 1",
+    "Original vertex positions, normals, UVs and triangle topology preserved under those transforms",
+    "Batched by original material; project screenshot replaces stock display; transmissive cover layer omitted for readable UI"
+  ],
+  "binary": "iphone.bin",
+  "binarySHA256": "407d7fa8bdc50869b5a72275ff0252b2ff31e7478e3a331d3621cf444bda504b",
+  "triangles": 64229,
+  "bounds": {
+    "min": [
+      -0.24353667350884126,
+      -0.5,
+      -0.03858739296231849
+    ],
+    "max": [
+      0.24353667350884126,
+      0.5,
+      0.03858739296231849
+    ]
+  },
+  "screenBounds": {
+    "min": [
+      -0.2233832071163876,
+      -0.48271616428403996,
+      0.0385870529905545
+    ],
+    "max": [
+      0.2233832370040152,
+      0.4827240546177266,
+      0.03858737801850468
+    ]
+  },
+  "batches": [
+    {
+      "material": 0,
+      "vertexOffset": 0,
+      "vertexCount": 4245,
+      "indexOffset": 135840,
+      "indexCount": 12018,
+      "nodes": [
+        "ttmRoLdJipiIOmf",
+        "zraMDXCGczVnffU",
+        "RvfXLdAOBoQdZkP",
+        "eYSJBzbqIfsHPsw",
+        "IZbjANwSMLfgcvD",
+        "IMPDFDiRXhPIUMV",
+        "dkQXkqysxzfHFiP",
+        "dxVZiHfQBLkPYHO",
+        "lfXEACUihtLFGfq",
+        "xtMgDHhPqFLAHyB",
+        "fdZyCEcqJDKBWVW"
+      ]
+    },
+    {
+      "material": 1,
+      "vertexOffset": 183912,
+      "vertexCount": 1189,
+      "indexOffset": 221960,
+      "indexCount": 5343,
+      "nodes": [
+        "DjsDkGiopeiEJZK"
+      ]
+    },
+    {
+      "material": 2,
+      "vertexOffset": 243332,
+      "vertexCount": 454,
+      "indexOffset": 257860,
+      "indexCount": 1182,
+      "nodes": [
+        "buRWvyqhBBgcJFo",
+        "VTXyqxbrBeQSTEt"
+      ]
+    },
+    {
+      "material": 3,
+      "vertexOffset": 262588,
+      "vertexCount": 1391,
+      "indexOffset": 307100,
+      "indexCount": 4440,
+      "nodes": [
+        "MrMmlCAsAxJpYqQ_0",
+        "xJhdvBbfHMKCBPl",
+        "KbMHiTYyrBmkZwz",
+        "sVqcZvpZKhwSmoN",
+        "HKHhmqmAZAOaaKY",
+        "MHfUXxLdYldKhVJ_0"
+      ]
+    },
+    {
+      "material": 4,
+      "vertexOffset": 324860,
+      "vertexCount": 1008,
+      "indexOffset": 357116,
+      "indexCount": 2880,
+      "nodes": [
+        "KVYuugCtKRpLNRG_0"
+      ]
+    },
+    {
+      "material": 5,
+      "vertexOffset": 368636,
+      "vertexCount": 510,
+      "indexOffset": 384956,
+      "indexCount": 1560,
+      "nodes": [
+        "wqbHSzWaUxBCwxY_0"
+      ]
+    },
+    {
+      "material": 6,
+      "vertexOffset": 391196,
+      "vertexCount": 172,
+      "indexOffset": 396700,
+      "indexCount": 504,
+      "nodes": [
+        "QvGDcbDApaGssma",
+        "MGPAkjCLsByKXcN"
+      ]
+    },
+    {
+      "material": 9,
+      "vertexOffset": 398716,
+      "vertexCount": 1322,
+      "indexOffset": 441020,
+      "indexCount": 3294,
+      "nodes": [
+        "vFwJFNASGvEHWhs"
+      ]
+    },
+    {
+      "material": 8,
+      "vertexOffset": 454196,
+      "vertexCount": 40,
+      "indexOffset": 455476,
+      "indexCount": 132,
+      "nodes": [
+        "fjHkOQLEMoyeYKr"
+      ]
+    },
+    {
+      "material": 7,
+      "vertexOffset": 456004,
+      "vertexCount": 86,
+      "indexOffset": 458756,
+      "indexCount": 252,
+      "nodes": [
+        "evAxFwhaQUwXuua"
+      ]
+    },
+    {
+      "material": 10,
+      "vertexOffset": 459764,
+      "vertexCount": 2272,
+      "indexOffset": 532468,
+      "indexCount": 7266,
+      "nodes": [
+        "USxQiqZgxHbRvqB"
+      ]
+    },
+    {
+      "material": 11,
+      "vertexOffset": 561532,
+      "vertexCount": 40,
+      "indexOffset": 562812,
+      "indexCount": 60,
+      "nodes": [
+        "TvgBVmqNmSrFVfW"
+      ]
+    },
+    {
+      "material": 12,
+      "vertexOffset": 563052,
+      "vertexCount": 8038,
+      "indexOffset": 820268,
+      "indexCount": 36174,
+      "nodes": [
+        "GuYJryuYunhpphO",
+        "DOjZomXdJsbbvcr",
+        "cnreaSmJRdAuFia",
+        "IZQgEjTfhbNtjHR",
+        "TxLQyfBdakwBPHu_0",
+        "zOPceDOPdLNSscX",
+        "hGKQDeRmDnGNdjb",
+        "AdjkxvMXIDEHBMM"
+      ]
+    },
+    {
+      "material": 13,
+      "vertexOffset": 964964,
+      "vertexCount": 138,
+      "indexOffset": 969380,
+      "indexCount": 384,
+      "nodes": [
+        "pvdHknDTGDzVpwc"
+      ]
+    },
+    {
+      "material": 14,
+      "vertexOffset": 970916,
+      "vertexCount": 44,
+      "indexOffset": 972324,
+      "indexCount": 132,
+      "nodes": [
+        "CfghdUoyzvwzIum"
+      ]
+    },
+    {
+      "material": 15,
+      "vertexOffset": 972852,
+      "vertexCount": 715,
+      "indexOffset": 995732,
+      "indexCount": 2142,
+      "nodes": [
+        "DjdhycfQYjKMDyn",
+        "SysBlPspVQNIcce",
+        "AQkWXGdRSkSZMav"
+      ]
+    },
+    {
+      "material": 16,
+      "vertexOffset": 1004300,
+      "vertexCount": 61,
+      "indexOffset": 1006252,
+      "indexCount": 180,
+      "nodes": [
+        "usFLmqcyrnltBUr"
+      ]
+    },
+    {
+      "material": 18,
+      "vertexOffset": 1006972,
+      "vertexCount": 220,
+      "indexOffset": 1014012,
+      "indexCount": 693,
+      "nodes": [
+        "xXDHkMplTIDAXLN"
+      ]
+    },
+    {
+      "material": 17,
+      "vertexOffset": 1016784,
+      "vertexCount": 1220,
+      "indexOffset": 1055824,
+      "indexCount": 5826,
+      "nodes": [
+        "vELORlCJixqPHsZ"
+      ]
+    },
+    {
+      "material": 19,
+      "vertexOffset": 1079128,
+      "vertexCount": 288,
+      "indexOffset": 1088344,
+      "indexCount": 1080,
+      "nodes": [
+        "EbQGKrWAqhBHiMv"
+      ]
+    },
+    {
+      "material": 20,
+      "vertexOffset": 1092664,
+      "vertexCount": 949,
+      "indexOffset": 1123032,
+      "indexCount": 5100,
+      "nodes": [
+        "EddVrWkqZTlvmci",
+        "aGrbyjnzqoVJenz",
+        "bxjlJpbNESedyat",
+        "ehFpgEdYijLjwka",
+        "FjtgRCsnzEoHpCy",
+        "gJeeYWdxrKsnsVD",
+        "gTmqYtKthFeRVJL",
+        "FFAjDZTPwYrUKAV",
+        "AwsQCWysocWlYzN"
+      ]
+    },
+    {
+      "material": 21,
+      "vertexOffset": 1143432,
+      "vertexCount": 384,
+      "indexOffset": 1155720,
+      "indexCount": 2040,
+      "nodes": [
+        "KSWlaxBcnPDpFCs",
+        "bpqFtgUKAOOPYpk",
+        "ooeiSEXgcJckXsp",
+        "yxqQUnbopbiRvZr"
+      ]
+    },
+    {
+      "material": 22,
+      "vertexOffset": 1163880,
+      "vertexCount": 699,
+      "indexOffset": 1186248,
+      "indexCount": 2193,
+      "nodes": [
+        "TakBsdEjEytCAMK",
+        "cibcwsZWGgGfpme"
+      ]
+    },
+    {
+      "material": 23,
+      "vertexOffset": 1195020,
+      "vertexCount": 399,
+      "indexOffset": 1207788,
+      "indexCount": 1185,
+      "nodes": [
+        "IykfmVvLplTsTEW"
+      ]
+    },
+    {
+      "material": 24,
+      "vertexOffset": 1212528,
+      "vertexCount": 2788,
+      "indexOffset": 1301744,
+      "indexCount": 14091,
+      "nodes": [
+        "wLfSXtbwRlBrwof"
+      ]
+    },
+    {
+      "material": 26,
+      "vertexOffset": 1358108,
+      "vertexCount": 2934,
+      "indexOffset": 1451996,
+      "indexCount": 14091,
+      "nodes": [
+        "WJwwVjsahIXbJpU"
+      ]
+    },
+    {
+      "material": 28,
+      "vertexOffset": 1508360,
+      "vertexCount": 520,
+      "indexOffset": 1525000,
+      "indexCount": 1992,
+      "nodes": [
+        "YfrJNXgMvGOAfzz"
+      ]
+    },
+    {
+      "material": 25,
+      "vertexOffset": 1532968,
+      "vertexCount": 33,
+      "indexOffset": 1534024,
+      "indexCount": 96,
+      "nodes": [
+        "DCLCbjzqejuvsqH"
+      ]
+    },
+    {
+      "material": 27,
+      "vertexOffset": 1534408,
+      "vertexCount": 8988,
+      "indexOffset": 1822024,
+      "indexCount": 35424,
+      "nodes": [
+        "FscwyiLIVNWUuKe",
+        "guvLdFXlBjMoNra",
+        "eWbcqPskBBXuZDe",
+        "nnqwwoLVdMJlHIF"
+      ]
+    },
+    {
+      "material": 31,
+      "vertexOffset": 1963720,
+      "vertexCount": 700,
+      "indexOffset": 1986120,
+      "indexCount": 3240,
+      "nodes": [
+        "CdalkzDVnwgdEhS",
+        "PRPzbUhYhabBDYt",
+        "XRoKUoMkItkzNYL",
+        "KOgQmlOdVEyKocf",
+        "KXVnYLSfTdVnSOf"
+      ]
+    },
+    {
+      "material": 32,
+      "vertexOffset": 1999080,
+      "vertexCount": 2409,
+      "indexOffset": 2076168,
+      "indexCount": 12960,
+      "nodes": [
+        "NtjcIgolNGgYlCg",
+        "oOTDgAlTGbFYzBo",
+        "drpRvcOgsocXGbn"
+      ]
+    },
+    {
+      "material": 29,
+      "vertexOffset": 2128008,
+      "vertexCount": 1800,
+      "indexOffset": 2185608,
+      "indexCount": 8208,
+      "nodes": [
+        "IXWuqsIeTqBFLIy",
+        "obVkazjvaXyXFtA",
+        "wJqHahKxdxecSAC"
+      ]
+    },
+    {
+      "material": 30,
+      "vertexOffset": 2218440,
+      "vertexCount": 219,
+      "indexOffset": 2225448,
+      "indexCount": 648,
+      "nodes": [
+        "qlwPlhojsxIgqwa",
+        "zFlMfSCaOdRDBFx",
+        "SRYqzKwamLGuEGm"
+      ]
+    },
+    {
+      "material": 33,
+      "vertexOffset": 2228040,
+      "vertexCount": 251,
+      "indexOffset": 2236072,
+      "indexCount": 864,
+      "nodes": [
+        "pXBNoLiaMwsDHRF",
+        "SCoTCDlNLPQMMyt"
+      ]
+    },
+    {
+      "material": 34,
+      "vertexOffset": 2239528,
+      "vertexCount": 40,
+      "indexOffset": 2240808,
+      "indexCount": 117,
+      "nodes": [
+        "IkoiNqATMVoZFKD"
+      ]
+    },
+    {
+      "material": 35,
+      "vertexOffset": 2241276,
+      "vertexCount": 33,
+      "indexOffset": 2242332,
+      "indexCount": 96,
+      "nodes": [
+        "rqgRAGHOwnuBypi"
+      ]
+    },
+    {
+      "material": 36,
+      "vertexOffset": 2242716,
+      "vertexCount": 972,
+      "indexOffset": 2273820,
+      "indexCount": 4800,
+      "nodes": [
+        "npMJxzurVJQlumk"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "hUlRcbieVuIiOXG",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metal": 0.0,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 0,
+      "normalScale": 1
+    },
+    {
+      "name": "iCxrnlRvbVOguYp",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metal": 0.2,
+      "rough": 0.6,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "eHgELfGhsUorIYR",
+      "color": [
+        0.02,
+        0.02,
+        0.02,
+        1.0
+      ],
+      "metal": 0.3,
+      "rough": 0.38,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "dxCVrUCvYhjVxqy",
+      "color": [
+        0.058955,
+        0.0604662,
+        0.065,
+        1.0
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 1,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "mvjnAONQuIshyfX",
+      "color": [
+        0.058955,
+        0.0604662,
+        0.065,
+        1.0
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 1,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "MHFGNLrDQbTNima",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 3,
+      "orm": 4,
+      "normal": 5,
+      "normalScale": 1
+    },
+    {
+      "name": "kUhjpatHUvkBwfM",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 6,
+      "orm": 7,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "KSIxMqttXxxmOYl",
+      "color": [
+        0.02,
+        0.02,
+        0.02,
+        1.0
+      ],
+      "metal": 0.501,
+      "rough": 0.55,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 8,
+      "normalScale": 1
+    },
+    {
+      "name": "AhrzSsKcKjghXhP",
+      "color": [
+        0.4,
+        0.4,
+        0.4,
+        1.0
+      ],
+      "metal": 0.0,
+      "rough": 0.3,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "RJoymvEsaIItifI",
+      "color": [
+        0.448,
+        0.448,
+        0.448,
+        1.0
+      ],
+      "metal": 1,
+      "rough": 0.65,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 9,
+      "normalScale": 1
+    },
+    {
+      "name": "mcPrzcBUcdqUybC",
+      "color": [
+        0.016,
+        0.0153144,
+        0.014384,
+        1.0
+      ],
+      "metal": 0.0,
+      "rough": 0.7,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 9,
+      "normalScale": 1
+    },
+    {
+      "name": "pIhYLPqiSQOZTjn",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 10,
+      "orm": 11,
+      "normal": 12,
+      "normalScale": 1
+    },
+    {
+      "name": "eShKpuMNVJTRrgg",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 6,
+      "orm": 13,
+      "normal": 14,
+      "normalScale": 1
+    },
+    {
+      "name": "xdyiJLYTYRfJffH",
+      "color": [
+        0.018468,
+        0.0186187,
+        0.019,
+        1.0
+      ],
+      "metal": 0.0,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 15,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "jpGaQNgTtEGkTfo",
+      "color": [
+        0.015,
+        0.0141031,
+        0.012375,
+        0.4
+      ],
+      "metal": 0.0,
+      "rough": 1,
+      "alphaMode": "BLEND",
+      "screen": false,
+      "cover": false,
+      "orm": 16,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "ujsvqBWRMnqdwPx",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metal": 0.275,
+      "rough": 0.001,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 17,
+      "normalScale": 1
+    },
+    {
+      "name": "sxNzrmuTqVeaXdg",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        0.008
+      ],
+      "metal": 0.5,
+      "rough": 0.05,
+      "alphaMode": "BLEND",
+      "screen": false,
+      "cover": true,
+      "normalScale": 1
+    },
+    {
+      "name": "zFdeDaGNRwzccye",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metal": 0.2,
+      "rough": 0.001,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 17,
+      "normalScale": 1
+    },
+    {
+      "name": "pIJKfZsazmcpEiU",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metal": 0.2,
+      "rough": 0.001,
+      "alphaMode": "OPAQUE",
+      "screen": true,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "TBLSREBUyLMVtJa",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0.74,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 18,
+      "orm": 19,
+      "normalScale": 1
+    },
+    {
+      "name": "xNrofRCqOXXHVZt",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        0.175
+      ],
+      "metal": 1,
+      "rough": 0.0,
+      "alphaMode": "BLEND",
+      "screen": false,
+      "cover": false,
+      "baseColor": 20,
+      "orm": 21,
+      "normalScale": 1
+    },
+    {
+      "name": "yQQySPTfbEJufve",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 0.5,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 22,
+      "normalScale": 1
+    },
+    {
+      "name": "ZQfGMLaFcpPaLMU",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        0.6
+      ],
+      "metal": 0.1,
+      "rough": 0.02,
+      "alphaMode": "BLEND",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "dwrMminMXjXXeek",
+      "color": [
+        0.05,
+        0.04725,
+        0.0445,
+        1.0
+      ],
+      "metal": 0.8,
+      "rough": 0.001,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "oZRkkORNzkufnGD",
+      "color": [
+        0.081175,
+        0.0821313,
+        0.085,
+        1.0
+      ],
+      "metal": 0.7,
+      "rough": 1,
+      "alphaMode": "BLEND",
+      "screen": false,
+      "cover": false,
+      "baseColor": 23,
+      "orm": 24,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "vhaEJjZoqGtyLdo",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 0,
+      "normalScale": 1
+    },
+    {
+      "name": "yhcAXNGcJWCqtIS",
+      "color": [
+        0.092,
+        0.087952,
+        0.08464,
+        1.0
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 24,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "fkUApOHLQsMUdfd",
+      "color": [
+        0.012,
+        0.011754,
+        0.011508,
+        1.0
+      ],
+      "metal": 0.1,
+      "rough": 0.36,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "bCgzXjHOanGdTFV",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0.0,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 25,
+      "normalScale": 1
+    },
+    {
+      "name": "EuTsEfyoAnyJIih",
+      "color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metal": 0.2,
+      "rough": 0.001,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "EszxgwYUTxbhBrC",
+      "color": [
+        0.068,
+        0.068,
+        0.06392,
+        0.01
+      ],
+      "metal": 0.0,
+      "rough": 0.001,
+      "alphaMode": "BLEND",
+      "screen": false,
+      "cover": true,
+      "normalScale": 1
+    },
+    {
+      "name": "jlzuBkUzuJqgiAK",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0.8,
+      "rough": 0.8,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 26,
+      "orm": 19,
+      "normalScale": 1
+    },
+    {
+      "name": "PpwUTnTFZJXxCoE",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 6,
+      "orm": 7,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "yiDkEwDSyEhavuP",
+      "color": [
+        0.014,
+        0.013384,
+        0.01288,
+        1.0
+      ],
+      "metal": 0.6,
+      "rough": 1,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "orm": 24,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "hiVunnLeAHkwGEo",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0.1,
+      "rough": 0.33,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 27,
+      "orm": 28,
+      "normal": 29,
+      "normalScale": 1
+    },
+    {
+      "name": "HGhEhpqSBZRnjHC",
+      "color": [
+        0.04,
+        0.0378,
+        0.0356,
+        0.2
+      ],
+      "metal": 1,
+      "rough": 1,
+      "alphaMode": "BLEND",
+      "screen": false,
+      "cover": false,
+      "orm": 24,
+      "normal": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "JJvGZqtXqnnFakR",
+      "color": [
+        0.31,
+        0.306745,
+        0.2914,
+        1.0
+      ],
+      "metal": 0.0,
+      "rough": 0.8,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "normalScale": 1
+    }
+  ],
+  "textures": [
+    {
+      "file": "iphone-0.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1,
+      "sha256": "3c9f856bd52cc614a678bf646a58a27af539dd03dfac95ffc13b8041d96a6333"
+    },
+    {
+      "file": "iphone-1.png",
+      "width": 1024,
+      "height": 1024,
+      "maxGPUSize": 1024,
+      "sha256": "a0d745fa0ff62d8fdf44840f387c50be34c60821e27fefdca2461c082e7c1745"
+    },
+    {
+      "file": "iphone-2.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "abab146efc19d64ba86b375cf25aff73d46ed7a5c20b12a3077d255cd3277525"
+    },
+    {
+      "file": "iphone-3.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1024,
+      "sha256": "e0aec3170ce89c6ec8db1ca2f69afa577807b12c8b7ea7d0c2ce5ca10dae1c38"
+    },
+    {
+      "file": "iphone-4.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1024,
+      "sha256": "0bd0e4089fa54aed4a8d6b7040fe0ccf76d8a1a369faeac0582a02a3e894b988"
+    },
+    {
+      "file": "iphone-5.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1024,
+      "sha256": "ad79b73dcfa1314459d78ba7c126200e088f77b3f8174acd339623b788c7436f"
+    },
+    {
+      "file": "iphone-6.jpg",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "84a8fdd1df9799c99f8495bbc5d7421251640a4d29378adc17f769cb00c66138"
+    },
+    {
+      "file": "iphone-7.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "0f19a5af79f340af49fd1c215316bd6cdf5dce29397b1639e7e6b83a60f8bdcd"
+    },
+    {
+      "file": "iphone-8.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1024,
+      "sha256": "d3a38f9c17d23110ec47ed1727321bbc62a4887e8893b56d6b1d7b30a322813b"
+    },
+    {
+      "file": "iphone-9.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "ac209bd455d4954cf6b858202071875e55a5e54347473440248c4794ce066628"
+    },
+    {
+      "file": "iphone-10.jpg",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "a57c2d02a7f9652749ac60eee6c9a63f4f7d418dcbb5548d826af3e257ddbead"
+    },
+    {
+      "file": "iphone-11.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "92133f7da031dd08ca315d76890e658c6e417acdb6086ca6818655fa678dfed4"
+    },
+    {
+      "file": "iphone-12.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "d420952ed6da7d705b23433e6baf6c6eb3f21c33015526d0448b73855fb4a74e"
+    },
+    {
+      "file": "iphone-13.png",
+      "width": 1024,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "bbc74e5403499ff2850e6778895becba22e4cc031a54610f20e66e1f890e89c8"
+    },
+    {
+      "file": "iphone-14.png",
+      "width": 1024,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "28053326f70324ad603842e0b76173a47a4bab9920c278694b0cb80d6746069c"
+    },
+    {
+      "file": "iphone-15.png",
+      "width": 1024,
+      "height": 1024,
+      "maxGPUSize": 1024,
+      "sha256": "a8c64e9515dec1b85c253a4caf58e98427f86a15b295b0a880313450f5187101"
+    },
+    {
+      "file": "iphone-16.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "d49cdf37af1df2c46d530ceac627cae4d0251cd3b4e39741fae5f979370f5a2a"
+    },
+    {
+      "file": "iphone-17.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1,
+      "sha256": "73e835d829f3f520f6eb59abaa258f142e80ec31f287973d5fa164032cc30aa3"
+    },
+    {
+      "file": "iphone-19.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "ed0d229ece4222ee0a7bbc2715db6783d99a5e7cc6a1da9cd68da2d2aa4eb5dd"
+    },
+    {
+      "file": "iphone-20.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "81f17b42745a3a1604c66db62ab0a0b8a43566e0203d805f87c1cccded260f19"
+    },
+    {
+      "file": "iphone-21.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "2d5bf7fb8c056932705d0e7f0cdc7d7e7ca31ff5095f51e1eaf294f17a45d496"
+    },
+    {
+      "file": "iphone-22.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "c963fdd9479ab37ac8960f27b8fc14fbecaff352becedda62f19f4e9d10bdd74"
+    },
+    {
+      "file": "iphone-23.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "9d5aab4a8fb4b2ae1101452aca189388c72575640c85e50bce8b9f90de6f853c"
+    },
+    {
+      "file": "iphone-24.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "a83a4435a157ef4e6c26659524d11b078584eee4f7a1a85da9a46519336d44e4"
+    },
+    {
+      "file": "iphone-25.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "da2a0d8da1f136d66fad0debd1d88957f2cf352a1c8e597d9ce199afb077513f"
+    },
+    {
+      "file": "iphone-26.png",
+      "width": 1024,
+      "height": 1024,
+      "maxGPUSize": 1024,
+      "sha256": "11412ae8b55d9eaa750581772747e0018bb09250625782150798c66482409c14"
+    },
+    {
+      "file": "iphone-27.png",
+      "width": 512,
+      "height": 512,
+      "maxGPUSize": 1024,
+      "sha256": "35e8e411e039e60c2883b0c601c5d7479a7b3937aa7ba56f15079f3697988169"
+    },
+    {
+      "file": "iphone-28.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1024,
+      "sha256": "19e5f9c2af71065bf3516ad6fa7217f2811e26565cb389e88a1700faa4d526f6"
+    },
+    {
+      "file": "iphone-29.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1024,
+      "sha256": "4dd33ae5f5377dcc78a63b16c4af71116b41fb14e3c7befe090968124b256498"
+    },
+    {
+      "file": "iphone-31.png",
+      "width": 256,
+      "height": 256,
+      "maxGPUSize": 1024,
+      "sha256": "40e8275a4d4e13b550e86f63dc4e364bd6686aed43e65ef630597894e9f5997f"
+    }
+  ]
+}

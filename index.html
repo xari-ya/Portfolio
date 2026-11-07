@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a0b0d">
+<meta name="description" content="The interactive engineering portfolio of Sarith Dodangodage — robotics, automation, embedded systems, AI and research, assembled in real time.">
+<title>Sarith Dodangodage — Assembly Required / An Engineer's Universe</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="preload" href="./assets/fonts/BarlowCondensed-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="./assets/fonts/BarlowCondensed-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="./engineer-about.css?v=education-11">
+<link rel="stylesheet" href="./homepage-appearance.css?v=hall-13">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./project-discovery.css?v=footer-02">
+<link rel="stylesheet" href="./workshop-glass.css?v=compact-transparent-02">
+<link rel="stylesheet" href="./project-study.css?v=lab-04">
+<link rel="stylesheet" href="./project-showcase.css?v=exhibit-01">
+<link rel="stylesheet" href="./fsk-showcase.css?v=fsk-01">
+<link rel="stylesheet" href="./habitseed-showcase.css?v=habit-01">
+<link rel="stylesheet" href="./claim-showcase.css?v=claim-01">
+<link rel="stylesheet" href="./prajaa-showcase.css?v=prajaa-01">
+<link rel="stylesheet" href="./engineering-career-lab/interface/skills-interface.css?v=refine-09">
+<link rel="stylesheet" href="./engineering-career-lab/refinement.css?v=refine-09">
+<link rel="stylesheet" href="./engineering-career-lab/skills/finishing.css?v=skills-finish-2">
+<link rel="stylesheet" href="./engineering-career-lab/archive-display.css?v=compact-transparent-02">
+<link rel="stylesheet" href="./engineering-career-lab/mobile-lab.css?v=compact-transparent-02">
+</head>
+<body>
+<section id="kiraLoader" class="kira-loader" aria-label="Kira system awakening" data-stage="1" data-ready="false">
+  <div class="kira-bay-back" aria-hidden="true"><div class="kira-bay-lines"></div><div class="kira-bay-halo"></div></div>
+  <canvas id="kiraCanvas" class="kira-render" aria-label="Kira, an expressive two-eyed robot in the workshop maintenance bay. Move your cursor and tap Kira after he wakes."></canvas>
+  <div class="kira-shade" aria-hidden="true"></div>
+  <div class="kira-loader-mark"><strong>S<span>↗</span>D.</strong><small>THE LIVING WORKSHOP &nbsp; / &nbsp; KIRA Mk.I</small></div>
+  <div class="kira-loader-story"><div class="kira-kicker"><i></i> THE LIVING WORKSHOP / ENTRY 001</div>
+    <h1>A LITTLE<br>MACHINE.<br><em>A BIG</em><br>WELCOME.</h1>
+    <p id="kiraStageStory">A quiet workshop. One small machine, waiting.</p>
+    <div class="kira-geometry-label">KIRA Mk.I &nbsp; / &nbsp; DUAL TRACKS &nbsp; / &nbsp; TWO OLED EYES</div></div>
+  <div class="kira-loader-progress"><span class="kira-boot-label">KIRA / SYSTEM STARTUP</span>
+    <strong id="kiraStatus" role="status" aria-live="polite">INITIALIZING</strong>
+    <div class="kira-progress-track"><i></i></div>
+    <span class="kira-boot-detail" id="kiraDetail">Preparing your engineering experience.</span></div>
+  <div class="kira-loader-bottom">
+    <div class="kira-chapters" aria-label="The five awakening stages">
+      <div class="kira-stage-item active" aria-current="step"><b>01</b><span>DORMANT</span></div>
+      <div class="kira-stage-item"><b>02</b><span>FIRST LIFE</span></div>
+      <div class="kira-stage-item"><b>03</b><span>CALIBRATION</span></div>
+      <div class="kira-stage-item"><b>04</b><span>VISITOR</span></div>
+      <div class="kira-stage-item"><b>05</b><span>WORKSHOP</span></div>
+    </div>
+    <div class="kira-bottom-controls"><span id="kiraAwakeningStage">01 / DORMANT</span><button type="button" id="kiraSkip" aria-label="Skip Kira's cinematic after the workshop has initialized">SKIP INTRO ↗</button></div>
+  </div>
+  <div id="kiraFallback" class="kira-fallback" hidden role="img" aria-label="Simplified illustration of Kira with two glowing eyes and two tracks">
+    <div class="kira-fallback-bot"><div class="kira-fallback-head"><div class="kira-fallback-face"><i></i><i></i></div><div class="kira-fallback-camera"></div></div><div class="kira-fallback-neck"></div><div class="kira-fallback-body"><div class="kira-fallback-track"></div><div class="kira-fallback-track"></div></div></div>
+    <p>3D graphics are unavailable · The workshop can still open.</p></div>
+  <div class="kira-ready-beam" aria-hidden="true"></div>
+</section>
+<div class="noise" aria-hidden="true"></div>
+<header class="topbar"><a class="brand" href="#home" aria-label="Sarith home">S<span>↗</span>D<span class="brand-dot">.</span></a><div class="brand-sub">SARITH DODANGODAGE</div><nav class="topnav" aria-label="Primary navigation"><a href="#about">THE ENGINEER</a><a href="#work">WORK <sup>07</sup></a><a href="#skills">THE TOOLBOX</a><a href="#contact">CONTACT <span>↗</span></a></nav><button id="menuButton" class="menu-btn" aria-controls="mobileNav" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button></header>
+<div id="mobileNavBackdrop" class="mobile-nav-backdrop" hidden aria-hidden="true"></div>
+<nav id="mobileNav" class="mobile-nav" aria-label="Site navigation" aria-hidden="true" inert>
+  <div class="mobile-nav-heading"><span>EXPLORE THE WORKSHOP</span><i aria-hidden="true"></i></div>
+  <a href="#home"><span class="mobile-nav-number" aria-hidden="true">01</span><span class="mobile-nav-label">Workshop</span><span class="mobile-nav-arrow" aria-hidden="true">&#8599;</span></a>
+  <a href="#about"><span class="mobile-nav-number" aria-hidden="true">02</span><span class="mobile-nav-label">The engineer</span><span class="mobile-nav-arrow" aria-hidden="true">&#8599;</span></a>
+  <a href="#work"><span class="mobile-nav-number" aria-hidden="true">03</span><span class="mobile-nav-label">Projects</span><span class="mobile-nav-arrow" aria-hidden="true">&#8599;</span></a>
+  <a href="#skills"><span class="mobile-nav-number" aria-hidden="true">04</span><span class="mobile-nav-label">The toolbox</span><span class="mobile-nav-arrow" aria-hidden="true">&#8599;</span></a>
+  <a href="#contact"><span class="mobile-nav-number" aria-hidden="true">05</span><span class="mobile-nav-label">Contact</span><span class="mobile-nav-arrow" aria-hidden="true">&#8599;</span></a>
+  <a class="mobile-nav-resume" href="./Sarith_Dodangodage_CV.pdf" target="_blank" rel="noopener"><span class="mobile-nav-label">Download r&#233;sum&#233;</span><span class="mobile-nav-file" aria-hidden="true">PDF &#8599;</span></a>
+</nav>
+<div class="sideguide" aria-hidden="true"><span>ENGINEERING IN MOTION</span><div class="rail"><i id="railFill"></i></div><b id="pageCount">01 / 07</b></div>
+<div class="corner-tag"><span class="dot"></span><span id="modeLabel">WORKSHOP / IDLE</span></div>
+<div id="scrollCue" class="scroll-cue">SCROLL TO EXPLORE <i></i> ↓</div>
+<main>
+<div class="experience" id="experience">
+  <div class="sticky">
+    <div class="grid-world" aria-hidden="true"></div><div class="workshop-portal-curtain" aria-hidden="true"></div>
+    <div class="distant-light" aria-hidden="true"></div>
+    <div class="fallback-machine" id="fallbackMachine" aria-hidden="true">
+      <div class="fm-backhalo"></div>
+      <div class="fm-ring fm-r1"></div><div class="fm-ring fm-r2"></div><div class="fm-ring fm-r3"></div>
+      <div class="fm-spindle"></div><div class="fm-body"><i class="fm-led"></i><i class="fm-led"></i><i class="fm-led"></i></div>
+      <div class="fm-plate plate-1"></div><div class="fm-plate plate-2"></div><div class="fm-plate plate-3"></div>
+      <div class="fm-readout"><span>OBJECT / <b id="fmName">ENGINEER'S CORE</b></span><small>ROTATE → CONNECT → TRANSFORM</small></div>
+    </div>
+<div id="livingHallFallback" class="living-hall-fallback" aria-hidden="true"><svg viewBox="0 0 880 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="metal" x1="0" x2="1"><stop stop-color="#31414a"/><stop offset=".5" stop-color="#859299"/><stop offset="1" stop-color="#293139"/></linearGradient><linearGradient id="deck" x1="0" x2="1"><stop stop-color="#263039"/><stop offset="1" stop-color="#11191f"/></linearGradient></defs><path d="M45 470L470 295 838 470 410 592Z" fill="#141d22" stroke="#44545c" stroke-width="3"/><path d="M132 471L448 349 731 470 407 568Z" fill="url(#deck)" stroke="#6e7c81" stroke-width="7"/><path d="M312 464L445 412 560 458 420 519Z" fill="#323e43" stroke="#e14d40" stroke-width="3"/><ellipse cx="440" cy="440" rx="67" ry="24" fill="#12191f" stroke="#da5b50" stroke-width="9"/><path d="M262 440L255 345 294 330 314 441Z" fill="#222d33" stroke="#d95c50" stroke-width="4"/><g transform="translate(282 342)"><circle r="43" fill="#242e37" stroke="#a6abb1" stroke-width="7"/><circle r="19" fill="#c14b47"/></g><g transform="translate(282 342)"><path d="M0 0L95 -116 140 -95 52 25Z" fill="url(#metal)" stroke="#172027" stroke-width="8"/><circle cx="118" cy="-113" r="31" fill="#323d44" stroke="#c14b47" stroke-width="8"/><path d="M118 -113L206 -176 229 -157 154 -89Z" fill="url(#metal)" stroke="#172027" stroke-width="7"/><circle cx="220" cy="-171" r="19" fill="#333d43" stroke="#e56a53" stroke-width="6"/><path d="M219 -174L264 -148 267 -117 245 -123" fill="none" stroke="#a5b3b4" stroke-width="9"/></g><path d="M585 396L771 340 831 381 649 454Z" fill="#303d46" stroke="#929da1" stroke-width="8"/><path d="M607 404L784 352M621 422L805 369M642 440L823 385" stroke="#15212a" stroke-width="14"/><path d="M35 131H828M61 140V385M817 140V390" fill="none" stroke="#52636a" stroke-width="16"/><path d="M55 142H829" stroke="#ac493f" stroke-width="10"/><g fill="#e75a51"><circle cx="54" cy="139" r="8"/><circle cx="827" cy="139" r="8"/></g><g transform="translate(546 522)"><rect x="-29" y="-43" width="56" height="46" rx="12" fill="#ded9c9" stroke="#47565f" stroke-width="7"/><rect x="-23" y="-39" width="45" height="22" rx="8" fill="#09131a"/><rect x="-14" y="-31" width="7" height="10" rx="3" fill="#ebf3f5"/><rect x="7" y="-31" width="7" height="10" rx="3" fill="#ebf3f5"/><path d="M-42 -10h83v35h-83z" fill="#d8d7ce" stroke="#3c4650" stroke-width="5"/><ellipse cx="-36" cy="24" rx="15" ry="22" fill="#11181d"/><ellipse cx="36" cy="24" rx="15" ry="22" fill="#11181d"/></g></svg><div class="hall-fallback-label">MAIN ASSEMBLY HALL <span> / INTERACTIVE WEBGL VIEW UNAVAILABLE</span></div></div>
+<div id="jellyFallback" class="jelly-fallback" aria-hidden="true">
+  <div class="jf-halo jf-halo-one"></div><div class="jf-halo jf-halo-two"></div>
+  <div class="jf-mapworld"><div class="jf-map-water"></div><svg class="jf-world-map" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" aria-label="GSHHS coastline outline of Sri Lanka with three study locations"><defs><linearGradient id="jfSea" x1="0" x2="1"><stop stop-color="#244852"/><stop offset="1" stop-color="#14333d"/></linearGradient></defs><path d="M 93.72 381.44 L 99.62 382.21 L 106.76 385.1 L 110.89 385.63 L 113.45 384.18 L 114.73 384.68 L 114.02 386.81 L 117.06 387.38 L 124.02 386.24 L 128.6 387.22 L 129.13 388.98 L 135.46 385.32 L 142.33 385.17 L 143.04 383.43 L 144.54 383.95 L 145.69 381.6 L 149.03 380.91 L 153.17 377.11 L 157.66 377.64 L 160.48 375.13 L 169.99 373.53 L 173.95 371.32 L 185.93 370.41 L 192.01 367.07 L 192.63 365.01 L 192.27 367.06 L 206.54 363.49 L 208.3 361.13 L 211.78 360.1 L 211.65 358.54 L 214.03 359 L 216.32 357.4 L 215.35 356.11 L 216.85 356.49 L 223.01 353.3 L 225.57 349.04 L 232.08 347.67 L 237.68 343.52 L 239.49 339.98 L 238.87 341.65 L 246.58 336.29 L 249.04 332.56 L 247.72 331.8 L 249.48 331.35 L 248.51 330.43 L 249.52 330.85 L 249.3 329.52 L 250.41 329.86 L 253 327.09 L 253.89 320.54 L 257.06 316.74 L 255.91 315.98 L 259.7 311.79 L 258.64 311.8 L 259.52 307.53 L 258.47 307.31 L 261.28 304.87 L 258.2 303.35 L 259.56 302.4 L 260.44 303.69 L 261.9 301.98 L 262.07 299.32 L 261.15 300.65 L 260.14 300.15 L 263.49 294.45 L 262.16 293.08 L 263.53 294.03 L 264.27 292.32 L 262.3 292.66 L 261.55 290.49 L 263.79 292.13 L 264.98 288.82 L 263.71 289.77 L 262.95 288.59 L 264.24 289.28 L 265.24 287.75 L 263.49 281.74 L 261.9 282.35 L 263.13 281.52 L 263.4 273.3 L 261.33 279.12 L 258.99 275.58 L 263.04 272.99 L 262.56 271.59 L 263.4 272.85 L 264.19 262.88 L 261.02 252.07 L 257.93 246.74 L 256.65 246.88 L 257.36 244.66 L 258.64 247.59 L 255.91 236.63 L 247.01 222.32 L 244.81 220.88 L 247.15 223.8 L 239.97 218.21 L 237.9 214.53 L 235.96 214.99 L 233.54 212.74 L 231.25 208.32 L 233.98 206.12 L 230.85 204.1 L 226.67 206.28 L 226.32 208.4 L 226.58 206.12 L 229.31 203.99 L 227.99 202.09 L 230.9 199.66 L 228.47 200.38 L 225.57 199.01 L 221.65 194.02 L 215.09 174.66 L 214.6 175.92 L 212.24 166.1 L 213.72 165.95 L 209.67 153.78 L 208.17 153.86 L 208.48 152.75 L 207.25 154.04 L 207.29 152.56 L 206.36 152.45 L 205.76 150.93 L 201.92 152.48 L 201.96 157.39 L 200.12 156.56 L 198.09 158.08 L 197.43 157.2 L 199.54 156.52 L 197.03 156.55 L 195.71 158.46 L 196.46 156.67 L 193.86 156.03 L 194.35 157.51 L 191.35 158.27 L 192.76 156.06 L 190.11 151.25 L 191.48 149.86 L 191.92 152.22 L 194.78 152.48 L 192.76 146.63 L 196.2 146.63 L 196.42 150.09 L 198.39 149.06 L 198.4 145.64 L 197.12 145.98 L 195.57 143.51 L 196.19 139.09 L 190.87 132.14 L 189.72 134.11 L 189.63 132.51 L 187.52 131.6 L 186.68 132.7 L 187.61 131.14 L 188.8 131.98 L 190.73 131.79 L 187.78 128.48 L 183.34 126.62 L 184.66 126.32 L 181.14 120 L 178.45 120.27 L 173.95 115.71 L 173.69 117.08 L 172.9 113.49 L 170.92 114.52 L 172.41 113.38 L 160.17 96.19 L 159.51 98.59 L 157.97 97.56 L 157.71 94.57 L 159.91 95.81 L 152.51 81.05 L 150.4 81.4 L 152.16 80.6 L 138.2 69.75 L 139.37 72.12 L 135.47 70.29 L 134.67 68.55 L 136.43 70.29 L 137.63 69.26 L 105 46.93 L 96.22 37.61 L 93.32 32.2 L 88.61 31.33 L 81.21 32.32 L 80.53 34.98 L 80.59 32.7 L 65.98 33.31 L 56.6 38.29 L 60.78 44.42 L 63.16 43.35 L 64.74 44.95 L 65.53 44.34 L 68.71 48.3 L 71.87 48.3 L 80.99 51.83 L 75.13 48.91 L 74.69 47.23 L 85.26 52.02 L 85.92 50.7 L 83.86 50.5 L 84.95 49.4 L 83.46 48.56 L 84.74 47.61 L 93.19 51.11 L 108.24 60.32 L 108.65 62.87 L 103.67 65.34 L 102.61 64.65 L 101.82 65.95 L 99.62 65.19 L 96.89 66.25 L 91.29 64.08 L 96.05 64.08 L 92.83 61.46 L 96.41 62.11 L 91.25 58.49 L 84.82 57.81 L 73.37 51.64 L 72.18 52.67 L 81.57 57.96 L 86.19 63.32 L 82.36 67.32 L 72.27 71.61 L 73.33 77.24 L 76.19 77.59 L 80.02 80.59 L 78.17 82.04 L 79.14 87.6 L 74.65 95.8 L 75.36 98.17 L 74.12 98.93 L 73.6 104.33 L 65.76 107.98 L 65.76 109.58 L 62.45 110.91 L 60.29 113.69 L 61.04 115.25 L 59.06 115.13 L 59.37 112.2 L 57.12 113.23 L 60.29 116.73 L 59.15 116.96 L 59.68 119.77 L 57.92 124.57 L 60.29 125.09 L 58.62 126.16 L 62.41 132.86 L 61.17 134.23 L 60.74 142.06 L 58.01 144.8 L 58.1 146.86 L 60.2 147.92 L 58.23 147.28 L 57.7 148.64 L 52.72 150.13 L 52.1 157.43 L 49.82 160.63 L 50.25 166.64 L 49.02 169.3 L 50.08 169.53 L 49.02 169.6 L 50.43 172.8 L 48.97 171.77 L 46.38 176.98 L 44.09 177.44 L 46.28 178.35 L 44.53 178.2 L 47.35 180.33 L 47.17 184.06 L 48.67 184.9 L 48.84 186.8 L 44.7 191.06 L 45.41 192.05 L 44.17 191.74 L 48.85 196.99 L 47.42 198.97 L 47.98 201.29 L 40.49 199.77 L 38.8 197.45 L 39.34 193.87 L 40.74 193.11 L 38.19 191.13 L 37.92 186.27 L 40.12 182.23 L 38.98 180.48 L 40.79 178.39 L 42.24 178.88 L 43.12 175.08 L 37.83 177.82 L 41.26 174.93 L 40.56 172.5 L 42.15 171.12 L 40.92 170.9 L 43.6 166.22 L 38.8 173.33 L 37.48 177.89 L 34.84 178.73 L 34.31 180.56 L 35.9 185.96 L 34.84 186.8 L 35.2 193.72 L 43.34 217.15 L 45.35 226.97 L 44.9 234.34 L 45.65 234.31 L 44.5 236.44 L 44.01 234.8 L 44.02 237.62 L 49.62 264.78 L 51.21 264.78 L 49.8 265.31 L 48.46 270.94 L 49.3 272.42 L 51.11 272.31 L 52.78 275.89 L 52.95 279.16 L 51.54 279.08 L 51.32 281.02 L 47.36 270.98 L 52.63 292.01 L 54.48 292.09 L 53.82 293.57 L 54.04 292.16 L 52.36 292.4 L 50.57 295.55 L 50.12 293.95 L 49.63 295.74 L 52.19 307.53 L 61.66 328.49 L 62.06 327.99 L 62.72 330.17 L 61.79 329.36 L 64.26 334.39 L 63.55 339.34 L 67.16 342 L 65.05 341.54 L 69.54 351.43 L 69.63 356.91 L 72.62 363.76 L 80.06 372.62 L 84.91 376.12 L 85.18 375.28 L 89.4 379.47 L 90.1 378.25 L 91.61 378.63 L 91.56 380.57 L 93.41 381.18 Z" fill="url(#jfSea)" stroke="#67bbb8" stroke-width="1.5" stroke-linejoin="round"/><path d="M 52.24 108.25 L 54.97 110.83 L 58.97 109.35 L 54.04 106.08 L 51.26 101.93 L 53.12 104.29 L 58.97 106.38 L 51.53 100.49 L 38.94 97.6 L 35.59 97.9 L 34.71 100.11 L 33.08 100.14 L 44.04 102.69 L 51.13 107.29 Z" fill="url(#jfSea)" stroke="#67bbb8" stroke-width="1.5" stroke-linejoin="round"/><g class="jf-pin jf-pin-0" data-site="0"><circle cx="49.68" cy="270.96" r="7"/><circle class="jf-pulse" cx="49.68" cy="270.96" r="16"/></g><g class="jf-pin jf-pin-1" data-site="1"><circle cx="50.51" cy="295.77" r="7"/><circle class="jf-pulse" cx="50.51" cy="295.77" r="16"/></g><g class="jf-pin jf-pin-2" data-site="2"><circle cx="69.53" cy="328.73" r="7"/><circle class="jf-pulse" cx="69.53" cy="328.73" r="16"/></g></svg><div class="jf-mapworld-label">WESTERN COAST / THREE STUDY SITES</div></div>
+  <div class="jf-floating jf-fish-1"><i></i><em></em></div><div class="jf-floating jf-fish-2"><i></i><em></em></div><div class="jf-floating jf-fish-3"><i></i><em></em></div>
+  <div class="jf-computer"><div class="jf-laptop-screen"><div class="jf-laptop-glass"><div class="jf-label">JELLYCAST <span>● RESEARCH / DEMO</span></div><svg class="jf-map" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" aria-label="GSHHS coastline outline of Sri Lanka with three study locations"><defs><linearGradient id="jfSea" x1="0" x2="1"><stop stop-color="#244852"/><stop offset="1" stop-color="#14333d"/></linearGradient></defs><path d="M 93.72 381.44 L 99.62 382.21 L 106.76 385.1 L 110.89 385.63 L 113.45 384.18 L 114.73 384.68 L 114.02 386.81 L 117.06 387.38 L 124.02 386.24 L 128.6 387.22 L 129.13 388.98 L 135.46 385.32 L 142.33 385.17 L 143.04 383.43 L 144.54 383.95 L 145.69 381.6 L 149.03 380.91 L 153.17 377.11 L 157.66 377.64 L 160.48 375.13 L 169.99 373.53 L 173.95 371.32 L 185.93 370.41 L 192.01 367.07 L 192.63 365.01 L 192.27 367.06 L 206.54 363.49 L 208.3 361.13 L 211.78 360.1 L 211.65 358.54 L 214.03 359 L 216.32 357.4 L 215.35 356.11 L 216.85 356.49 L 223.01 353.3 L 225.57 349.04 L 232.08 347.67 L 237.68 343.52 L 239.49 339.98 L 238.87 341.65 L 246.58 336.29 L 249.04 332.56 L 247.72 331.8 L 249.48 331.35 L 248.51 330.43 L 249.52 330.85 L 249.3 329.52 L 250.41 329.86 L 253 327.09 L 253.89 320.54 L 257.06 316.74 L 255.91 315.98 L 259.7 311.79 L 258.64 311.8 L 259.52 307.53 L 258.47 307.31 L 261.28 304.87 L 258.2 303.35 L 259.56 302.4 L 260.44 303.69 L 261.9 301.98 L 262.07 299.32 L 261.15 300.65 L 260.14 300.15 L 263.49 294.45 L 262.16 293.08 L 263.53 294.03 L 264.27 292.32 L 262.3 292.66 L 261.55 290.49 L 263.79 292.13 L 264.98 288.82 L 263.71 289.77 L 262.95 288.59 L 264.24 289.28 L 265.24 287.75 L 263.49 281.74 L 261.9 282.35 L 263.13 281.52 L 263.4 273.3 L 261.33 279.12 L 258.99 275.58 L 263.04 272.99 L 262.56 271.59 L 263.4 272.85 L 264.19 262.88 L 261.02 252.07 L 257.93 246.74 L 256.65 246.88 L 257.36 244.66 L 258.64 247.59 L 255.91 236.63 L 247.01 222.32 L 244.81 220.88 L 247.15 223.8 L 239.97 218.21 L 237.9 214.53 L 235.96 214.99 L 233.54 212.74 L 231.25 208.32 L 233.98 206.12 L 230.85 204.1 L 226.67 206.28 L 226.32 208.4 L 226.58 206.12 L 229.31 203.99 L 227.99 202.09 L 230.9 199.66 L 228.47 200.38 L 225.57 199.01 L 221.65 194.02 L 215.09 174.66 L 214.6 175.92 L 212.24 166.1 L 213.72 165.95 L 209.67 153.78 L 208.17 153.86 L 208.48 152.75 L 207.25 154.04 L 207.29 152.56 L 206.36 152.45 L 205.76 150.93 L 201.92 152.48 L 201.96 157.39 L 200.12 156.56 L 198.09 158.08 L 197.43 157.2 L 199.54 156.52 L 197.03 156.55 L 195.71 158.46 L 196.46 156.67 L 193.86 156.03 L 194.35 157.51 L 191.35 158.27 L 192.76 156.06 L 190.11 151.25 L 191.48 149.86 L 191.92 152.22 L 194.78 152.48 L 192.76 146.63 L 196.2 146.63 L 196.42 150.09 L 198.39 149.06 L 198.4 145.64 L 197.12 145.98 L 195.57 143.51 L 196.19 139.09 L 190.87 132.14 L 189.72 134.11 L 189.63 132.51 L 187.52 131.6 L 186.68 132.7 L 187.61 131.14 L 188.8 131.98 L 190.73 131.79 L 187.78 128.48 L 183.34 126.62 L 184.66 126.32 L 181.14 120 L 178.45 120.27 L 173.95 115.71 L 173.69 117.08 L 172.9 113.49 L 170.92 114.52 L 172.41 113.38 L 160.17 96.19 L 159.51 98.59 L 157.97 97.56 L 157.71 94.57 L 159.91 95.81 L 152.51 81.05 L 150.4 81.4 L 152.16 80.6 L 138.2 69.75 L 139.37 72.12 L 135.47 70.29 L 134.67 68.55 L 136.43 70.29 L 137.63 69.26 L 105 46.93 L 96.22 37.61 L 93.32 32.2 L 88.61 31.33 L 81.21 32.32 L 80.53 34.98 L 80.59 32.7 L 65.98 33.31 L 56.6 38.29 L 60.78 44.42 L 63.16 43.35 L 64.74 44.95 L 65.53 44.34 L 68.71 48.3 L 71.87 48.3 L 80.99 51.83 L 75.13 48.91 L 74.69 47.23 L 85.26 52.02 L 85.92 50.7 L 83.86 50.5 L 84.95 49.4 L 83.46 48.56 L 84.74 47.61 L 93.19 51.11 L 108.24 60.32 L 108.65 62.87 L 103.67 65.34 L 102.61 64.65 L 101.82 65.95 L 99.62 65.19 L 96.89 66.25 L 91.29 64.08 L 96.05 64.08 L 92.83 61.46 L 96.41 62.11 L 91.25 58.49 L 84.82 57.81 L 73.37 51.64 L 72.18 52.67 L 81.57 57.96 L 86.19 63.32 L 82.36 67.32 L 72.27 71.61 L 73.33 77.24 L 76.19 77.59 L 80.02 80.59 L 78.17 82.04 L 79.14 87.6 L 74.65 95.8 L 75.36 98.17 L 74.12 98.93 L 73.6 104.33 L 65.76 107.98 L 65.76 109.58 L 62.45 110.91 L 60.29 113.69 L 61.04 115.25 L 59.06 115.13 L 59.37 112.2 L 57.12 113.23 L 60.29 116.73 L 59.15 116.96 L 59.68 119.77 L 57.92 124.57 L 60.29 125.09 L 58.62 126.16 L 62.41 132.86 L 61.17 134.23 L 60.74 142.06 L 58.01 144.8 L 58.1 146.86 L 60.2 147.92 L 58.23 147.28 L 57.7 148.64 L 52.72 150.13 L 52.1 157.43 L 49.82 160.63 L 50.25 166.64 L 49.02 169.3 L 50.08 169.53 L 49.02 169.6 L 50.43 172.8 L 48.97 171.77 L 46.38 176.98 L 44.09 177.44 L 46.28 178.35 L 44.53 178.2 L 47.35 180.33 L 47.17 184.06 L 48.67 184.9 L 48.84 186.8 L 44.7 191.06 L 45.41 192.05 L 44.17 191.74 L 48.85 196.99 L 47.42 198.97 L 47.98 201.29 L 40.49 199.77 L 38.8 197.45 L 39.34 193.87 L 40.74 193.11 L 38.19 191.13 L 37.92 186.27 L 40.12 182.23 L 38.98 180.48 L 40.79 178.39 L 42.24 178.88 L 43.12 175.08 L 37.83 177.82 L 41.26 174.93 L 40.56 172.5 L 42.15 171.12 L 40.92 170.9 L 43.6 166.22 L 38.8 173.33 L 37.48 177.89 L 34.84 178.73 L 34.31 180.56 L 35.9 185.96 L 34.84 186.8 L 35.2 193.72 L 43.34 217.15 L 45.35 226.97 L 44.9 234.34 L 45.65 234.31 L 44.5 236.44 L 44.01 234.8 L 44.02 237.62 L 49.62 264.78 L 51.21 264.78 L 49.8 265.31 L 48.46 270.94 L 49.3 272.42 L 51.11 272.31 L 52.78 275.89 L 52.95 279.16 L 51.54 279.08 L 51.32 281.02 L 47.36 270.98 L 52.63 292.01 L 54.48 292.09 L 53.82 293.57 L 54.04 292.16 L 52.36 292.4 L 50.57 295.55 L 50.12 293.95 L 49.63 295.74 L 52.19 307.53 L 61.66 328.49 L 62.06 327.99 L 62.72 330.17 L 61.79 329.36 L 64.26 334.39 L 63.55 339.34 L 67.16 342 L 65.05 341.54 L 69.54 351.43 L 69.63 356.91 L 72.62 363.76 L 80.06 372.62 L 84.91 376.12 L 85.18 375.28 L 89.4 379.47 L 90.1 378.25 L 91.61 378.63 L 91.56 380.57 L 93.41 381.18 Z" fill="url(#jfSea)" stroke="#67bbb8" stroke-width="1.5" stroke-linejoin="round"/><path d="M 52.24 108.25 L 54.97 110.83 L 58.97 109.35 L 54.04 106.08 L 51.26 101.93 L 53.12 104.29 L 58.97 106.38 L 51.53 100.49 L 38.94 97.6 L 35.59 97.9 L 34.71 100.11 L 33.08 100.14 L 44.04 102.69 L 51.13 107.29 Z" fill="url(#jfSea)" stroke="#67bbb8" stroke-width="1.5" stroke-linejoin="round"/><g class="jf-pin jf-pin-0" data-site="0"><circle cx="49.68" cy="270.96" r="7"/><circle class="jf-pulse" cx="49.68" cy="270.96" r="16"/></g><g class="jf-pin jf-pin-1" data-site="1"><circle cx="50.51" cy="295.77" r="7"/><circle class="jf-pulse" cx="50.51" cy="295.77" r="16"/></g><g class="jf-pin jf-pin-2" data-site="2"><circle cx="69.53" cy="328.73" r="7"/><circle class="jf-pulse" cx="69.53" cy="328.73" r="16"/></g></svg><div class="jf-latlon">NEGOMBO<br>COLOMBO<br>KALUTARA</div><div class="jf-status" id="jfSelected">COASTAL OBSERVATORY</div></div></div><div class="jf-laptop-base"><div class="jf-keyboard"></div><div class="jf-touchpad"></div></div></div>
+  <div class="jf-phone"><div class="jf-phone-top"></div><div class="jf-phone-title">JELLYCAST</div><div class="jf-phone-label">COASTAL INTELLIGENCE</div><div class="jf-phone-map"><svg class="jf-map" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" aria-label="GSHHS coastline outline of Sri Lanka with three study locations"><defs><linearGradient id="jfSea" x1="0" x2="1"><stop stop-color="#244852"/><stop offset="1" stop-color="#14333d"/></linearGradient></defs><path d="M 93.72 381.44 L 99.62 382.21 L 106.76 385.1 L 110.89 385.63 L 113.45 384.18 L 114.73 384.68 L 114.02 386.81 L 117.06 387.38 L 124.02 386.24 L 128.6 387.22 L 129.13 388.98 L 135.46 385.32 L 142.33 385.17 L 143.04 383.43 L 144.54 383.95 L 145.69 381.6 L 149.03 380.91 L 153.17 377.11 L 157.66 377.64 L 160.48 375.13 L 169.99 373.53 L 173.95 371.32 L 185.93 370.41 L 192.01 367.07 L 192.63 365.01 L 192.27 367.06 L 206.54 363.49 L 208.3 361.13 L 211.78 360.1 L 211.65 358.54 L 214.03 359 L 216.32 357.4 L 215.35 356.11 L 216.85 356.49 L 223.01 353.3 L 225.57 349.04 L 232.08 347.67 L 237.68 343.52 L 239.49 339.98 L 238.87 341.65 L 246.58 336.29 L 249.04 332.56 L 247.72 331.8 L 249.48 331.35 L 248.51 330.43 L 249.52 330.85 L 249.3 329.52 L 250.41 329.86 L 253 327.09 L 253.89 320.54 L 257.06 316.74 L 255.91 315.98 L 259.7 311.79 L 258.64 311.8 L 259.52 307.53 L 258.47 307.31 L 261.28 304.87 L 258.2 303.35 L 259.56 302.4 L 260.44 303.69 L 261.9 301.98 L 262.07 299.32 L 261.15 300.65 L 260.14 300.15 L 263.49 294.45 L 262.16 293.08 L 263.53 294.03 L 264.27 292.32 L 262.3 292.66 L 261.55 290.49 L 263.79 292.13 L 264.98 288.82 L 263.71 289.77 L 262.95 288.59 L 264.24 289.28 L 265.24 287.75 L 263.49 281.74 L 261.9 282.35 L 263.13 281.52 L 263.4 273.3 L 261.33 279.12 L 258.99 275.58 L 263.04 272.99 L 262.56 271.59 L 263.4 272.85 L 264.19 262.88 L 261.02 252.07 L 257.93 246.74 L 256.65 246.88 L 257.36 244.66 L 258.64 247.59 L 255.91 236.63 L 247.01 222.32 L 244.81 220.88 L 247.15 223.8 L 239.97 218.21 L 237.9 214.53 L 235.96 214.99 L 233.54 212.74 L 231.25 208.32 L 233.98 206.12 L 230.85 204.1 L 226.67 206.28 L 226.32 208.4 L 226.58 206.12 L 229.31 203.99 L 227.99 202.09 L 230.9 199.66 L 228.47 200.38 L 225.57 199.01 L 221.65 194.02 L 215.09 174.66 L 214.6 175.92 L 212.24 166.1 L 213.72 165.95 L 209.67 153.78 L 208.17 153.86 L 208.48 152.75 L 207.25 154.04 L 207.29 152.56 L 206.36 152.45 L 205.76 150.93 L 201.92 152.48 L 201.96 157.39 L 200.12 156.56 L 198.09 158.08 L 197.43 157.2 L 199.54 156.52 L 197.03 156.55 L 195.71 158.46 L 196.46 156.67 L 193.86 156.03 L 194.35 157.51 L 191.35 158.27 L 192.76 156.06 L 190.11 151.25 L 191.48 149.86 L 191.92 152.22 L 194.78 152.48 L 192.76 146.63 L 196.2 146.63 L 196.42 150.09 L 198.39 149.06 L 198.4 145.64 L 197.12 145.98 L 195.57 143.51 L 196.19 139.09 L 190.87 132.14 L 189.72 134.11 L 189.63 132.51 L 187.52 131.6 L 186.68 132.7 L 187.61 131.14 L 188.8 131.98 L 190.73 131.79 L 187.78 128.48 L 183.34 126.62 L 184.66 126.32 L 181.14 120 L 178.45 120.27 L 173.95 115.71 L 173.69 117.08 L 172.9 113.49 L 170.92 114.52 L 172.41 113.38 L 160.17 96.19 L 159.51 98.59 L 157.97 97.56 L 157.71 94.57 L 159.91 95.81 L 152.51 81.05 L 150.4 81.4 L 152.16 80.6 L 138.2 69.75 L 139.37 72.12 L 135.47 70.29 L 134.67 68.55 L 136.43 70.29 L 137.63 69.26 L 105 46.93 L 96.22 37.61 L 93.32 32.2 L 88.61 31.33 L 81.21 32.32 L 80.53 34.98 L 80.59 32.7 L 65.98 33.31 L 56.6 38.29 L 60.78 44.42 L 63.16 43.35 L 64.74 44.95 L 65.53 44.34 L 68.71 48.3 L 71.87 48.3 L 80.99 51.83 L 75.13 48.91 L 74.69 47.23 L 85.26 52.02 L 85.92 50.7 L 83.86 50.5 L 84.95 49.4 L 83.46 48.56 L 84.74 47.61 L 93.19 51.11 L 108.24 60.32 L 108.65 62.87 L 103.67 65.34 L 102.61 64.65 L 101.82 65.95 L 99.62 65.19 L 96.89 66.25 L 91.29 64.08 L 96.05 64.08 L 92.83 61.46 L 96.41 62.11 L 91.25 58.49 L 84.82 57.81 L 73.37 51.64 L 72.18 52.67 L 81.57 57.96 L 86.19 63.32 L 82.36 67.32 L 72.27 71.61 L 73.33 77.24 L 76.19 77.59 L 80.02 80.59 L 78.17 82.04 L 79.14 87.6 L 74.65 95.8 L 75.36 98.17 L 74.12 98.93 L 73.6 104.33 L 65.76 107.98 L 65.76 109.58 L 62.45 110.91 L 60.29 113.69 L 61.04 115.25 L 59.06 115.13 L 59.37 112.2 L 57.12 113.23 L 60.29 116.73 L 59.15 116.96 L 59.68 119.77 L 57.92 124.57 L 60.29 125.09 L 58.62 126.16 L 62.41 132.86 L 61.17 134.23 L 60.74 142.06 L 58.01 144.8 L 58.1 146.86 L 60.2 147.92 L 58.23 147.28 L 57.7 148.64 L 52.72 150.13 L 52.1 157.43 L 49.82 160.63 L 50.25 166.64 L 49.02 169.3 L 50.08 169.53 L 49.02 169.6 L 50.43 172.8 L 48.97 171.77 L 46.38 176.98 L 44.09 177.44 L 46.28 178.35 L 44.53 178.2 L 47.35 180.33 L 47.17 184.06 L 48.67 184.9 L 48.84 186.8 L 44.7 191.06 L 45.41 192.05 L 44.17 191.74 L 48.85 196.99 L 47.42 198.97 L 47.98 201.29 L 40.49 199.77 L 38.8 197.45 L 39.34 193.87 L 40.74 193.11 L 38.19 191.13 L 37.92 186.27 L 40.12 182.23 L 38.98 180.48 L 40.79 178.39 L 42.24 178.88 L 43.12 175.08 L 37.83 177.82 L 41.26 174.93 L 40.56 172.5 L 42.15 171.12 L 40.92 170.9 L 43.6 166.22 L 38.8 173.33 L 37.48 177.89 L 34.84 178.73 L 34.31 180.56 L 35.9 185.96 L 34.84 186.8 L 35.2 193.72 L 43.34 217.15 L 45.35 226.97 L 44.9 234.34 L 45.65 234.31 L 44.5 236.44 L 44.01 234.8 L 44.02 237.62 L 49.62 264.78 L 51.21 264.78 L 49.8 265.31 L 48.46 270.94 L 49.3 272.42 L 51.11 272.31 L 52.78 275.89 L 52.95 279.16 L 51.54 279.08 L 51.32 281.02 L 47.36 270.98 L 52.63 292.01 L 54.48 292.09 L 53.82 293.57 L 54.04 292.16 L 52.36 292.4 L 50.57 295.55 L 50.12 293.95 L 49.63 295.74 L 52.19 307.53 L 61.66 328.49 L 62.06 327.99 L 62.72 330.17 L 61.79 329.36 L 64.26 334.39 L 63.55 339.34 L 67.16 342 L 65.05 341.54 L 69.54 351.43 L 69.63 356.91 L 72.62 363.76 L 80.06 372.62 L 84.91 376.12 L 85.18 375.28 L 89.4 379.47 L 90.1 378.25 L 91.61 378.63 L 91.56 380.57 L 93.41 381.18 Z" fill="url(#jfSea)" stroke="#67bbb8" stroke-width="1.5" stroke-linejoin="round"/><path d="M 52.24 108.25 L 54.97 110.83 L 58.97 109.35 L 54.04 106.08 L 51.26 101.93 L 53.12 104.29 L 58.97 106.38 L 51.53 100.49 L 38.94 97.6 L 35.59 97.9 L 34.71 100.11 L 33.08 100.14 L 44.04 102.69 L 51.13 107.29 Z" fill="url(#jfSea)" stroke="#67bbb8" stroke-width="1.5" stroke-linejoin="round"/><g class="jf-pin jf-pin-0" data-site="0"><circle cx="49.68" cy="270.96" r="7"/><circle class="jf-pulse" cx="49.68" cy="270.96" r="16"/></g><g class="jf-pin jf-pin-1" data-site="1"><circle cx="50.51" cy="295.77" r="7"/><circle class="jf-pulse" cx="50.51" cy="295.77" r="16"/></g><g class="jf-pin jf-pin-2" data-site="2"><circle cx="69.53" cy="328.73" r="7"/><circle class="jf-pulse" cx="69.53" cy="328.73" r="16"/></g></svg></div><div class="jf-phone-status">FORECAST / RESEARCH</div></div>
+</div>
+    <div id="terraFallback" class="terra-fallback" aria-hidden="true">
+      <div class="tf-stage"><div class="tf-case"><div class="tf-inner"><div class="tf-pcb"><span>ESP32-C3</span><i></i><i></i><i></i></div><div class="tf-battery">18650 · 2S</div><div class="tf-duct">MQ-135 <i></i></div><div class="tf-lcd">TERRA / VITA<br>SENSOR MONITOR</div></div><div class="tf-lid"><div class="tf-grille">✳</div><div class="tf-controls"><b>MODE</b><b>ACTION</b><b>POWER</b></div></div></div><div class="tf-probe tf-probe-temp"></div><div class="tf-probe tf-probe-moist"></div></div>
+      <div class="tf-reference">ENCLOSURE / 147 × 102 × 75 MM <span>ILLUSTRATIVE FALLBACK</span></div>
+    </div>
+    <canvas id="stage" role="img" aria-label="Interactive, scroll-driven 3D sculpture representing robotics, embedded systems, environmental sensing, and digital technology."></canvas>
+    <div id="terraMeasured" class="terra-measured" aria-hidden="true"><span class="measured-dot"></span> REV 04 / SINGLE-SCENE ASSEMBLY <b>147 × 102 × 75 MM</b></div>
+    <div class="focus-line" aria-hidden="true"><span class="cross x1">+</span><span class="cross x2">+</span><span class="cross x3">+</span><span class="cross x4">+</span></div>
+    <div class="scene-id" aria-hidden="true">SCENE <span id="sceneId">/ 001</span><br>ENGINEERING / IN MOTION</div>
+    <div class="chapter" id="chapters">
+      <section class="frame active home" id="home" data-n="0">
+        <div class="home-intro">
+        <div class="eyebrow">A PERSONAL PORTFOLIO / 2026 <span class="blink">✳</span> / COLOMBO, SRI LANKA</div>
+        <h1>SYSTEMS <br class="home-title-break">DON'T BUILD<br><em>THEMSELVES</em><span class="redstop">.</span></h1>
+        <p class="home-statement">I'M <strong>SARITH DODANGODAGE.</strong><br>I TURN IDEAS INTO THINGS THAT <u>SENSE, THINK & ACT.</u></p>
+        <div class="intro-actions"><a class="button-solid" href="#about">ENTER THE WORKSHOP <span>↗</span></a></div>
+        </div>
+        <div class="ghost-index">01 / 07 <b>THE ENGINEER</b></div>
+      </section>
+      <section class="frame components legacy-hall-slide" id="components" hidden inert aria-hidden="true" data-n="1">
+        <div class="eyebrow">01 — MATERIALS / 00:01</div>
+        <h2>BEFORE<br>THERE'S A<br><em>SYSTEM.</em></h2>
+        <p class="copy">Every working system begins with moving parts. Follow the robotic arm, conveyors, and inspection cell as the workshop comes to life.</p>
+        <div class="note">01 / OBSERVE &nbsp;&nbsp; 02 / QUESTION &nbsp;&nbsp; 03 / EXPERIMENT</div>
+        <div class="right-annotation">[ DECONSTRUCTED INTELLIGENCE ]<br><b>SCROLL TO CONNECT THE PIECES ↓</b></div>
+      </section>
+      <section class="frame assembly legacy-hall-slide" id="assembly" hidden inert aria-hidden="true" data-n="2">
+        <div class="eyebrow">02 — THE METHOD / 00:02</div>
+        <h2>MAKE<br>IT <em>WORK.</em></h2>
+        <p class="copy">Precision robotics, material handling and automated inspection: the machinery works together as one connected system.</p>
+        <div class="build-meter"><div><span>ASSEMBLY SEQUENCE</span><b id="buildPercent">00%</b></div><div class="build-bar"><i id="buildBar"></i></div><small id="assemblyInstruction">YOU ARE ASSEMBLING THE SYSTEM — KEEP SCROLLING</small></div>
+        <div class="discipline-labels"><span>ROBOTICS</span><span>EMBEDDED SYSTEMS</span><span>AI / DATA</span><span>AUTOMATION</span></div>
+      </section>
+      <section class="frame work" id="work" data-n="3">
+        <div class="eyebrow">03 — SELECT A SYSTEM / PROJECT ARCHIVE 001—008</div>
+        <h2>EIGHT<br>DIFFERENT<br><em>QUESTIONS.</em></h2>
+        <p class="copy">One approach: understand the problem, build the system, improve the result. Choose a project to transform the object in front of you.</p>
+        <div class="project-console">
+          <div class="project-nav-row"><span>SELECT A PROJECT <b>↘</b></span><span id="projectFraction">01 / 08</span></div>
+          <div class="project-selector" id="projectSelector" role="group" aria-label="Choose a project">
+            <button class="project-choice chosen" data-project="0"><i>01</i> OBSIDIAN <b>↗</b></button>
+            <button class="project-choice" data-project="1"><i>02</i> TERRAVITA <b>↗</b></button>
+            <button class="project-choice" data-project="2"><i>03</i> JELLYCAST <b>↗</b></button>
+            <!-- Sentinel: we'll be implementing this later.
+            <button class="project-choice" data-project="3"><i>04</i> SENTINEL <b>↗</b></button>
+            -->
+            <button class="project-choice" data-project="4"><i>04</i> CLICK CLAIM <b>↗</b></button>
+            <button class="project-choice" data-project="5"><i>05</i> ANALOG FSK / IR <b>↗</b></button>
+            <button class="project-choice" data-project="6"><i>06</i> HABITSEED <b>↗</b></button>
+            <button class="project-choice" data-project="7"><i>07</i> PRAJAA <b>↗</b></button>
+          </div>
+        </div>
+        <div class="selected-label" id="selectedLabel">CURRENTLY IN THE WORKSHOP <strong>OBSIDIAN / AUTONOMOUS ROBOTICS</strong></div>
+      </section>
+      <section class="frame inspect" id="inspect" data-n="4">
+        <div class="eyebrow">04 — STEP INSIDE / PROJECT DOSSIER</div>
+        <h2 id="projectHeading">OBSIDIAN<span class="redstop">.</span></h2>
+        <div class="project-type" id="projectType">AUTONOMOUS MICROMOUSE / EMBEDDED ROBOTICS</div>
+        <p class="copy" id="projectDescription">An ESP32-driven autonomous micromouse with motor feedback, distance sensing, custom electronics and a ROS 2 / Webots digital twin.</p>
+        <div class="tech-tags" id="projectTags"><span>ESP32</span><span>ROS 2</span><span>WEBOTS</span></div>
+        <button class="button-solid inspect-open" id="openDossier">OPEN THE PROJECT FILE <span>↗</span></button>
+        <div class="inspect-aside">[ INTERNAL SYSTEMS EXPOSED ]<br>DRAG TO ORBIT ↔</div>
+      </section>
+      <section class="frame contact" id="contact" data-n="6">
+        <div class="eyebrow">06 — OPEN FOR THE NEXT CHALLENGE</div>
+        <h2>LET'S BUILD<br><em>SOMETHING</em><br>THAT MATTERS<span class="redstop">.</span></h2>
+        <p class="copy">Internships, engineering opportunities, research, collaborations—or just an interesting idea. The workshop is open.</p>
+        <div class="contact-links"><a href="mailto:sarithdodangodage@outlook.com">EMAIL ME <span>↗</span></a><a href="https://www.linkedin.com/in/sarith-dodangodage-889113216" rel="noopener noreferrer" target="_blank">LINKEDIN <span>↗</span></a><a href="https://github.com/xari-ya" rel="noopener noreferrer" target="_blank">GITHUB <span>↗</span></a><a href="./Sarith_Dodangodage_CV.pdf" rel="noopener" target="_blank">RÉSUMÉ <span>↗</span></a></div>
+        <div class="contact-footer"><span>DESIGNED TO BE EXPLORED. ENGINEERED TO KEEP EVOLVING.</span><a href="#home">REASSEMBLE ↶</a></div>
+      </section>
+    </div>
+
+    <section id="engineerAbout" class="engineer-about" aria-label="About Sarith Dodangodage" aria-hidden="true" hidden inert>
+      <p class="engineer-label">01 / THE ENGINEER</p>
+      <h2 id="about">THE PERSON<br><span>BEHIND THE <strong>SYSTEMS.</strong></span></h2>
+      <div class="engineer-screen-index" aria-hidden="true"><b>S<span>/</span>D.</b><small>HARDWARE<br>SOFTWARE<br>THE PHYSICAL WORLD</small></div>
+      <div class="engineer-tabs" role="tablist" aria-label="About the engineer">
+        <button id="engineerTabIntro" role="tab" aria-selected="true" aria-controls="engineerIntro" tabindex="0" data-engineer-tab="intro"><svg class="engineer-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 21v-2a7 7 0 0 1 14 0v2Z"/><circle cx="12" cy="7" r="4"/></svg>INTRODUCTION</button>
+        <button id="engineerTabEducation" role="tab" aria-selected="false" aria-controls="engineerEducation" tabindex="-1" data-engineer-tab="education"><svg class="engineer-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5Z M6 10v7q6 5 12 0v-7 M22 8v8"/></svg>EDUCATION</button>
+        <button id="engineerTabInterests" role="tab" aria-selected="false" aria-controls="engineerInterests" tabindex="-1" data-engineer-tab="interests"><svg class="engineer-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"/></svg>INTERESTS</button>
+        <button id="engineerTabDirection" role="tab" aria-selected="false" aria-controls="engineerDirection" tabindex="-1" data-engineer-tab="direction"><svg class="engineer-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 1v5m0 12v5M1 12h5m12 0h5m-8-14 3 7-7-3Z"/></svg>DIRECTION</button>
+      </div>
+      <div class="engineer-header-rule" aria-hidden="true"></div>
+      <div class="engineer-reading" tabindex="0" aria-label="About Me information — scroll to read">
+        <div id="engineerIntro" role="tabpanel" aria-labelledby="engineerTabIntro" data-engineer-page="intro">
+          <h3>SARITH DODANGODAGE</h3>
+          <p class="engineer-role">Engineering &amp; IT Undergraduate<small><span>Instrumentation &amp; Automation</span><i>|</i><span>Robotics</span><i>|</i><span>Embedded Systems</span><i>|</i><span>AI &amp; Software</span></small></p>
+          <p>I'm Sarith Dodangodage, an engineering and information technology undergraduate interested in building intelligent systems that connect hardware, software, and the physical world.</p>
+          <p>My work spans embedded electronics, robotics, industrial automation, and artificial intelligence. I enjoy taking ideas beyond theory—designing, prototyping, programming, and testing systems that solve practical problems.</p>
+        </div>
+        <div id="engineerEducation" role="tabpanel" aria-labelledby="engineerTabEducation" data-engineer-page="education" hidden>
+          <h3>EDUCATION &amp; FOUNDATIONS.</h3>
+          <article class="engineer-academic"><img class="engineer-school-logo" src="./character-assets/university-of-colombo.png" alt="University of Colombo logo" width="64" height="64"><div class="engineer-academic-copy"><h4>University of Colombo</h4><p>Bachelor of Engineering Technology Honours in Instrumentation and Automation</p><small>Faculty of Technology</small><span class="engineer-status">UNDERGRADUATE</span></div></article>
+          <article class="engineer-academic"><img class="engineer-school-logo" src="./character-assets/university-of-moratuwa.png" alt="University of Moratuwa logo" width="64" height="64"><div class="engineer-academic-copy"><h4>University of Moratuwa</h4><p>Bachelor of Information Technology — External Degree</p><span class="engineer-status">UNDERGRADUATE</span></div></article>
+          <article class="engineer-academic"><img class="engineer-school-logo" src="./engineering-career-lab/assets/archive/ananda-college.png" alt="Ananda College logo" width="64" height="64"><div class="engineer-academic-copy"><h4>Ananda College</h4><p>School education</p></div></article>
+        </div>
+        <div id="engineerInterests" role="tabpanel" aria-labelledby="engineerTabInterests" data-engineer-page="interests" hidden>
+          <h3>WHAT DRIVES MY WORK</h3>
+          <div class="engineer-interest"><h4>Robotics &amp; Automation</h4><p>Robotic systems, control, autonomous behaviour, and industrial automation.</p></div>
+          <div class="engineer-interest"><h4>Embedded Systems &amp; Electronics</h4><p>Microcontrollers, sensors, electronics, IoT, and hardware-software integration.</p></div>
+          <div class="engineer-interest"><h4>Artificial Intelligence &amp; Software</h4><p>Machine learning, programming, intelligent applications, and software systems.</p></div>
+          <div class="engineer-interest"><h4>Instrumentation &amp; Intelligent Monitoring</h4><p>Measurement, sensing, data acquisition, environmental monitoring, and intelligent instrumentation.</p></div>
+        </div>
+        <div id="engineerDirection" role="tabpanel" aria-labelledby="engineerTabDirection" data-engineer-page="direction" hidden>
+          <h3>WHERE I'M HEADED</h3>
+          <p>I'm particularly interested in opportunities that combine engineering, embedded systems, robotics, automation, and intelligent software. My goal is to keep developing practical systems while strengthening my experience in real engineering environments.</p>
+        </div>
+      </div>
+      <span class="engineer-read-hint" aria-hidden="true">SCROLL THIS DISPLAY TO READ ↓</span>
+      <div class="engineer-actions"><span class="engineer-about-tag" aria-hidden="true">ABOUT ME</span>
+        <button type="button" class="engineer-primary" data-engineer-nav="production"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="1.6"/><circle cx="5" cy="12" r="1.6"/><circle cx="5" cy="19" r="1.6"/><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/><circle cx="19" cy="5" r="1.6"/><circle cx="19" cy="12" r="1.6"/><circle cx="19" cy="19" r="1.6"/></svg><span class="engineer-desktop-action">EXPLORE MY WORK ↗</span><span class="engineer-mobile-action">CONTINUE TO PROJECTS ↗</span></button>
+        <a class="engineer-resume" href="./Sarith_Dodangodage_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 2h9l5 5v15H5Z M14 2v6h5 M8 12h8m-8 4h8m-8 3h5"/></svg>VIEW MY RÉSUMÉ ↗</a>
+        <button type="button" class="engineer-back" data-engineer-nav="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M10 3H3v18h7 M10 12h12m-5-5 5 5-5 5"/></svg><span class="engineer-desktop-action">EXIT ↶</span><span class="engineer-mobile-action">↶ BACK TO WORKSHOP</span></button>
+      </div>
+    </section>
+    <section id="jellyExperience" class="jelly-experience" aria-hidden="true" aria-label="JellyCast coastal observatory exploration">
+      <div class="jelly-kicker">[ JELLYCAST / COASTAL OBSERVATORY ] <span class="jelly-live-dot"></span></div>
+      <div class="jelly-narrative">
+        <span id="jellyCounter">THREE OBSERVATION SITES / ONE COAST</span>
+        <h2 id="jellyLocation">ONE COAST.<br>THREE STATIONS.</h2>
+        <p id="jellyExplanation">Select Negombo, Colombo, or Kalutara to explore all three study locations in one continuous coastal view.</p>
+        <small id="jellyDetail">NEGOMBO  /  COLOMBO  /  KALUTARA</small>
+      </div>
+      <div class="jelly-stations" role="group" aria-label="Highlight a study location on the combined coastline">
+         <button type="button" class="jelly-step" aria-pressed="false"><span>01</span> NEGOMBO <b>↗</b></button>
+         <button type="button" class="jelly-step" aria-pressed="false"><span>02</span> COLOMBO <b>↗</b></button>
+         <button type="button" class="jelly-step" aria-pressed="false"><span>03</span> KALUTARA <b>↗</b></button>
+      </div>
+      <div class="jelly-disclaimer">INTERACTIVE RESEARCH VISUALIZATION · NO LIVE FORECAST DATA</div>
+    </section>
+
+    <section id="terraExperience" class="terra-experience" aria-hidden="true" aria-label="TerraVita three-scene instrumentation exploration">
+      <div class="terra-ambient" aria-hidden="true"><div class="terra-light-pool"></div><div class="terra-orbit terra-orbit-a"></div><div class="terra-orbit terra-orbit-b"></div><div class="terra-grain"></div></div>
+      <div class="terra-topline"><span class="terra-illuminated"></span>TERRAVITA / INSTRUMENTATION STORY <span id="terraCount">01 — 03</span></div>
+      <article class="terra-scene terra-one" data-terra-scene="0">
+        <div class="terra-section-label">01 / THE BUILD &nbsp;—&nbsp; A SYSTEM TAKES SHAPE</div>
+        <h2>BUILD IT.<br><em>MEASURE IT.</em></h2>
+        <p>An environmental monitoring instrument takes shape from an enclosure, a preserved PCB, power electronics, sensing, and a display. Every piece has a purpose.</p>
+        <div class="terra-tech-rule"><span>147 × 102 × 75 mm</span><span>ENCLOSURE ENVELOPE</span></div>
+        <div class="terra-annotation">SCROLL TO ASSEMBLE <span>↓</span></div>
+      </article>
+      <article class="terra-scene terra-two" data-terra-scene="1">
+        <div class="terra-section-label">02 / SENSOR ARCHITECTURE &nbsp;—&nbsp; UNDER THE LID</div>
+        <h2>FOLLOW<br>THE <em>SIGNAL.</em></h2>
+        <p>One instrument. Three different measurements. Select a sensing pathway to inspect how the system acquires information.</p>
+        <div class="terra-sensor-tabs" role="group" aria-label="Inspect a sensor">
+          <button type="button" class="terra-sensor active" data-sensor="0" aria-pressed="true"><i>01</i><span>TEMPERATURE</span><b>↗</b></button>
+          <button type="button" class="terra-sensor" data-sensor="1" aria-pressed="false"><i>02</i><span>MOISTURE</span><b>↗</b></button>
+          <button type="button" class="terra-sensor" data-sensor="2" aria-pressed="false"><i>03</i><span>AIR RESPONSE</span><b>↗</b></button>
+        </div>
+        <div class="terra-focus-description"><span id="terraSensorType">DS18B20 / DIGITAL THERMOMETER</span><p id="terraSensorDetail">A waterproof temperature probe tracks compost temperature through a digital sensor interface.</p></div>
+      </article>
+      <article class="terra-scene terra-three" data-terra-scene="2">
+        <div class="terra-section-label">03 / INTERPRETATION &nbsp;—&nbsp; FROM SENSORS TO INFORMATION</div>
+        <h2>DATA YOU<br>CAN <em>ACT ON.</em></h2>
+        <p>Read the measurements together, not as disconnected numbers. Change the simulated sample conditions to see the monitor respond.</p>
+        <div class="terra-telemetry" aria-label="Illustrative TerraVita monitor">
+          <div class="terra-telemetry-head"><span>SIMULATION / INPUT CHANNELS</span><b><i></i> READING</b></div>
+          <div class="terra-channel-grid">
+            <label> TEMPERATURE <output id="terraTempVal" for="terraTemp">42.6 °C</output><input type="range" id="terraTemp" min="22" max="72" value="42.6" step="0.1"></label>
+            <label> MOISTURE <output id="terraMoistVal" for="terraMoist">56 % INDEX</output><input type="range" id="terraMoist" min="0" max="100" value="56" step="1"></label>
+            <label> GAS SENSOR <output id="terraGasVal" for="terraGas">1.62 V</output><input type="range" id="terraGas" min="0.1" max="3.2" value="1.62" step="0.01"></label>
+          </div>
+          <svg viewBox="0 0 420 78" preserveAspectRatio="none" class="terra-sparkline" role="img" aria-label="Illustrative changing sensor trace"><path class="terra-chart-grid" d="M0 20H420 M0 42H420 M0 64H420"/><path class="terra-chart-path" id="terraGraph" d="M0 40L420 40"/></svg>
+          <div class="terra-status"><span>DAQ / ESP32-C3</span><strong id="terraSignal">SENSOR OUTPUT STREAM</strong><span>DEMONSTRATION DATA</span></div>
+        </div>
+      </article>
+      <div class="terra-bottomline"><span id="terraCurrentLabel">01 — HARDWARE ASSEMBLY</span><span>SCROLL TO EXPLORE THE INSTRUMENT →</span></div>
+      <div class="terra-safety">SCHEMATIC INTERACTION · NOT LIVE MEASUREMENTS · MQ-135 IS NOT A SELECTIVE CO₂ / O₂ SENSOR</div>
+    </section>
+
+    <!-- V12 / Obsidian: three chapter-length scroll scenes, one consistent WebGL world -->
+    <section id="obsExperience" class="obs-experience" aria-hidden="true" aria-label="Obsidian three-scene robotic exploration">
+      <div class="obs-atmosphere" aria-hidden="true"><div class="obs-pulse"></div><div class="obs-crosshair"></div><div class="obs-scanlines"></div></div>
+      <div class="obs-headline"><span><b class="obs-live"></b> OBSIDIAN / AUTONOMOUS ROBOTICS</span><span id="obsCounter">01 — 03</span></div>
+      <article class="obs-scene obs-build" data-obs-scene="0">
+        <div class="obs-overline">01 / THE MACHINE · HARDWARE ASSEMBLY</div>
+        <h2>BUILT TO<br><em>FIND A WAY.</em></h2>
+        <p>Two encoder-driven N20 motors, three distance sensors, a custom electronics stack and a rear caster: a compact robot built to understand an unknown maze.</p>
+        <div class="obs-progress-line"><div class="obs-line-label"><span>SUBSYSTEMS ALIGNED</span><b id="obsAssemblePct">00%</b></div><div class="obs-progress-track"><i id="obsAssembleFill"></i></div></div>
+        <div class="obs-specs"><span>ESP32 / C++</span><span>3× TOF SENSING</span><span>DUAL DRIVE</span></div>
+        <div class="obs-hint">SCROLL TO ASSEMBLE THE ROBOT ↓</div>
+      </article>
+      <article class="obs-scene obs-maze" data-obs-scene="1">
+        <div class="obs-overline">02 / DIGITAL TWIN · MAZE EXPLORATION</div>
+        <h2>LEARN THE<br><em>LABYRINTH.</em></h2>
+        <p>Explore unknown corridors, then compare the route with shortest-path replay. The simulated robot follows your scroll position through an illustrative 11 × 11 maze.</p>
+        <div class="obs-maze-modes" role="group" aria-label="Maze navigation mode">
+          <button class="obs-mode active" data-obs-mode="explore" aria-pressed="true" type="button">01 EXPLORE</button>
+          <button class="obs-mode" data-obs-mode="replay" aria-pressed="false" type="button">02 REPLAY</button>
+        </div>
+        <div class="obs-maze-stats"><div><span>MAP</span><strong>11 × 11</strong></div><div><span>STEP</span><strong id="obsStep">000 / 000</strong></div><div><span>CURRENT CELL</span><strong id="obsCell">R01 / C01</strong></div></div>
+        <div class="obs-maze-instruction">SCROLL THROUGH THE ROUTE ↓ <span>ILLUSTRATIVE SIMULATION</span></div>
+      </article>
+      <article class="obs-scene obs-inspect" data-obs-scene="2">
+        <div class="obs-overline">03 / UNDER THE HOOD · AUTONOMOUS CONTROL</div>
+        <h2>SENSE.<br>DECIDE.<br><em>MOVE.</em></h2>
+        <p>The robot's behavior comes from coordinated sensing, feedback and navigation—not from a single clever component. Select a subsystem to examine it.</p>
+        <div class="obs-subsystems" role="group" aria-label="Inspect robotic subsystems">
+          <button type="button" class="obs-sub active" data-obs-sub="0" aria-pressed="true"><span>01</span> PERCEPTION <b>↗</b></button>
+          <button type="button" class="obs-sub" data-obs-sub="1" aria-pressed="false"><span>02</span> LOCOMOTION <b>↗</b></button>
+          <button type="button" class="obs-sub" data-obs-sub="2" aria-pressed="false"><span>03</span> INTELLIGENCE <b>↗</b></button>
+        </div>
+        <div class="obs-subdetail"><span id="obsSubTitle">DISTANCE / THREE VL53L0X SENSORS</span><p id="obsSubDetail">Three ToF sensors observe the front and sides. Measurements inform wall detection, mapping and movement decisions.</p></div>
+      </article>
+      <div class="obs-map-hud" id="obsMapHud" aria-hidden="true"><div class="obs-map-title"><span>11 × 11 / GRID OBSERVATION</span><b id="obsMazeStatus">EXPLORING</b></div><svg id="obsMazeSvg" viewBox="0 0 420 420" aria-label="Illustrative micromouse maze map with traversal route" role="img"></svg><div class="obs-map-key"><span><i></i> OBSERVED PATH</span><span>■ ROBOT</span><span>◇ TARGET</span></div></div>
+      <div class="obs-footer"><span id="obsFooterText">01 — MACHINE ASSEMBLY</span><span>SCROLL / EXPLORE / INSPECT →</span></div>
+      <div class="obs-truth">ILLUSTRATIVE MAZE / NOT A RECORDED COMPETITION RUN · PHYSICAL HARDWARE MODEL IS A VISUAL RECONSTRUCTION</div>
+    </section>
+    <div class="obs-fallback" aria-hidden="true"></div>
+    <div class="stage-controls"><button id="rotateLeft" type="button" title="Rotate left">↶</button><span>DRAG OBJECT TO ORBIT</span><button id="rotateRight" type="button" title="Rotate right">↷</button><button id="resetView" class="reset-control" type="button" title="Reset camera">RESET</button></div>
+    <div class="footer-axis" aria-hidden="true"><span>X / ENGINEERING</span><span>Y / EXPERIMENTATION</span><span>Z / INFINITE ITERATIONS</span></div>
+  </div>
+  <div class="spacers" aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+</main>
+<aside class="dossier" id="dossier" role="dialog" aria-modal="true" aria-labelledby="dossierTitle" aria-hidden="true"><div class="dossier-inner"><button id="closeDossier" class="dossier-close" type="button" aria-label="Close project file">CLOSE ✕</button><div class="dossier-head"><span id="dossierIndex">PROJECT FILE / 001</span><span>SARITH / WORKSHOP ARCHIVE</span></div><h2 id="dossierTitle">OBSIDIAN</h2><div class="dossier-category" id="dossierCategory">EMBEDDED ROBOTICS</div><p id="dossierBody"></p><div class="dossier-rule"></div><h3>WHAT I BUILT / CONTRIBUTED</h3><p id="dossierContribution"></p><h3>TECHNOLOGY</h3><div class="dossier-tech" id="dossierTech"></div><p class="dossier-foot" id="dossierFoot">This experience uses conceptual 3D reconstructions. The dossier describes actual CV project work; rendered objects are not manufacturing CAD or evidence of a finished physical product.</p><a id="dossierLink" class="dossier-link" target="_blank" rel="noopener" hidden>OPEN REPOSITORY ↗</a><div class="dossier-nav"><button id="dossierPrev" type="button">← PREVIOUS</button><button id="dossierNext" type="button">NEXT PROJECT →</button></div></div></aside>
+<div class="no-webgl" id="noWebgl" hidden>3D GRAPHICS UNAVAILABLE. THE PORTFOLIO, PROJECT CONTROLS, AND CONTACT LINKS REMAIN ACCESSIBLE.</div>
+<script src="./kira-loader.js"></script>
+<script src="./workshop-system.js"></script>
+<script src="./project-registry.js?v=final-polish-01"></script>
+<script src="./project-delivery.js?v=mobile-12s-01"></script>
+<script src="./production-station.js?v=model-previews-02"></script>
+<script src="./project-discovery.js?v=education-nav-01"></script>
+<script src="./project-study-timeline.js?v=study-11"></script>
+<script src="./project-study.js?v=education-nav-01"></script>
+<script src="./project-showcase.js?v=exhibit-01"></script>
+<script src="./fsk-source-geometry.js?v=fsk-01"></script>
+<script src="./fsk-showcase.js?v=floating-02"></script>
+<script src="./fsk-exhibit.js?v=fsk-01"></script>
+<script src="./imported-phone.js?v=authored-01"></script>
+<script src="./habitseed-showcase.js?v=card-links-02"></script>
+<script src="./habitseed-exhibit.js?v=habit-01"></script>
+<script src="./claim-showcase.js?v=floating-02"></script>
+<script src="./claim-exhibit.js?v=claim-01"></script>
+<script src="./prajaa-showcase.js?v=overview-refine-05"></script>
+<script src="./showcase-shadows.js?v=shadow-01"></script>
+<script src="./showcase-material.js?v=material-01"></script>
+<script src="./showcase-batches.js?v=batch-01"></script>
+<script src="./obsidian-batches.js?v=batch-01"></script>
+<script src="./obsidian-autopilot.js?v=auto-01"></script>
+<script src="./obsidian-route.js?v=trail-01"></script>
+<script src="./prajaa-exhibit.js?v=prajaa-01"></script>
+<script src="./project-view-controls.js?v=inspect-01"></script>
+<script src="./study-renderer.js?v=study-11"></script>
+<script src="./workshop-appearance.js?v=production-03"></script>
+<script src="./workshop-shadows.js?v=hall-10"></script>
+<script src="./workshop-monitor.js?v=production-02"></script>
+<script src="./engineer-assets/laptop/legion-model.js"></script>
+<script src="./engineer-station.js?v=hall-10"></script>
+<script src="./engineer-avatar.js?v=life-03"></script>
+<script src="./engineer-renderer.js?v=lab-02"></script>
+<script src="./engineering-career-lab/room/geometry-kit.js?v=refine-09"></script>
+<script src="./engineering-career-lab/skills/skills-data.js?v=final-polish-01"></script>
+<script src="./engineering-career-lab/skills/technical-art.js?v=skills-finish-1"></script>
+<script src="./engineering-career-lab/skills/craftsmanship.js?v=skills-finish-2"></script>
+<script src="./engineering-career-lab/refinement.js?v=skills-finish-1"></script>
+<script src="./engineering-career-lab/archive-display.js?v=compact-transparent-02"></script>
+<script src="./engineering-career-lab/skills/furniture.js?v=skills-finish-8"></script>
+<script src="./engineering-career-lab/skills/equipment.js?v=skills-finish-4"></script>
+<script src="./engineering-career-lab/room/lab-dressing.js?v=portal-3"></script>
+<script src="./engineering-career-lab/room/reception-door.js?v=portal-5"></script>
+<script src="./engineering-career-lab/room/lab-room.js?v=kira-life-01"></script>
+<script src="./engineering-career-lab/lab-controller.js?v=mobile-mission-01"></script>
+<script src="./engineering-career-lab/kira-behaviour.js?v=life-01"></script>
+<script src="./engineering-career-lab/lab-kira-route.js?v=life-01"></script>
+<script src="./engineering-career-lab/interface/skills-interface.js?v=education-nav-01"></script>
+<link rel="stylesheet" href="./communications-room/room.css?v=phone-office-04">
+<link rel="stylesheet" href="./mobile-landing.css?v=phone-01">
+<link rel="stylesheet" href="./mobile-ui.css?v=education-nav-01">
+<link rel="stylesheet" href="./mobile-behavior.css?v=compact-menu-01">
+<script src="./communications-room/daylight.js?v=phone-office-04"></script>
+<script src="./communications-room/graphics.js?v=phone-office-04"></script>
+<script src="./communications-room/materials.js"></script>
+<script src="./communications-room/exterior.js"></script>
+<script src="./communications-room/behaviour.js?v=kira-life-01"></script>
+<script src="./communications-room/cars.js"></script>
+<script src="./communications-room/screens.js"></script>
+<script src="./communications-room/pendulum.js"></script>
+<script src="./communications-room/room.js?v=portal-2"></script>
+<script src="./communications-room/phone.js?v=phone-office-04"></script>
+<script src="./communications-room/camera.js?v=phone-office-04"></script>
+<script src="./communications-room/interface.js?v=door-click-02"></script>
+<script src="./engineering-career-lab/mobile-lab.js?v=kira-life-01"></script>
+<script src="./workshop-hall.js?v=kira-life-01"></script>
+<script src="./engineer-about.js?v=text-05"></script>
+<script src="./engine.js?v=final-polish-01"></script>
+<script src="./mobile-behavior.js?v=compact-menu-01"></script>
+</body></html>

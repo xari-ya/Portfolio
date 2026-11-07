@@ -1,0 +1,82 @@
+/* The hall remains the homepage. This pass changes presentation, not content
+   or navigation; the approved About Me and mobile reading layout stay intact. */
+@font-face{font-family:Workshop Condensed;src:url('./assets/fonts/BarlowCondensed-ExtraBold.ttf') format('truetype');font-style:normal;font-weight:800;font-display:swap}
+@font-face{font-family:Workshop Condensed;src:url('./assets/fonts/BarlowCondensed-SemiBold.ttf') format('truetype');font-style:normal;font-weight:600;font-display:swap}
+.topbar{background:linear-gradient(180deg,#080a0df5,#080a0dad);border-bottom-color:#8d999b21}
+.topnav a{color:#f1ede4}
+.topnav a:hover{color:#ff4931}
+body.hall-current .scene-id{display:none}
+.home .button-solid{background:linear-gradient(135deg,#f72d15,#b70f05);border-color:#ff472c;box-shadow:inset 0 1px 0 #ff8f6940,0 0 25px #e42c0c18}
+.home .button-outline{background:#090c0fd9;border-color:#9d392c;box-shadow:inset 0 0 20px #ef402006}
+.home :is(.button-solid,.button-outline):hover{border-color:#ff795f;background:#dc2c12;color:#fff}
+.home{--home-personal-accent:#ff7656}
+.home .eyebrow{color:var(--home-personal-accent)}
+.home .redstop,.home .home-statement strong{color:#ff3b20}
+.home .home-statement strong{font:600 clamp(21px,1.55vw,29px)/1.3 Workshop Condensed,'Arial Narrow',Arial,sans-serif;letter-spacing:.025em;color:var(--home-personal-accent);text-shadow:0 2px 12px #000b}
+.frame.home::before{display:none}
+.home-intro{position:relative;isolation:isolate;width:100%}
+.home-intro::before{content:'';position:absolute;inset:-110px -150px -100px -115px;z-index:-1;background:radial-gradient(ellipse closest-side at 47% 51%,#07111ff0 0%,#07111fdb 46%,#08121e85 73%,transparent 100%);filter:blur(20px);pointer-events:none}
+@media(min-width:1040px) and (min-aspect-ratio:7/5){
+ .frame.home{left:0;right:0;top:0;bottom:0;width:100%;min-width:0;height:100%;padding:0}
+ .home-intro{position:absolute;left:5.2%;bottom:76px;width:min(41vw,630px);max-width:100%}
+ .frame.home h1{font-family:Workshop Condensed,'Arial Narrow',Arial,sans-serif;font-weight:800;font-size:clamp(48px,3.8vw,73px);line-height:.96;letter-spacing:-.025em;max-width:none}
+ .home-title-break{display:none}
+ .frame.home .home-statement{font-size:clamp(10px,.68vw,12px);line-height:1.75;letter-spacing:.025em;margin-top:14px}
+ .frame.home .eyebrow{font-size:clamp(9px,.66vw,12px);letter-spacing:.12em;margin-bottom:12px}
+ .frame.home .intro-actions{gap:12px;margin-top:16px}
+ .frame.home .intro-actions a{font-size:10px;min-height:48px;padding:14px 18px;gap:24px}
+}
+@media(min-width:1040px) and (min-aspect-ratio:7/5) and (max-height:780px){.home-intro{bottom:60px}.frame.home h1{font-size:clamp(40px,3.4vw,54px)}.frame.home .intro-actions a{min-height:43px;padding:11px 16px}.frame.home .home-statement{margin-top:10px}.frame.home .intro-actions{margin-top:12px}}
+@media(max-width:760px){
+ .topbar{background:#080d12ed}
+ .home .intro-actions a{min-height:48px}
+ .frame.home .home-statement{max-width:100%;white-space:normal}
+ .home-intro::before{inset:-65px -70px -65px;background:radial-gradient(ellipse closest-side,#09131ef0 0%,#080d14d6 50%,#080d1455 78%,transparent 100%);filter:blur(14px)}
+}
+@media(prefers-reduced-motion:reduce){.home :is(.button-solid,.button-outline){transition:none}}
+
+/* Computing inspection shares the machined display palette. Matrix details
+   remain semantic HTML for small screens and keyboard access. */
+.hall-station-info{border-left:2px solid #df4327;background:linear-gradient(130deg,#15191ef2,#090e14e8);box-shadow:0 12px 35px #0004;max-height:calc(100vh - 160px);overflow:auto;scrollbar-width:thin;scrollbar-color:#bf482c #11161b}
+.hall-station-info>button{color:#f0e9da;border-bottom-color:#bf482c}
+.hall-station-info h2{font-family:Workshop Condensed,Arial,sans-serif;font-weight:600;letter-spacing:0;color:#f0eade}
+.hall-display-modes button{background:#161b20;border-color:#4d5257;color:#d5d3c9}
+.hall-display-modes button[aria-pressed=true]{background:#752315;border-color:#f15332;color:#fff0de}
+.hall-joint-details{margin:18px 0 14px;border-top:1px solid #515960;padding-top:12px;color:#d5d5ce}
+.hall-joint-details[hidden]{display:none}
+.hall-joint-details summary{font:600 11px/1.5 ui-monospace,monospace;color:#f68a67;cursor:pointer;min-height:34px}
+.hall-joint-details>p{font-size:11px;line-height:1.6;margin:4px 0 15px}
+.hall-joint-details h3{font:600 11px/1.5 ui-monospace,monospace;color:#f4e6cf;margin:14px 0 7px}
+.hall-joint-details pre{font:10px/1.8 ui-monospace,monospace;color:#c9d3cf;background:#0a1016;border:1px solid #3a454c;padding:8px;overflow:auto;margin:0}
+@media(min-width:1040px){body[data-hall-station=intelligence] .hall-station-info{left:3.5%;top:125px;width:min(250px,22vw);padding:16px}body[data-hall-station=intelligence] .hall-station-info h2{font-size:31px}}
+
+/* Same physical workshop, same five-stage boot; colours and fixtures only. */
+.kira-loader{color:#f2ede3}
+.kira-loader-mark strong span,.kira-kicker,.kira-bottom-controls>span{color:#ff5536}
+.kira-loader-mark small{color:#b6afa4}
+.kira-kicker i{background:#ff4529;box-shadow:0 0 12px #f3412645}
+.kira-loader-story h1 em{color:#f44229}
+.kira-loader-story h1{font-family:Workshop Condensed,'Arial Narrow',Arial,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:.96}
+.kira-loader-story p{color:#c0bdb5}
+.kira-geometry-label{color:#938d83;border-top-color:#7f625240}
+.kira-loader-progress{border:0;border-radius:0;background:none;box-shadow:none;padding:0;-webkit-backdrop-filter:none;backdrop-filter:none;text-shadow:0 2px 12px #000b;isolation:isolate}
+.kira-loader-progress::before{content:'';position:absolute;inset:-65px -85px;z-index:-1;background:radial-gradient(ellipse closest-side,#07111fe8 0%,#07111fc7 43%,#08121e65 73%,transparent 100%);filter:blur(18px);pointer-events:none}
+.kira-loader-progress strong{font:800 clamp(22px,1.5vw,28px)/1.15 Workshop Condensed,'Arial Narrow',Arial,sans-serif;color:#f2ede3;letter-spacing:-.02em}
+.kira-boot-label{color:#ff5536}
+.kira-boot-detail{font:12px/1.8 Arial,Helvetica,sans-serif;color:#c0bdb5}
+.kira-progress-track{background:#453029}
+.kira-progress-track i{background:#fc472a;box-shadow:0 0 13px #ff462950}
+.kira-loader[data-ready=true] .kira-progress-track i,.kira-loader.kira-entering .kira-progress-track i{background:#f86e43}
+.kira-loader-bottom{border-top-color:#a47d6040}
+.kira-stage-item{color:#8b8983}
+.kira-stage-item b{color:#a9a397}
+.kira-stage-item::before{background:#3a3632}
+.kira-stage-item.active{color:#fff0df}
+.kira-stage-item.active b{color:#ff6744}
+.kira-stage-item.active::before{background:#f04429;box-shadow:0 0 12px #ff4f2544}
+.kira-stage-item.passed{color:#c4b8a7}
+.kira-stage-item.passed::before{background:#986c50}
+#kiraSkip{border:1px solid #ff6542;border-radius:6px;background:linear-gradient(135deg,#e9381c,#9d1d0c);color:#fff4e8}
+#kiraSkip:hover,#kiraSkip:focus-visible{background:#ee482a;border-color:#ffc3a2;outline-color:#ffc3a2}
+.kira-shade{background:linear-gradient(90deg,#080a0ed9,#080a0e25 34%,transparent 66%),linear-gradient(0deg,#080a0fdb,transparent 30%)}
+@media(max-width:700px){.kira-shade{background:linear-gradient(180deg,#0a0b0ebb,transparent 38%),linear-gradient(0deg,#0a0b0ee8,transparent 40%)!important}}

@@ -1,0 +1,42 @@
+/* Analog FSK / IR — the local controls and readouts use the shared study
+ * surface. The 3D model stays unobstructed; no floating callout layer. */
+#projectStudy[data-project=analog-fsk] .fsk-hud{display:none!important}
+
+#projectStudy .fsk-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:2px 0 14px}
+#projectStudy .fsk-facts>div{display:flex;flex-direction:column;gap:5px;min-width:0;padding:12px 13px;border:1px solid #d5e5f22b;border-radius:12px;background:#bddce909}
+#projectStudy .fsk-facts b{font:600 clamp(22px,1.8vw,30px)/1 Workshop Condensed,'Arial Narrow',Arial,sans-serif;letter-spacing:-.01em;color:var(--study-accent)}
+#projectStudy .fsk-facts>div:nth-child(2) b{color:#e8eff0}
+#projectStudy .fsk-facts span{font:9px/1.4 monospace;letter-spacing:.05em;color:#d5e2e5}
+#projectStudy .fsk-facts small{font:8px/1.4 monospace;letter-spacing:.04em;color:#9db6c0}
+
+#projectStudy .fsk-signal-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:0 0 4px}
+#projectStudy .fsk-signal-controls button{min-height:42px;padding:8px 6px;font:9px/1.4 monospace;background:#cdeaff09;border-color:#d5efff30;color:#dae7eb}
+#projectStudy .fsk-signal-controls button[aria-pressed=true]{background:var(--workshop-glass-accent);border-color:#ffb38c80;color:#fff8f1;box-shadow:inset 0 1px 0 #ffffff26,0 3px 18px #ff602822}
+
+/* The carrier signature lives in the reading column, not over the model. */
+#projectStudy .fsk-mobile-instrument{display:block;position:relative;inset:auto;width:100%;box-sizing:border-box;margin:14px 0 0;padding:12px 14px;border:1px solid #d5e5f22b;border-radius:12px;background:#bddce909;color:#d5e0e3}
+#projectStudy .fsk-mobile-instrument>b{display:block;font:9px/1.5 monospace;letter-spacing:.08em;color:var(--study-accent);padding-bottom:8px;border-bottom:1px solid #d1e8ee30;margin-bottom:8px}
+#projectStudy .fsk-mobile-instrument .fsk-wave{display:flex;align-items:center;gap:10px;font:9px/1.4 monospace;color:#ff8c7d}
+#projectStudy .fsk-mobile-instrument .fsk-wave.space{color:#b6d1df}
+#projectStudy .fsk-mobile-instrument .fsk-wave svg{width:min(62%,260px);height:24px;overflow:visible}
+#projectStudy .fsk-mobile-instrument .fsk-wave path{fill:none;stroke:currentColor;stroke-width:1.5}
+#projectStudy .fsk-mobile-instrument>small{display:block;margin-top:8px;font:8px/1.5 monospace;color:#9db6c0}
+#projectStudy .fsk-mobile-instrument .fsk-chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+#projectStudy .fsk-mobile-instrument .fsk-chain>span{padding:8px 6px;border:1px solid #d5e5f22b;border-radius:8px;background:#07121a66;font:9px/1.3 monospace;color:#dae7eb}
+#projectStudy .fsk-mobile-instrument .fsk-chain small{display:block;margin-top:5px;font:8px/1.3 monospace;color:#9db6c0}
+#projectStudy .fsk-mobile-instrument p{font:13px/1.5 Arial,Helvetica,sans-serif;color:#d5e0e3;margin:4px 0 6px}
+#projectStudy .fsk-contribution{font:10px/1.6 monospace;color:#a9c2cc;margin:14px 0 0;padding-top:12px;border-top:1px solid #d1e8ee30}
+
+@media(max-width:1039px){
+ #projectStudy .fsk-signal-controls button{min-height:44px;font-size:10px}
+ #projectStudy .fsk-mobile-instrument .fsk-chain{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+#projectStudy .fsk-wave{flex-direction:column;align-items:stretch;gap:4px;padding:8px 10px;border-radius:10px;background:#0d182280;margin:6px 0;border:1px solid #ffffff12;transition:border-color .2s}
+#projectStudy .fsk-wave.is-active{border-color:#ff695180;background:#ff695112}
+#projectStudy .fsk-wave.space.is-active{border-color:#38df9280;background:#38df9212}
+#projectStudy .fsk-wave-header{display:flex;justify-content:space-between;align-items:center;font:9px monospace}
+#projectStudy .fsk-live-badge{font-style:normal;font:bold 8px monospace;padding:2px 7px;border-radius:6px;background:#ffffff18;color:#a8c4ce}
+#projectStudy .fsk-wave.is-active .fsk-live-badge{background:#ff4d3633;color:#ff8d7e;border:1px solid #ff4d3666}
+#projectStudy .fsk-wave.space.is-active .fsk-live-badge{background:#26d97c33;color:#55f0a6;border:1px solid #26d97c66}
+#projectStudy .fsk-mobile-instrument .fsk-wave svg{width:100%;max-width:none;height:32px}

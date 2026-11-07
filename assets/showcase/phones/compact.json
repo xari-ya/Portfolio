@@ -1,0 +1,526 @@
+{
+  "source": {
+    "title": "Compact phone",
+    "author": "Innerscene Corp",
+    "url": "https://www.innerscene.com/tools/library/3d-parts/compact-phone-5347b30a",
+    "license": "CC0-1.0",
+    "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "originalFile": "compact-phone.glb",
+  "originalSHA256": "2cd083d125eb92a04d64c15349b9900058f2bc725e8d465035309ea55816389a",
+  "modifications": [
+    "Source transforms flattened; oriented display toward +Z; centered and normalized to height 1",
+    "Original vertex positions, normals, UVs and triangle topology preserved under those transforms",
+    "Batched by original material; project screenshot replaces stock display; transmissive cover layer omitted for readable UI"
+  ],
+  "binary": "compact.bin",
+  "binarySHA256": "88f0d41d0a8adf8193f84a2cc199550b388d6cda4a160529730beeceaf61b5af",
+  "triangles": 7610,
+  "bounds": {
+    "min": [
+      -0.2465779456478186,
+      -0.5,
+      -0.03159695925246487
+    ],
+    "max": [
+      0.2465779456478186,
+      0.5,
+      0.03159695925246487
+    ]
+  },
+  "screenBounds": {
+    "min": [
+      -0.24239542218217355,
+      -0.4965779456478186,
+      0.025893536512545983
+    ],
+    "max": [
+      0.23897336782999215,
+      0.4965779456478186,
+      0.025893536512545983
+    ]
+  },
+  "batches": [
+    {
+      "material": 0,
+      "vertexOffset": 0,
+      "vertexCount": 2149,
+      "indexOffset": 68768,
+      "indexCount": 8463,
+      "nodes": [
+        "Aluminium frame with antenna bands",
+        "Side keys",
+        "SIM tray"
+      ]
+    },
+    {
+      "material": 1,
+      "vertexOffset": 102620,
+      "vertexCount": 168,
+      "indexOffset": 107996,
+      "indexCount": 396,
+      "nodes": [
+        "Aluminium frame with antenna bands"
+      ]
+    },
+    {
+      "material": 2,
+      "vertexOffset": 109580,
+      "vertexCount": 817,
+      "indexOffset": 135724,
+      "indexCount": 2271,
+      "nodes": [
+        "Aluminium frame with antenna bands",
+        "Flash and rear microphone",
+        "SIM tray",
+        "USB-C receptacle"
+      ]
+    },
+    {
+      "material": 3,
+      "vertexOffset": 144808,
+      "vertexCount": 425,
+      "indexOffset": 158408,
+      "indexCount": 1788,
+      "nodes": [
+        "Back glass"
+      ]
+    },
+    {
+      "material": 4,
+      "vertexOffset": 165560,
+      "vertexCount": 198,
+      "indexOffset": 171896,
+      "indexCount": 576,
+      "nodes": [
+        "Camera lens cover glass"
+      ]
+    },
+    {
+      "material": 5,
+      "vertexOffset": 174200,
+      "vertexCount": 99,
+      "indexOffset": 177368,
+      "indexCount": 432,
+      "nodes": [
+        "Camera lens elements"
+      ]
+    },
+    {
+      "material": 6,
+      "vertexOffset": 179096,
+      "vertexCount": 246,
+      "indexOffset": 186968,
+      "indexCount": 720,
+      "nodes": [
+        "Camera lens elements"
+      ]
+    },
+    {
+      "material": 7,
+      "vertexOffset": 189848,
+      "vertexCount": 490,
+      "indexOffset": 205528,
+      "indexCount": 2016,
+      "nodes": [
+        "Camera lens rings"
+      ]
+    },
+    {
+      "material": 8,
+      "vertexOffset": 213592,
+      "vertexCount": 470,
+      "indexOffset": 228632,
+      "indexCount": 1338,
+      "nodes": [
+        "Display panel",
+        "Earpiece slot",
+        "Flash and rear microphone"
+      ]
+    },
+    {
+      "material": 9,
+      "vertexOffset": 233984,
+      "vertexCount": 60,
+      "indexOffset": 235904,
+      "indexCount": 174,
+      "nodes": [
+        "Display panel"
+      ]
+    },
+    {
+      "material": 10,
+      "vertexOffset": 236600,
+      "vertexCount": 134,
+      "indexOffset": 240888,
+      "indexCount": 384,
+      "nodes": [
+        "Flash and rear microphone"
+      ]
+    },
+    {
+      "material": 11,
+      "vertexOffset": 242424,
+      "vertexCount": 425,
+      "indexOffset": 256024,
+      "indexCount": 1788,
+      "nodes": [
+        "Front cover glass"
+      ]
+    },
+    {
+      "material": 12,
+      "vertexOffset": 263176,
+      "vertexCount": 510,
+      "indexOffset": 279496,
+      "indexCount": 1476,
+      "nodes": [
+        "Side key gaps"
+      ]
+    },
+    {
+      "material": 13,
+      "vertexOffset": 285400,
+      "vertexCount": 344,
+      "indexOffset": 296408,
+      "indexCount": 1008,
+      "nodes": [
+        "USB-C receptacle"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "Anodised aluminium frame",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 0.41999998688697815,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 0,
+      "normal": 1,
+      "normalScale": 0.3499999940395355
+    },
+    {
+      "name": "Antenna band polymer",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.550000011920929,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 2,
+      "normalScale": 1
+    },
+    {
+      "name": "Port and hole interior",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.699999988079071,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 3,
+      "normalScale": 1
+    },
+    {
+      "name": "Frosted back glass",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.3799999952316284,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 4,
+      "normal": 5,
+      "normalScale": 0.6000000238418579
+    },
+    {
+      "name": "Lens cover glass (transmissive)",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 6,
+      "normalScale": 1
+    },
+    {
+      "name": "Coated camera lens element",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.03999999910593033,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 7,
+      "normalScale": 1
+    },
+    {
+      "name": "Lens barrel black",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.6000000238418579,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 8,
+      "normalScale": 1
+    },
+    {
+      "name": "Lens ring aluminium",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 0.2199999988079071,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 9,
+      "normal": 10,
+      "normalScale": 0.25
+    },
+    {
+      "name": "Display edge and mask black",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.5,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 11,
+      "normalScale": 1
+    },
+    {
+      "name": "Display showing a generic lock screen",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.30000001192092896,
+      "alphaMode": "OPAQUE",
+      "screen": true,
+      "cover": false,
+      "normalScale": 1
+    },
+    {
+      "name": "Flash diffuser",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.3199999928474426,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 12,
+      "normalScale": 1
+    },
+    {
+      "name": "Cover glass (transmissive)",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.019999999552965164,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": true,
+      "normalScale": 1
+    },
+    {
+      "name": "Button gap",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 0,
+      "rough": 0.6000000238418579,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 13,
+      "normalScale": 1
+    },
+    {
+      "name": "Nickel-plated steel",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metal": 1,
+      "rough": 0.3199999928474426,
+      "alphaMode": "OPAQUE",
+      "screen": false,
+      "cover": false,
+      "baseColor": 14,
+      "normalScale": 1
+    }
+  ],
+  "textures": [
+    {
+      "file": "compact-1.jpg",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 1024,
+      "sha256": "fed155c0d805e471228b58c2d50bc04e5ed349e5a574c184df7aaa52df9eeed7"
+    },
+    {
+      "file": "compact-0.jpg",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 1024,
+      "sha256": "e110b3b968dd876ce76df4730bbe3139fd656a0021adbc3022ab3a2679a82b0d"
+    },
+    {
+      "file": "compact-2.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "c542f8f9193b1bc165517bbea705ea9e40984b427b17a8a3fefffb6e6d752828"
+    },
+    {
+      "file": "compact-3.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "2680710075edaf0f89e39c98b1f8b1b1e8fbb6a01f6b6cca0ace846b8a5b658d"
+    },
+    {
+      "file": "compact-5.jpg",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 1024,
+      "sha256": "ec75eb46cc7d59ad5909908f8c6baf4abe210f023da08d4a792c4609677933de"
+    },
+    {
+      "file": "compact-4.jpg",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 1024,
+      "sha256": "a0b4a9a80d58ced2d247a91982b7b7bfab78cf57f3b2b4ba11787bac1524df3b"
+    },
+    {
+      "file": "compact-6.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "3bcbf804e0beee25de21dca9d2a3437181697eabedc684beab9d259d50460232"
+    },
+    {
+      "file": "compact-7.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "c39292c7f7dc78561ad95cad97aa8e66d8b6ac943c8be4112e028b84e7b2cd61"
+    },
+    {
+      "file": "compact-8.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "e6388cefb036d31528f5a84de372c04523bdde284f66a8308604ff10d6f751a6"
+    },
+    {
+      "file": "compact-1.jpg",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 1024,
+      "sha256": "fed155c0d805e471228b58c2d50bc04e5ed349e5a574c184df7aaa52df9eeed7"
+    },
+    {
+      "file": "compact-9.jpg",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 1024,
+      "sha256": "7135a003009272fb888f8a1441d10c825b746448e3ba7eb0c7170a3c80fba753"
+    },
+    {
+      "file": "compact-10.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "9ae46f49b6821a40973a7118a8b65142aa90d7199eedde5e2e1d68b6bbf5b14b"
+    },
+    {
+      "file": "compact-12.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "5e966ea4bdf414ada2443160225851b232fa14ea39d78f732c5e4ec763230e28"
+    },
+    {
+      "file": "compact-13.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "e3815da76fa68d873642f84910471944964ae68fd06305a288e1c9754c6e44fb"
+    },
+    {
+      "file": "compact-14.png",
+      "width": 2048,
+      "height": 2048,
+      "maxGPUSize": 64,
+      "sha256": "fe467f631cdd6b9309a8f224764b4ad11c2fb67d0fe0ea8357e0f1c00050b27d"
+    }
+  ]
+}

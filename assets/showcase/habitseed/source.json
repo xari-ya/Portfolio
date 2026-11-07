@@ -1,0 +1,41 @@
+{
+  "repository": "https://github.com/xari-ya/HabitSeed",
+  "factualSources": [
+    {
+      "path": "README.md",
+      "blob": "8c48cad695c745b71fbbc814ea3fa3a7400d4d96",
+      "supports": "Six-stage progression; private Room data / public Firebase features; app screens and stack"
+    },
+    {
+      "path": "domain/gamification/RewardCalculator.kt",
+      "blob": "0bf5f8e1759db91fcd95484e78abb01ac897e369",
+      "supports": "Standard completion: +10 drops / +10 XP"
+    }
+  ],
+  "assets": [
+    {
+      "file": "04-home.png",
+      "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/04-home.png",
+      "sha256": "7f3372125f91602848c460d22462ea1a6e17afdf02faf5e9ef8ae2a78e9af381",
+      "modified": false
+    },
+    {
+      "file": "06-habit-detail.png",
+      "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/06-habit-detail.png",
+      "sha256": "279c296a72de137d7e361cdf5c30a2ac98a3997d9dd909853d661c341167db8a",
+      "modified": false
+    },
+    {
+      "file": "07-stats.png",
+      "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/07-stats.png",
+      "sha256": "c7be1e9e521d14666f7df35c532e14588745c5f38e01c286084fa392d60b339a",
+      "modified": false
+    },
+    {
+      "file": "08-store.png",
+      "url": "https://raw.githubusercontent.com/xari-ya/HabitSeed/main/docs/screenshots/08-store.png",
+      "sha256": "23c734532f1ac302a671d7920f2166e50c9b177fba6c3d28305b8d8dd8315b7f",
+      "modified": false
+    }
+  ]
+}

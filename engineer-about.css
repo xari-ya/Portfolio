@@ -1,0 +1,151 @@
+/* Desktop: one interactive surface registered to the physical wall screen.
+   Mobile: the approved character-above / reading-below composition. */
+.engineer-about[hidden]{display:none!important}
+.engineer-about{position:fixed;z-index:19;left:0;bottom:0;width:100%;height:55%;padding:17px 22px 14px;background:linear-gradient(135deg,#101a20fa,#0b141bf8);color:#eeeae2;border-top:2px solid #e65b38;display:flex;flex-direction:column;pointer-events:auto;opacity:0;transition:opacity .24s;overflow:hidden;isolation:isolate}
+.engineer-about.is-ready{opacity:1}
+.engineer-about .engineer-label{font:10px/1.3 ui-monospace,monospace;letter-spacing:.16em;color:#f1805d;margin:0 0 8px}
+.engineer-about h2{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:24px;letter-spacing:-.025em;line-height:1.02;text-shadow:none;max-width:none;margin:0 0 12px;color:#f4efe5}
+.engineer-about h2 span{color:#c9d1d0}
+.engineer-screen-index{display:none}
+.engineer-header-rule{display:none}
+.engineer-tabs{display:flex;gap:17px;border-bottom:1px solid #52646d77;padding-bottom:3px;margin-bottom:10px;flex-shrink:0}
+.engineer-tabs button{border:0;border-bottom:2px solid transparent;background:none;color:#9eafb6;font:10px ui-monospace,monospace;letter-spacing:.025em;padding:7px 0;min-height:44px;cursor:pointer}
+.engineer-tabs button[aria-selected=true]{color:#fb8a61;border-bottom-color:#fc5433}
+.engineer-reading{overflow:auto;overscroll-behavior:contain;min-height:0;flex:1;scrollbar-width:thin;scrollbar-color:#b05840 #152128;padding-right:7px}
+.engineer-about h3{font:800 17px/1.2 Arial,sans-serif;letter-spacing:-.02em;margin:0 0 8px;color:#f2eee4}
+.engineer-about h4{font:700 13px/1.4 Arial,sans-serif;margin:0 0 5px;color:#eee9df}
+.engineer-about p{font:14px/1.65 Arial,sans-serif;color:#bfcccf;margin:0 0 13px}
+.engineer-about .engineer-role{color:#e3dfd4;font-size:12px;line-height:1.5;margin-bottom:14px}
+.engineer-about .engineer-role small{display:block;font:10px/1.7 ui-monospace,monospace;color:#97adb7;margin-top:7px}
+.engineer-academic,.engineer-interest{border-top:1px solid #4f626b66;padding:12px 0 0;margin-top:14px}
+.engineer-about .engineer-academic p{margin:5px 0 10px}
+.engineer-about .engineer-status{font:10px ui-monospace,monospace;color:#ed997c;letter-spacing:.10em}
+.engineer-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding-top:10px;border-top:1px solid #53636c66;flex-shrink:0;margin-top:7px;align-items:stretch}
+.engineer-actions .engineer-primary,.engineer-actions .engineer-resume{display:flex;align-items:center;justify-content:center;background:#fc4929;color:#fff5eb;border:1px solid #ff7450;padding:12px 8px;font:700 9px/1.4 ui-monospace,monospace;letter-spacing:.045em;cursor:pointer;min-height:44px;text-decoration:none;text-align:center}
+.engineer-actions .engineer-back{grid-column:1/-1;display:flex;align-items:center;justify-content:center;background:#899495;color:#10191e;border:1px solid #a6b0ae;font:700 10px/1.4 ui-monospace,monospace;letter-spacing:.08em;cursor:pointer;min-height:40px;padding:10px 8px}
+.engineer-actions :is(button,a):hover{filter:brightness(1.12)}
+.engineer-about :is(a,button,[tabindex]):focus-visible{outline:2px solid #ffbb97;outline-offset:4px}
+.engineer-read-hint{font:8px/1.6 ui-monospace,monospace;letter-spacing:.08em;color:#9aaeb5;flex-shrink:0;padding-top:4px}
+.engineer-read-hint[hidden]{display:none}
+.engineer-desktop-action{display:none}.engineer-mobile-action{display:inline}
+.engineer-about.on-wall-screen{left:0;top:0;right:auto;bottom:auto;max-height:none;max-width:none;padding:32px 36px;background:transparent;border:0;box-shadow:none;transform-origin:0 0;transform-style:flat;display:grid;grid-template-columns:23% minmax(0,1fr);grid-template-rows:auto auto auto minmax(0,1fr) auto auto;column-gap:30px;overflow:hidden;transition:opacity .24s;pointer-events:none}
+.on-wall-screen .engineer-label{grid-column:1/-1;grid-row:1;font-size:14px;letter-spacing:.20em;margin-bottom:11px;padding-left:15px;border-left:5px solid #f34b2b}
+.on-wall-screen h2{grid-column:1/-1;grid-row:2;font-size:46px;line-height:.96;letter-spacing:-.02em;margin:0;font-weight:900;max-width:42%}
+.on-wall-screen h2 span{color:#f1eee5}
+.on-wall-screen .engineer-header-rule{display:block;grid-column:1/-1;grid-row:3;height:1px;background:#697b8077;margin:12px 0 18px}
+.on-wall-screen .engineer-screen-index{display:block;grid-column:1;grid-row:4/7;align-self:start;padding:8px 0 0 10px;border-left:1px solid #687d8166}
+.engineer-screen-index b{font:900 88px/1 Impact,'Arial Black',sans-serif;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px #7a8d91}
+.engineer-screen-index b span{color:#de5a38;-webkit-text-stroke:0}
+.engineer-screen-index small{display:block;font:12px/1.9 ui-monospace,monospace;letter-spacing:.10em;color:#9eafb2;margin-top:19px}
+.on-wall-screen .engineer-tabs{grid-column:1/-1;grid-row:2;justify-self:end;align-self:center;width:58%;gap:12px;margin:0;padding:0;border-bottom:0}
+.on-wall-screen .engineer-tabs button{flex:1;min-width:0;font-size:12px;min-height:34px;padding:6px 9px;border:1px solid #64767b88;background:#0b151b99}
+.on-wall-screen .engineer-tabs button[aria-selected=true]{background:#d34427;border-color:#f47e50;color:#fff3e6}
+.on-wall-screen .engineer-reading{grid-column:2;grid-row:4;padding-right:10px}
+.on-wall-screen h3{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:29px;letter-spacing:.01em;margin-bottom:9px}
+.on-wall-screen p{font-size:19px;line-height:1.55;color:#d0d8d6;margin-bottom:13px}
+.on-wall-screen .engineer-role{font-size:18px;line-height:1.3;margin-bottom:15px;color:#f0e6d5}
+.on-wall-screen .engineer-role small{font-size:12px;line-height:1.6;letter-spacing:.04em;color:#a2bbc2;margin-top:8px}
+.on-wall-screen h4{font:700 20px/1.2 Arial,sans-serif;color:#efe9dc}
+.on-wall-screen .engineer-academic,.on-wall-screen .engineer-interest{border-left:2px solid #b85536;border-top:1px solid #536a7277;padding:12px 14px;margin-top:12px;background:#0e1b2344}
+.on-wall-screen .engineer-status{font-size:12px}
+.on-wall-screen #engineerEducation:not([hidden]),.on-wall-screen #engineerInterests:not([hidden]){display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.on-wall-screen #engineerEducation>h3,.on-wall-screen #engineerInterests>h3{grid-column:1/-1;margin-bottom:0}
+.on-wall-screen .engineer-academic p,.on-wall-screen .engineer-interest p{font-size:16px;line-height:1.5}
+.on-wall-screen .engineer-read-hint{grid-column:2;grid-row:5;font-size:11px}
+.on-wall-screen .engineer-actions{grid-column:2;grid-row:6;grid-template-columns:1fr 1fr .65fr;gap:10px;padding-top:13px;margin-top:8px}
+.on-wall-screen .engineer-actions :is(button,a){grid-column:auto;min-height:56px;font-size:12px;padding:13px 10px}
+.on-wall-screen .engineer-desktop-action{display:inline}.on-wall-screen .engineer-mobile-action{display:none}
+.engineer-active .chapter .frame,.engineer-active .hall-focus-tools,.engineer-active .hall-station-info,.engineer-active .stage-controls,.engineer-active .scroll-cue,.engineer-active .ghost-index,.engineer-active .scene-meta{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+.engineer-active .corner-tag{opacity:.4}
+/* The introduction moves to the right, clearing the engineer's server-side bay. */
+@media(min-width:1040px) and (min-aspect-ratio:7/5){
+ .frame.home{left:auto;right:5.8%;width:36%;min-width:430px;padding:130px 0 110px;align-items:flex-start;justify-content:center}
+ .frame.home::before{content:'';position:absolute;inset:18% -35px 17% -35px;z-index:-1;background:linear-gradient(90deg,#080f1400,#080f1482 22%,#080f14b0);filter:blur(18px);pointer-events:none}
+ .frame.home h1{font-size:clamp(50px,4.8vw,96px);line-height:.94;max-width:100%;text-shadow:0 3px 25px #03070ddd}
+ .frame.home .eyebrow{max-width:100%;font-size:clamp(9px,.70vw,12px);line-height:1.7}
+ .frame.home .home-statement{font-size:clamp(10px,.7vw,12px);max-width:100%;line-height:1.8}
+ .frame.home .intro-actions{flex-wrap:wrap;gap:10px}
+ .frame.home .intro-actions a{padding:15px 17px;gap:18px;font-size:9px}
+}
+@media(max-width:1039px),(max-aspect-ratio:7/5){
+ .engineer-active .sideguide,.engineer-active .corner-tag{display:none}
+ .engineer-active .topbar{background:#090f13e0}
+ .hall-focus-tools [data-hall="about"]{min-height:44px;border-color:#ad5947;background:#512a23;color:#f3eae1}
+}
+@media(min-width:551px) and (max-width:1039px){.engineer-about{left:5%;width:90%;bottom:58px;height:49%;padding:18px}}
+@media(min-width:551px) and (max-aspect-ratio:7/5){.engineer-about{left:5%;width:90%;bottom:58px;height:49%;padding:18px}}
+@media(max-width:550px){.engineer-active .topbar{height:65px}}
+@media(max-width:360px){.engineer-tabs{gap:10px}.engineer-tabs button{font-size:9px}.engineer-about{padding-left:17px;padding-right:17px}.engineer-actions :is(a,button){font-size:9px}}
+@media(max-width:800px){.hall-focus-tools .hall-station-buttons{width:100%;flex-wrap:wrap;justify-content:center}.hall-focus-tools .hall-station-buttons button{flex:1 1 30%;padding-left:5px;padding-right:5px}}
+.has-no-webgl .engineer-about{left:15%;width:70%;top:100px;height:calc(100vh - 150px);bottom:auto}
+@media(max-width:1039px),(max-aspect-ratio:7/5){.has-no-webgl .engineer-about{left:0;width:100%;top:80px;height:calc(100vh - 80px)}}
+@media(prefers-reduced-motion:reduce){.engineer-about{transition:none}}
+
+.on-wall-screen .engineer-reading,.on-wall-screen .engineer-tabs,.on-wall-screen .engineer-actions{pointer-events:auto}
+
+/* Machined presentation display / reference refinement. Ordinary flat HTML
+   remains readable and interactive above its physical WebGL screen. */
+.engineer-tab-icon{display:none}
+.engineer-actions svg{width:18px;height:18px;flex:none}
+.engineer-actions :is(button,a){gap:10px}
+.engineer-about h2 strong{font-weight:inherit;color:#ef3324}
+.engineer-role small i{font-style:normal;color:#e9472d;padding:0 7px}
+.engineer-about.on-wall-screen{padding:35px 43px 38px;column-gap:34px;grid-template-columns:23% minmax(0,1fr)}
+.on-wall-screen .engineer-label{border:0;padding-left:0;color:#d7d2c8;letter-spacing:.16em;font-size:15px;margin-bottom:13px}
+.on-wall-screen .engineer-label::first-letter{color:#ff4730}
+.on-wall-screen h2{font-family:Workshop Condensed,'Arial Narrow',Arial,sans-serif;font-weight:600;font-size:44px;letter-spacing:-.015em;line-height:1.01;max-width:42%}
+.on-wall-screen .engineer-header-rule{height:2px;margin:14px 0 24px;background:linear-gradient(90deg,#e33521 0 15%,#4a4d4d44 15% 100%)}
+.on-wall-screen .engineer-tabs{gap:4px;width:58%}
+.on-wall-screen .engineer-tabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:78px;padding:10px 8px;font:600 14px/1.1 Workshop Condensed,Arial,sans-serif;letter-spacing:.055em;color:#f0ece4;border:1px solid #51565b;background:linear-gradient(145deg,#24272b,#0b0e11);clip-path:polygon(7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px),0 7px)}
+.on-wall-screen .engineer-tabs button[aria-selected=true]{background:linear-gradient(155deg,#3e1713,#6c180e);border-color:#f14b32;box-shadow:inset 0 -3px 0 #f34227;color:#fff3df}
+.on-wall-screen .engineer-tabs button:not([aria-selected=true]):hover{border-color:#f79070;background:linear-gradient(145deg,#343236,#351713)}
+.on-wall-screen .engineer-tab-icon{display:block;width:26px;height:26px}
+.on-wall-screen .engineer-screen-index{position:relative;padding:3px 24px 0 0;border-left:0;border-right:1px solid #62635e66;align-self:stretch}
+.on-wall-screen .engineer-screen-index::after{content:'';position:absolute;right:-1px;top:40px;width:2px;height:126px;background:#ee3f25;box-shadow:0 0 12px #f43a2066}
+.engineer-screen-index b{font-family:Workshop Condensed,Arial,sans-serif;font-weight:800;font-size:104px;color:#f0ece2;-webkit-text-stroke:0;letter-spacing:-.055em}
+.engineer-screen-index b span{color:#ee3521}
+.engineer-screen-index small{font-size:13px;color:#ddd8cc;line-height:1.7;letter-spacing:.06em;margin-top:20px}
+.on-wall-screen h3{font:700 26px/1.15 Arial,sans-serif;letter-spacing:-.02em;margin-bottom:10px;color:#f1eee5}
+.on-wall-screen #engineerIntro h3::after{content:'/';color:#f13620;margin-left:15px;font-weight:400}
+.on-wall-screen p{font-size:18px;line-height:1.48;color:#d6d6cf;margin-bottom:14px}
+.on-wall-screen .engineer-role{font-size:19px;line-height:1.3;color:#f0eee8;margin-bottom:23px}
+.on-wall-screen .engineer-role small{font:14px/1.55 Arial,sans-serif;margin-top:8px;color:#d0d1cb}
+.on-wall-screen .engineer-actions{border-top:0;padding-top:16px;gap:14px;grid-template-columns:1.08fr 1.08fr .65fr}
+.on-wall-screen .engineer-actions :is(button,a){font:700 13px/1.2 Arial,sans-serif;letter-spacing:.025em;min-height:53px;padding:12px 13px;border-radius:4px}
+.on-wall-screen .engineer-actions .engineer-primary{background:linear-gradient(135deg,#c32b14,#8f160b);border-color:#fb4b2d;box-shadow:inset 0 1px 0 #ffb58033,0 0 16px #ff321719;color:#fff1df}
+.on-wall-screen .engineer-actions .engineer-resume{background:linear-gradient(145deg,#171b1e,#0a0d10);border-color:#ba6b50;color:#f6eee0}
+.on-wall-screen .engineer-actions .engineer-back{background:linear-gradient(135deg,#3b4042,#202428);border-color:#646868;color:#eeeade}
+.on-wall-screen .engineer-actions svg{width:20px;height:20px}
+.on-wall-screen .engineer-academic,.on-wall-screen .engineer-interest{background:#151a1d99;border-top-color:#515b5e55;border-left-color:#c73b25;border-radius:2px}
+@media(max-width:1039px),(max-aspect-ratio:7/5){
+ .engineer-about h2{font-family:Workshop Condensed,'Arial Narrow',Arial,sans-serif;font-weight:600;font-size:29px;letter-spacing:-.015em}
+ .engineer-role small i{padding:0 3px}
+ .engineer-actions svg{width:14px;height:14px}
+ .engineer-actions :is(button,a){gap:6px}
+}
+
+/* Three institutions share one readable column and equal, uncropped marks. */
+#engineerEducation:not([hidden]),.on-wall-screen #engineerEducation:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+#engineerEducation>h3{margin:0 0 2px}
+.engineer-about #engineerEducation .engineer-academic{display:grid;grid-template-columns:64px minmax(0,1fr);align-items:center;gap:14px;margin:0;padding:10px 12px;border:1px solid #d8e5e51a;border-radius:10px;background:#b4d3e007}
+.engineer-school-logo{display:block;width:64px;height:64px;object-fit:contain;object-position:center;flex:none}
+.engineer-academic-copy{min-width:0}
+.engineer-about #engineerEducation h4{margin:0 0 4px}
+.engineer-about #engineerEducation p{margin:0;font-size:13px;line-height:1.4}
+.engineer-academic-copy small{display:block;margin-top:4px;font:11px/1.4 Arial,sans-serif;color:#aebec3}
+.engineer-about #engineerEducation .engineer-status{display:block;margin-top:6px;font-size:9px;line-height:1.3}
+.on-wall-screen #engineerEducation h4{font-size:19px}
+.on-wall-screen #engineerEducation p{font-size:15px;line-height:1.35}
+.on-wall-screen .engineer-academic-copy small{font-size:12px}
+.on-wall-screen #engineerEducation .engineer-status{font-size:10px}
+@media(max-width:550px){
+ .engineer-about #engineerEducation .engineer-academic{grid-template-columns:52px minmax(0,1fr);gap:12px;padding:10px}
+ .engineer-school-logo{width:52px;height:52px}
+}
+/* Short phones need enough reading space for a complete education row. */
+@media(max-width:550px) and (max-height:650px){
+ .engineer-about{height:70%;padding:13px 18px 10px}
+ .engineer-about h2{font-size:25px;margin-bottom:9px}
+ .engineer-about .engineer-label{margin-bottom:6px}
+ .engineer-about #engineerEducation>h3{font-size:15px}
+}

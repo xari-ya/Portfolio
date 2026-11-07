@@ -1,0 +1,11 @@
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const dir='verification/mobile-mission',before=JSON.parse(fs.readFileSync(dir+'/baseline/report.json')),after=JSON.parse(fs.readFileSync(dir+'/current/report.json'));
+const report={protectedViews:0,desktopLabViews:0,failures:[],changedSources:[],protectedWorldSourcesUnchanged:true,notes:['Phone Lab compositions are intentionally new. Contact ghost overlays in baseline screenshots are an observed pre-existing hidden-state bug; their removal is expected. Camera and visible control geometry/styles are independently compared.','Project camera is controlled by the protected study timeline; all three chapter visual states are compared for all nine projects.']};
+function equal(a,b,label,tolerance=.002){if(typeof a==='number'&&typeof b==='number'){if(Math.abs(a-b)>tolerance)report.failures.push({label,before:a,after:b});}else if(a&&b&&typeof a==='object'){for(const k of new Set([...Object.keys(a),...Object.keys(b)]))equal(a[k],b[k],label+'.'+k,tolerance);}else if(a!==b)report.failures.push({label,before:a,after:b});}
+for(const [key,b]of Object.entries(before.views)){const a=after.views[key];if(!a){report.failures.push({label:'Missing '+key});continue;}const lab=/-(lab|skills|experience)$/.test(key),phone=parseInt(key)<=760;if(lab&&phone)continue;
+ equal(b.camera,a.camera,key+'.camera');equal(b.study,a.study,key+'.study');equal(b.controls,a.controls,key+'.controls',.15);equal(b.canvas,a.canvas,key+'.canvas');equal(b.resources,a.resources,key+'.resources');if(lab)report.desktopLabViews++;else report.protectedViews++;
+}
+for(const [file,hash]of Object.entries(before.sources))if(after.sources[file]!==hash)report.changedSources.push(file);
+const world=/^(engineering-career-lab\/(room|skills)\/|communications-room\/(room|materials|graphics|exterior|daylight|phone|camera)|workshop-appearance|workshop-shadows|engineer-station|engineer-avatar|production-station|project-study|project-registry|study-renderer)/;
+report.protectedWorldSourcesUnchanged=!report.changedSources.some(f=>world.test(f));
+fs.writeFileSync(dir+'/comparison.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));assert.equal(report.failures.length,0,'Protected camera, UI, study or resource differences');assert.ok(report.protectedWorldSourcesUnchanged);

@@ -1,0 +1,10 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "user supplied office diagram, exterior mood only",
+  "prompt": "Wide outdoor park and distant city skyline; eye level; warm afternoon sunlight from upper right; trees framing a clear central view; realistic stylized environmental texture; no interior, window frames, furniture, people, text, labels or watermarks.",
+  "source": "01a1a65a-8f2b-7480-8976-a3327812e7f1/exec-54650e77-9eb0-4f08-b8e9-a081e095a454.png",
+  "exports": [
+    "park.webp",
+    "park-mobile.webp"
+  ]
+}

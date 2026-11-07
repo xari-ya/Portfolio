@@ -1,0 +1,52 @@
+[
+  {
+    "name": "paffrel",
+    "url": "https://www.paffrel.com/images/logoline-2022.png",
+    "sha256": "22007350599cd4419d33d60ba9d91a3a71689c1bc33c3d06e54cb6179ef1c3ee",
+    "bytes": 10302,
+    "note": "Original header mark replaces the wider footer variant; no geometric changes."
+  },
+  {
+    "name": "hemas",
+    "url": "https://hemas.com/assets/images/logo/hemas-logo-color.png",
+    "sha256": "15ff907378bfad4a1b94742b03f4bc816527b874f9cabaca3fe15e404a3f5785",
+    "bytes": 108874
+  },
+  {
+    "name": "rupavahini",
+    "url": "https://tv.rupavahini.lk/wp-content/uploads/2023/10/logo-main.png",
+    "sha256": "4bd6668c679f6b4ecb23ad75107d15fd178ea8061dee1df82ffb6ca613157273",
+    "bytes": 34014
+  },
+  {
+    "name": "aiesec",
+    "url": "https://aiesec-logos.s3.eu-west-1.amazonaws.com/Blue-Logo.png",
+    "sha256": "91e81a4d9fdd30f2fbca5919e673e5613b6487d27e66a20d437a03f49aa9d85f",
+    "bytes": 12432
+  },
+  {
+    "name": "welfare",
+    "url": "https://www.wbb.gov.lk/assets/img/wbblogf.png",
+    "sha256": "c24556337fb5c95c5ea1a2420569a2d9881b0e0f3672ecf2f2868ea341519e6f",
+    "bytes": 101445,
+    "sourceSha256": "64eba852508ba7979e1494fd88e849eb3b4373159ed3bb403a91e4ddc48b54f4",
+    "transparency": "Removed only near-white background connected to image edges; enclosed emblem details, colors and proportions retained."
+  },
+  {
+    "name": "mahara-youth",
+    "page": "https://www.linkedin.com/company/leo-club-of-mahara-youth",
+    "source": "Club-owned LinkedIn cover image",
+    "sourceAsset": "https://media.licdn.com/dms/image/v2/D563DAQFtpe2vJsrk8g/image-scale_191_1128/B56ZtgZDXOHYAc-/0/1766848739949/leo_club_of_mahara_youth_cover?e=2147483647&t=4f_sJJHpp8wDpwKRzWx2feQl2Od-C_m51BnQGzdNKF8&v=beta",
+    "modification": "Cropped the club gold phoenix emblem from its cover; colors and proportions preserved.",
+    "crop": [
+      812,
+      10,
+      901,
+      114
+    ],
+    "sha256": "9a01d9b5fa72826599bdd1079f4d29dc98b3988427939b0ae90c4758de621036",
+    "sourceSha256": "61e112d5fb87fb0de75c94e85b920c0c0d84ca49bc20363f36876ffdc566dd2c",
+    "bytes": 14586,
+    "transparency": "Removed only near-white background connected to image edges; enclosed emblem details, colors and proportions retained."
+  }
+]

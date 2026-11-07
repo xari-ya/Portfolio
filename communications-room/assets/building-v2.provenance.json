@@ -1,0 +1,7 @@
+{
+  "tool": "built-in imagegen",
+  "mode": "generate",
+  "prompt": "Create one transparent-background architectural illustration asset for an engineering portfolio wall display. A compact modern engineering research workshop / robotics laboratory building in a three-quarter front view, long low two-storey wing extending left, taller cuboid entrance tower on the right. Steel and glass curtain wall, cyan-blue illuminated windows and precision thin cyan architectural edges, subtle red roof edge accents. Rich, believable stylized 3D visualization with small structural columns, faint interior machinery silhouettes and two restrained blue-grey ornamental tree silhouettes near the base. Perspective like a premium industrial sci-fi architectural presentation, realistic proportions and restrained detail, matching a dark graphite, red-accented engineering workshop environment. The building occupies nearly the full wide 2:1 composition; no large empty margin. On the upper right tower, one crisp white small S/D. monogram with a single red slash. No other text, no diagram labels, no room interior, no wall screen, no interface, no people, no robots, no landscape background, no floor rectangle. Background must be genuinely transparent, including around the trees and beneath the building. The ground contact may have a very faint cyan translucent reflection fading naturally to transparency. Deliver the standalone building artwork, not a complete room image.",
+  "output": "building-v2.webp",
+  "source": "exec-1f36406e-05f8-419d-97cb-871acbcfc862.png"
+}

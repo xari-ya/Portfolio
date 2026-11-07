@@ -1,0 +1,196 @@
+{
+  "tablerVersion": "3.48.0",
+  "files": [
+    {
+      "file": "users.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/users.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "ee1ec96e17087cbcb5663d84d2e5e1e46d56356c19d88bc42f8100154c1e298f",
+      "bytes": 550,
+      "modified": false
+    },
+    {
+      "file": "briefcase.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/briefcase.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "e3bf4e397b34b5dcfc4efa2444b35bbc8872490145a4b747764e3a7929f57292",
+      "bytes": 571,
+      "modified": false
+    },
+    {
+      "file": "trophy.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/trophy.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "2e56bd8f0e6f4d2ca4554485acc11717bb05a040d8a296fe2fb029781f4dad21",
+      "bytes": 525,
+      "modified": false
+    },
+    {
+      "file": "calendar-month.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/calendar-month.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "aa06da7b53f3cbca2f6169d3e92ac658e8102b1ea318a8c3584b340610270de7",
+      "bytes": 635,
+      "modified": false
+    },
+    {
+      "file": "book-2.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/book-2.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "1f03d3e6df24ba50d7d9007d344430fe96fd80a3e4e5da92ecdd4dcf024f7a3a",
+      "bytes": 482,
+      "modified": false
+    },
+    {
+      "file": "settings.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/settings.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "d71136dfd83ad19efe1777d01768a5d23d7b295de5dde3b1fccc50806809a423",
+      "bytes": 944,
+      "modified": false
+    },
+    {
+      "file": "coins.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/coins.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "e95bc6abd9d8db7f4132ca936bcc2aae9e33454842d197dfb6f2d9de1354e86f",
+      "bytes": 765,
+      "modified": false
+    },
+    {
+      "file": "shield-star.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/shield-star.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "e0248e99cde7eda2f399f6623c89cf7c7bfe4526d8a41bfacdfd02347077caba",
+      "bytes": 767,
+      "modified": false
+    },
+    {
+      "file": "checkbox.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/checkbox.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "2d5b035b8f081c6e47852fa31e80c661968ae5b89547ef4c70c4979fb96339d4",
+      "bytes": 468,
+      "modified": false
+    },
+    {
+      "file": "microphone.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/microphone.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "804b6189fea0ae697def236da6790d3ae81e99449cd5c056245c205eb7f333f2",
+      "bytes": 534,
+      "modified": false
+    },
+    {
+      "file": "broadcast.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/broadcast.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "be50f280506412135e54798d2800e674d9cfb33227edab19d56efe2a78366662",
+      "bytes": 519,
+      "modified": false
+    },
+    {
+      "file": "laurel-wreath.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/laurel-wreath.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "19e5ffed8b7ac9e7ea72abe4521356af9b723acab4efd8b28013a7a622752b25",
+      "bytes": 1412,
+      "modified": false
+    },
+    {
+      "file": "award.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/award.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "5bb13c64d4be8fe815d6d8bec1b22f589b3233df47e75740f81fd3eb9659ba71",
+      "bytes": 509,
+      "modified": false
+    },
+    {
+      "file": "chevron-right.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/chevron-right.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "26b321e42c7c7ed5d5161d9af061033df1d49ef33b5d2fc2309e2f6ee3d4c81a",
+      "bytes": 381,
+      "modified": false
+    },
+    {
+      "file": "chevron-down.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/chevron-down.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "06bd20b8cbe565b97046c5d0ec917f11ed6b29c0e4885a82ae057325c972bf9a",
+      "bytes": 377,
+      "modified": false
+    },
+    {
+      "file": "school.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/school.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "eeb18ee74b3f64022ff7479ba3671b8e22e5304651e2971cebebb55c84c1998a",
+      "bytes": 462,
+      "modified": false
+    },
+    {
+      "file": "arrows-maximize.svg",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/icons/outline/arrows-maximize.svg",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "102202d6565c7f83ce8daaedb292177c9e847655be3bc5362bed75cd0dd47bdc",
+      "bytes": 584,
+      "modified": false
+    },
+    {
+      "file": "LICENSE-tabler.txt",
+      "url": "https://raw.githubusercontent.com/tabler/tabler-icons/v3.48.0/LICENSE",
+      "author": "Tabler Icons contributors",
+      "license": "MIT",
+      "sha256": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+      "bytes": 1073,
+      "modified": false
+    },
+    {
+      "file": "world-scout-emblem.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/WOSM_2024.svg",
+      "author": "World Organization of the Scout Movement; Wikimedia Commons contributors",
+      "license": "CC BY-SA 4.0",
+      "sha256": "85fc3d6786ff556923d005991a2c18ef4e6e6e1852daa6bcfcbb69c07471ef45",
+      "bytes": 3175,
+      "modified": false
+    },
+    {
+      "file": "ananda-college.png",
+      "url": "https://anandacollege.edu.lk/Assets/Images/logo.png",
+      "author": "Ananda College, Colombo",
+      "license": "School crest; copyright retained by its owner; descriptive identification",
+      "sha256": "69a2e4ffb752d3402b73c07b956b5170a55af6814a0e50578822b64ad3f82b52",
+      "bytes": 75510,
+      "modified": false
+    }
+  ],
+  "derivedFiles": [
+    {
+      "file": "world-scout-emblem.png",
+      "source": "world-scout-emblem.svg",
+      "author": "World Organization of the Scout Movement; contributors in the upstream file history",
+      "license": "CC BY-SA 4.0",
+      "modification": "Rasterized unchanged vector artwork to a transparent 512 x 512 PNG; original SVG retained.",
+      "sha256": "84b95b9526a7167275cb797df41ff4c9bb1f491684be4cd220fcf6bcec5aaa80",
+      "bytes": 56363
+    }
+  ]
+}

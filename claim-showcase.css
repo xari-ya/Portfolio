@@ -1,0 +1,29 @@
+/* Click Claim — the role cards and response workflow remain interactive in
+ * the reading column and use the shared study controls. */
+#projectStudy[data-project=click-claim] .claim-hud{display:none!important}
+
+#projectStudy .claim-roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:0;margin:2px 0 16px;border:0}
+#projectStudy .claim-roles button{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:64px;padding:10px 11px;text-align:left;background:#cdeaff09;border-color:#d5efff30}
+#projectStudy .claim-roles button:hover{border-color:#f3f6ff70}
+#projectStudy .claim-roles strong{font:600 clamp(13px,1.05vw,17px)/1.15 Workshop Condensed,'Arial Narrow',Arial,sans-serif;letter-spacing:.01em;color:#f2f3ed}
+#projectStudy .claim-roles small{font:8px/1.4 monospace;letter-spacing:.04em;color:#9db6c0}
+
+#projectStudy .claim-workflow{margin-top:2px}
+#projectStudy .claim-workflow>div{display:flex;justify-content:space-between;gap:12px;padding:8px 10px;margin-bottom:6px;border:1px solid #d5e5f22b;border-radius:9px;background:#bddce909;font:9px/1.4 monospace;color:var(--study-accent)}
+#projectStudy .claim-workflow>div span{color:#c3d7e0;text-align:right}
+#projectStudy .claim-workflow button{margin:10px 0 8px;padding:10px 14px;font:9px/1.4 monospace;background:var(--workshop-glass-accent);border-color:#ffb38c80;color:#fff8f1}
+#projectStudy .claim-workflow small{display:block;font:9px/1.5 monospace;color:#8fd3b6}
+#projectStudy .claim-contribution{font:11px/1.6 monospace;color:#a9c2cc;margin:14px 0 0;padding-top:12px;border-top:1px solid #d1e8ee30}
+#projectStudy .claim-truth{display:block;margin-top:12px;font:8px/1.6 monospace;letter-spacing:.03em;color:#8ca3b1}
+#projectStudy .claim-truth a{color:var(--study-accent);text-decoration:underline;text-underline-offset:2px}
+#projectStudy .claim-mobile-callouts{display:none}
+
+@media(max-width:1039px){
+ #projectStudy .claim-roles button{min-height:72px;padding:10px}
+ #projectStudy .claim-workflow>div{font-size:10px}
+ #projectStudy .claim-mobile-callouts{display:block;margin:14px 0;border-block:1px solid #63839677;color:#b8ccda}
+ #projectStudy .claim-mobile-callouts summary{min-height:44px;display:flex;align-items:center;font:11px monospace;cursor:pointer}
+ #projectStudy .claim-mobile-callouts p{margin:10px 0;font:12px/1.5 Arial}
+ #projectStudy .claim-mobile-callouts b{display:block;font:600 12px/1.5 Arial;color:#dce9ec}
+ #projectStudy .claim-mobile-callouts span{display:block;font:12px/1.5 Arial;color:#9fbaca}
+}

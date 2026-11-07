@@ -1,0 +1,32 @@
+/* HabitSeed — growth, privacy, and app-screen controls stay in the reading
+ * column; the phone model remains unobstructed. */
+#projectStudy[data-project=habitseed] .habit-model-hud{display:none!important}
+
+#projectStudy .habit-controls{display:flex;flex-wrap:wrap;gap:7px;margin:2px 0 0}
+#projectStudy .habit-controls button{flex:1;min-width:0;min-height:42px;padding:8px 6px;font:9px/1.35 monospace;background:#cdeaff09;border-color:#d5efff30;color:#dae7eb}
+#projectStudy .habit-controls button[aria-pressed=true]{background:var(--workshop-glass-accent);border-color:#ffb38c80;color:#fff8f1;box-shadow:inset 0 1px 0 #ffffff26,0 3px 18px #ff602822}
+#projectStudy .habit-note{margin:12px 0 0;font:8px/1.6 monospace;letter-spacing:.03em;color:#9db6b0}
+#projectStudy .habit-note a{color:var(--study-accent);text-decoration:underline;text-underline-offset:2px}
+
+#projectStudy .habit-growth{margin:14px 0 0;padding:13px 14px;border:1px solid #d5e5f22b;border-radius:12px;background:#bddce909;color:#c9ded4}
+#projectStudy .habit-growth label{display:block;margin-bottom:9px;font:9px/1.5 monospace;letter-spacing:.08em;color:var(--study-accent)}
+#projectStudy .habit-growth input{display:block;width:100%;min-height:26px;accent-color:var(--study-accent);touch-action:pan-x}
+#projectStudy .habit-growth-status{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:4px}
+#projectStudy .habit-growth-status strong{font:600 clamp(18px,1.5vw,24px)/1.1 Workshop Condensed,'Arial Narrow',Arial,sans-serif;color:#e8f0e9}
+#projectStudy .habit-growth-status button{min-height:38px;padding:8px 10px;font:8px/1.35 monospace;background:var(--workshop-glass-accent);border-color:#ffb38c80;color:#fff8f1}
+#projectStudy .habit-growth p{margin:10px 0 0;padding:9px 0;border-block:1px solid #d1e8ee30;font:9px/1.5 monospace;color:#b5cbd2}
+#projectStudy .habit-growth small{display:block;margin-top:8px;font:8px/1.5 monospace;color:#93ada5}
+
+#projectStudy .habit-privacy{padding:12px 0 0;margin:14px 0 0;border-top:1px solid #d1e8ee30}
+#projectStudy .habit-privacy strong{display:block;font:9px/1.5 monospace;letter-spacing:.08em;color:var(--study-accent)}
+#projectStudy .habit-privacy p{margin:7px 0 8px;font:13px/1.55 Arial,Helvetica,sans-serif;color:#d5e0e3}
+#projectStudy .habit-privacy span{display:block;font:8px/1.6 monospace;color:#9db6b0}
+
+@media(max-width:1039px){
+ #projectStudy .habit-controls button{min-height:44px;font-size:10px}
+ #projectStudy .habit-growth-status button{min-height:44px;font-size:9px}
+}
+
+#projectStudy .habit-growth-buttons{display:flex;gap:7px}
+#projectStudy .habit-engine-btn{background:#13352666!important;border:1px solid #4ade8066!important;color:#dafbe8!important;border-radius:10px;padding:7px 11px;cursor:pointer}
+#projectStudy .habit-engine-btn:hover{background:#1f4b37!important;border-color:#4ade80!important}
